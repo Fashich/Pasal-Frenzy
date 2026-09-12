@@ -612,7 +612,7 @@ def write_report(data: dict, check: dict, errors: list[str]) -> None:
             a = d["A"].replace("|", "\\|")
             b = d["B"].replace("|", "\\|")
             lines.append(f"| {d['unit']} | {d['jenis']} | {a} | {b} |")
-    REPORT_PATH.write_text("\n".join(lines) + "\n", encoding="utf-8")
+    REPORT_PATH.write_text("\n".join(lines) + "\n", encoding="utf-8", newline="\n")
 
 
 # --------------------------------------------------------------------------- #
@@ -657,7 +657,9 @@ def build() -> int:
     write_report(data, check, errors)
 
     OUT_PATH.parent.mkdir(parents=True, exist_ok=True)
-    OUT_PATH.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    OUT_PATH.write_text(
+        json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n"
+    )
 
     print(f"JSON  : {OUT_PATH.relative_to(ROOT).as_posix()} ({OUT_PATH.stat().st_size:,} byte)")
     print(f"Report: {REPORT_PATH.relative_to(ROOT).as_posix()}")
