@@ -159,8 +159,11 @@ html.pf-has-cursor [data-cursor] {
   position: absolute;
   inset: 0;
   display: grid;
-  place-items: center;
-  padding: clamp(1rem, 4vh, 3rem) clamp(1.5rem, 6vw, 6rem) calc(5.5rem + var(--pf-safe-bottom));
+  place-content: center;
+  justify-items: center;
+  gap: 1.25rem;
+  padding: calc(4.5rem + var(--pf-safe-top)) clamp(1.5rem, 6vw, 6rem)
+    calc(2rem + var(--pf-safe-bottom));
 }
 
 .pf-preloader__alinea {
@@ -175,6 +178,16 @@ html.pf-has-cursor [data-cursor] {
   text-wrap: balance;
 }
 
+.pf-preloader__ref {
+  margin: 0;
+  font-family: var(--pf-font-ui);
+  font-size: var(--pf-t-small);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--pf-fg-muted);
+  opacity: 0;
+}
+
 .pf-preloader__alinea span {
   display: inline-block;
   will-change: transform, opacity, filter;
@@ -185,12 +198,12 @@ html.pf-has-cursor [data-cursor] {
   display: grid;
   justify-items: center;
   gap: clamp(1rem, 2.5vh, 2rem);
-  width: min(92vw, 640px);
+  width: min(94vw, 820px);
   opacity: 0;
 }
 
 .pf-preloader__brand .pf-logotype {
-  font-size: clamp(2.6rem, 1.6rem + 7vw, 5rem);
+  font-size: clamp(1.9rem, 10.5vw, 5rem);
 }
 
 .pf-preloader__logotype-char {
@@ -235,7 +248,9 @@ html.pf-has-cursor [data-cursor] {
 
 .pf-preloader__desc {
   margin: 0;
-  max-width: 52ch;
+  width: 100%;
+  max-width: none;
+  min-height: 2.7em;
   text-align: center;
   font-family: var(--pf-font-ui);
   font-size: var(--pf-t-small);
@@ -246,8 +261,8 @@ html.pf-has-cursor [data-cursor] {
 
 .pf-preloader__skip {
   position: absolute;
-  right: clamp(1rem, 3vw, 2.5rem);
-  bottom: calc(clamp(1rem, 3vh, 2.5rem) + var(--pf-safe-bottom));
+  right: calc(clamp(1rem, 3vw, 2.5rem) + var(--pf-safe-right));
+  top: calc(clamp(1rem, 3vh, 2rem) + var(--pf-safe-top));
   opacity: 0;
   background: rgba(8, 8, 16, 0.75);
   border-color: rgba(248, 248, 248, 0.18);

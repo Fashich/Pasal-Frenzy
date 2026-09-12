@@ -10,7 +10,7 @@ export interface LoadingStage {
   label: string;
   /** bobot relatif (mis. perkiraan waktu/ukuran) */
   weight: number;
-  run: (report: (fraction: number) => void) => Promise<void>;
+  run: (report: (fraction: number, detail?: string) => void) => Promise<void>;
 }
 
 export interface LoadingProgress {
@@ -19,6 +19,8 @@ export interface LoadingProgress {
   stageIndex: number;
   stageId: string;
   label: string;
+  /** item spesifik yang sedang dimuat (mis. nama font, modul, kata ke-N) */
+  detail: string | null;
   done: boolean;
   error: unknown | null;
 }
@@ -66,18 +68,19 @@ export async function runLoadingStages(
     const stage = stages[i];
     if (!stage) continue;
     const started = now();
-    const emit = (fraction: number, error: unknown = null) =>
+    const emit = (fraction: number, error: unknown = null, detail: string | null = null) =>
       onProgress({
         fraction: computeProgress(stages, i, fraction),
         stageIndex: i,
         stageId: stage.id,
         label: stage.label,
+        detail,
         done: false,
         error,
       });
     emit(0);
     try {
-      await stage.run((f) => emit(clamp01(f)));
+      await stage.run((f, detail) => emit(clamp01(f), null, detail ?? null));
     } catch (error) {
       errors.push({ stageId: stage.id, error });
       emit(1, error);
@@ -94,6 +97,7 @@ export async function runLoadingStages(
     stageIndex: Math.max(0, stages.length - 1),
     stageId: last?.id ?? '',
     label: last?.label ?? '',
+    detail: null,
     done: true,
     error: null,
   });

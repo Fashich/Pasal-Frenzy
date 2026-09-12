@@ -74,6 +74,10 @@ canvas {
   display: block;
 }
 
+[hidden] {
+  display: none !important;
+}
+
 /* Canvas engine mengisi container-nya; ukuran buffer diatur renderer, bukan CSS. */
 .pf-canvas {
   position: absolute;

@@ -36,6 +36,21 @@ ROOT = Path(__file__).resolve().parent.parent
 PDF_PATH = ROOT / "data-source" / "UUD-NRI-1945-Dalam-Satu-Naskah.pdf"
 OUT_PATH = ROOT / "src" / "data" / "uud-1945.json"
 PEMBUKAAN_PATH = ROOT / "src" / "data" / "pembukaan.json"
+INTRO_PATH = ROOT / "src" / "data" / "intro-passages.json"
+
+# Kutipan untuk intro acak: unit teks yang menjadi inti narasi game (semua dari naskah).
+INTRO_UNIT_IDS = [
+    ("1-2", "Pasal 1 ayat (2)"),
+    ("1-3", "Pasal 1 ayat (3)"),
+    ("22-1", "Pasal 22 ayat (1)"),
+    ("27-1", "Pasal 27 ayat (1)"),
+    ("28A", "Pasal 28A"),
+    ("28D-1", "Pasal 28D ayat (1)"),
+    ("28E-3", "Pasal 28E ayat (3)"),
+    ("28J-2", "Pasal 28J ayat (2)"),
+    ("33-2", "Pasal 33 ayat (2)"),
+    ("33-3", "Pasal 33 ayat (3)"),
+]
 REPORT_PATH = ROOT / "docs" / "data-validation" / "uud-1945-report.md"
 
 SOFT_HYPHEN = "­"
@@ -668,6 +683,38 @@ def build() -> int:
     }
     PEMBUKAAN_PATH.write_text(
         json.dumps(pembukaan, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n"
+    )
+    # kutipan intro acak: 4 alinea + unit pasal kunci (teks asli, dengan kata ber-id)
+    units_by_id: dict[str, str] = {}
+    for bab in data["batangTubuh"]["bab"]:
+        for ps in bab["pasal"]:
+            if ps["teks"] is not None:
+                units_by_id[ps["id"]] = ps["teks"]
+            for ay in ps["ayat"]:
+                units_by_id[ay["id"]] = ay["teks"]
+    passages = [
+        {
+            "id": f"pembukaan-{al['nomor']}",
+            "label": f"Pembukaan UUD 1945, alinea ke-{al['nomor']}",
+            "teks": al["teks"],
+            "kata": al["kata"],
+        }
+        for al in data["pembukaan"]["alinea"]
+    ]
+    for uid, label in INTRO_UNIT_IDS:
+        teks = units_by_id.get(uid)
+        if teks is None:
+            raise SystemExit(f"Unit intro {uid} tidak ditemukan di naskah")
+        passages.append({"id": uid, "label": label, "teks": teks, "kata": tokenize(teks)})
+    INTRO_PATH.write_text(
+        json.dumps(
+            {"provenance": pembukaan["provenance"], "passages": passages},
+            ensure_ascii=False,
+            indent=2,
+        )
+        + "\n",
+        encoding="utf-8",
+        newline="\n",
     )
 
     print(f"JSON  : {OUT_PATH.relative_to(ROOT).as_posix()} ({OUT_PATH.stat().st_size:,} byte)")

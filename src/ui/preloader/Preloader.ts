@@ -25,6 +25,8 @@ export interface PreloaderOptions {
   /** referensi teks intro untuk aria */
   introLabel?: string;
   description: string;
+  /** kalimat-kalimat tambahan yang berganti otomatis tiap 2 detik selama memuat */
+  descriptions?: string[];
   reducedMotion?: boolean;
   /** tampilkan tombol lewati sejak awal (kunjungan berikutnya) */
   showSkip?: boolean;
@@ -48,6 +50,9 @@ export class Preloader {
   private skipped = false;
   private finished = false;
   private lastFraction = 0;
+  private readonly descriptionEl: HTMLElement;
+  private descriptionTimer: ReturnType<typeof setInterval> | null = null;
+  private descriptionIndex = 0;
 
   constructor(options: PreloaderOptions) {
     this.options = options;
@@ -64,6 +69,7 @@ export class Preloader {
       <div class="pf-preloader__noise" aria-hidden="true"></div>
       <div class="pf-preloader__intro" aria-hidden="true">
         <p class="pf-preloader__alinea"></p>
+        <p class="pf-preloader__ref"></p>
       </div>
       <div class="pf-preloader__brand">
         <h1 class="pf-logotype" aria-label="Pasal Frenzy">
@@ -89,7 +95,8 @@ export class Preloader {
     this.pct = must(el, '.pf-preloader__pct');
     this.logotype = must(el, '.pf-logotype');
     this.skipButton = must(el, '.pf-preloader__skip') as HTMLButtonElement;
-    must(el, '.pf-preloader__desc').textContent = options.description;
+    this.descriptionEl = must(el, '.pf-preloader__desc');
+    this.descriptionEl.textContent = options.description;
 
     for (const word of options.introWords) {
       const span = document.createElement('span');
@@ -97,7 +104,10 @@ export class Preloader {
       this.alinea.appendChild(span);
       this.alinea.appendChild(document.createTextNode(' '));
     }
-    if (options.introLabel) this.alinea.setAttribute('aria-label', options.introLabel);
+    if (options.introLabel) {
+      this.alinea.setAttribute('aria-label', options.introLabel);
+      must(el, '.pf-preloader__ref').textContent = options.introLabel;
+    }
 
     this.skipButton.addEventListener('click', () => this.skip());
     if (options.showSkip) this.skipButton.style.opacity = '1';
@@ -115,6 +125,7 @@ export class Preloader {
   playIntro(): Promise<void> {
     const reduced = this.options.reducedMotion ?? false;
     const words = Array.from(this.alinea.querySelectorAll('span'));
+    this.startDescriptionRotation();
     const tl = gsap.timeline({
       onComplete: () => this.resolveIntro(),
     });
@@ -149,6 +160,12 @@ export class Preloader {
       ease: 'power3.out',
       stagger: { each: 0.045, from: 'random' },
     });
+    tl.fromTo(
+      must(this.element, '.pf-preloader__ref'),
+      { opacity: 0, y: 8 },
+      { opacity: 0.7, y: 0, duration: 0.5, ease: 'power2.out' },
+      '-=0.4',
+    );
     // resonansi: kalimat utuh bercahaya sejenak (metafora penemuan koneksi semantik)
     tl.to(
       this.alinea,
@@ -160,7 +177,7 @@ export class Preloader {
       },
       '+=0.15',
     );
-    tl.to(this.alinea, {
+    tl.to([this.alinea, must(this.element, '.pf-preloader__ref')], {
       textShadow: '0 0 0px rgba(59,130,246,0)',
       opacity: 0,
       filter: 'blur(6px)',
@@ -221,6 +238,42 @@ export class Preloader {
     this.skipButton.disabled = true;
   }
 
+  /** deskripsi berganti tiap 2 detik dengan fade halus (berhenti saat finish) */
+  private startDescriptionRotation(): void {
+    const list = [this.options.description, ...(this.options.descriptions ?? [])].filter(Boolean);
+    if (list.length < 2 || this.descriptionTimer !== null) return;
+    const reduced = this.options.reducedMotion ?? false;
+    this.descriptionTimer = setInterval(() => {
+      this.descriptionIndex = (this.descriptionIndex + 1) % list.length;
+      const next = list[this.descriptionIndex] ?? '';
+      if (reduced) {
+        this.descriptionEl.textContent = next;
+        return;
+      }
+      gsap.to(this.descriptionEl, {
+        opacity: 0,
+        y: -6,
+        duration: 0.25,
+        ease: 'power2.in',
+        onComplete: () => {
+          this.descriptionEl.textContent = next;
+          gsap.fromTo(
+            this.descriptionEl,
+            { opacity: 0, y: 6 },
+            { opacity: 1, y: 0, duration: 0.35, ease: 'power2.out' },
+          );
+        },
+      });
+    }, 2000);
+  }
+
+  private stopDescriptionRotation(): void {
+    if (this.descriptionTimer !== null) {
+      clearInterval(this.descriptionTimer);
+      this.descriptionTimer = null;
+    }
+  }
+
   /** progres NYATA dari runLoadingStages */
   setProgress(progress: LoadingProgress): void {
     this.lastFraction = Math.max(this.lastFraction, progress.fraction);
@@ -237,7 +290,7 @@ export class Preloader {
       ? `${progress.label} (gagal, dilanjutkan)`
       : progress.done
         ? 'Siap.'
-        : progress.label;
+        : (progress.detail ?? progress.label);
   }
 
   /** logotype zoom out + reveal circular clip-path wipe; menghapus elemen di akhir */
@@ -245,6 +298,7 @@ export class Preloader {
     if (this.finished) return;
     this.finished = true;
     await this.introDone;
+    this.stopDescriptionRotation();
     const reduced = this.options.reducedMotion ?? false;
     const clip = { r: 150 };
     await new Promise<void>((resolve) => {
@@ -276,6 +330,7 @@ export class Preloader {
   }
 
   destroy(): void {
+    this.stopDescriptionRotation();
     this.timeline?.kill();
     this.element.remove();
   }
