@@ -310,6 +310,37 @@ html.pf-has-cursor [data-cursor] {
     0 30px 60px -30px rgba(0, 0, 0, 0.8);
 }
 
+/* ---------- merek: logo + logotype ---------- */
+.pf-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: inherit;
+  text-decoration: none;
+}
+
+.pf-brand__logo {
+  flex: none;
+  width: clamp(28px, 2.4vw, 36px);
+  height: auto;
+  border-radius: 8px;
+  filter: drop-shadow(0 4px 12px rgba(220, 38, 38, 0.35));
+}
+
+.pf-brand .pf-logotype {
+  font-size: 1.1rem;
+}
+
+@media (max-width: 480px) {
+  .pf-brand .pf-logotype {
+    display: none;
+  }
+
+  .pf-brand__logo {
+    width: 34px;
+  }
+}
+
 /* ---------- skip link ---------- */
 .pf-skip-link {
   position: absolute;
