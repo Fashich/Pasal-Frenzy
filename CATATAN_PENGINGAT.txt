@@ -36,6 +36,14 @@ Peran AI    : "M-shaped talent" (game designer + arsitek teknis + engineer 3D/fr
 [ ] Sebelum landing page: intro + loading bar, dengan deskripsi di bawah bar.
 [ ] Pasal Frenzy harus bisa dipakai tanpa internet (offline).
 [ ] Semua isi percakapan dicatat di file .txt ini agar tidak lupa.
+[ ] (12 Sep, sesi lanjutan) Alur produk WAJIB: intro > landing page > login/sign up (profil
+    lokal) > home page > fitur PRD; halaman ?dev=... hanya alat uji, bukan produk.
+[ ] Saat loading: deskripsi di bawah bar berganti otomatis tiap 2 detik; teks di bawah bar
+    menampilkan item yang benar-benar dimuat (font, naskah, modul engine, kata ke-N, audio).
+[ ] Teks intro jangan selalu alinea I: acak dari kumpulan kutipan asli (4 alinea + pasal kunci).
+[ ] Latar 3D landing harus memudar/blur saat di-scroll agar tidak menimpa teks.
+[ ] Tambahkan ganti bahasa: Indonesia (default) dan English/internasional.
+[ ] Hapus/ganti kalimat teknis yang "terasa buatan AI" (mis. menyebut IndexedDB di UI).
 
 3. KEPUTUSAN (disetujui Fashich, 12 Sep 2026)
 ---------------------------------------------
@@ -108,15 +116,24 @@ transitions}, data/{uud-1945.json,pasal-weights.json,case-relevance.json}, resea
 workers/}, electron/, android/, research/, .github/workflows/, vite.config.ts, tsconfig.json,
 eslint.config.js, playwright.config.ts, electron-builder.yml, capacitor.config.ts
 
-8. ALUR APLIKASI
-----------------
-Intro (layar hitam -> kata alinea I Pembukaan melayang -> logotype SplitText) ->
-Loading bar progres NYATA (data UUD, font, chunk Three, audio) + deskripsi di bawah bar ->
-Landing 3D in-world (hero void, section: Singularitas Konstitusional, 3 kasus, cara bermain,
-riset & data, unduh, footer) -> Mulai -> Prolog (void puzzle 4 alinea, Constitutional Ignition)
--> Kasus 1 Labirinto Hakiki (28A-28J) -> Kasus 2 Oligarki Digital (Pasal 33) ->
-Kasus 3 Singularitas Perppu (Pasal 22, Browser Corruption Protocol).
-Pause/Settings in-world: volume, kualitas, reduced motion, consent riset, ekspor, reset.
+8. ALUR APLIKASI (DIPERBARUI 12 Sep 2026 atas permintaan Fashich)
+------------------------------------------------------------------
+1. Intro (layar hitam -> kata alinea I Pembukaan melayang -> logotype SplitText)
+2. Loading bar progres NYATA (font, data UUD, chunk Three, audio) + deskripsi di bawah bar
+3. Landing page 3D in-world (hero void, section: Singularitas Konstitusional, 3 kasus,
+   cara bermain, riset & data, unduh, footer) -> tombol "Mulai Bermain"
+4. Masuk / Buat Profil (LOGIN/SIGN-UP versi offline): profil pemain LOKAL di IndexedDB
+   player_profile (nama, avatar warna, opsional kode partisipan riset), bisa >1 profil per
+   perangkat, pilih profil yang sudah ada. Tidak ada server (keputusan: offline + ekspor).
+   Akun cloud bisa ditambah nanti lewat layanan gratis tanpa kartu kredit jika diminta.
+5. Home page (hub): pilih bab (Prolog, Kasus 1-3; terkunci/terbuka), progres & integritas,
+   peta konstelasi pasal, pengaturan (volume, kualitas, reduced motion), riset (consent,
+   ekspor JSON/CSV), profil (ganti/keluar)
+6. Gameplay: Prolog (void puzzle 4 alinea, Constitutional Ignition) -> Kasus 1 Labirinto
+   Hakiki (28A-28J) -> Kasus 2 Oligarki Digital (Pasal 33) -> Kasus 3 Singularitas Perppu
+   (Pasal 22, Browser Corruption Protocol); pause in-world; kembali ke Home
+Catatan: halaman ?dev=... (corridor, typography, audio, preloader) HANYA halaman uji internal
+untuk verifikasi komponen; dinonaktifkan di build produksi, bukan bagian produk.
 Save: IndexedDB (player_profile, chapter_progress, pasal_mastery, constitutional_history,
 research_sessions).
 
@@ -148,7 +165,12 @@ research_sessions).
 [~] Fase 3  : [x] feature/09 preloader sinematik (intro alinea I -> logotype SplitText -> bar progres
                   NYATA + label tahap + deskripsi produk -> reveal clip-path), CustomCursor,
                   SceneTransition 3 jenis (~800 ms), typography.css + ui.css, demo ?dev=preloader
-              [ ] feature/20 landing page 3D responsif + AppShell (intro -> loading -> landing -> game)
+              [x] feature/20 AppShell + router hash + landing 3D (HeroScene: partikel GPU, kata
+                  Pembukaan troika font lokal, busur resonansi, paralaks, scrim blur saat scroll)
+                  + intro acak (intro-passages.json) + loading detail per item + deskripsi 2 detik
+                  + GameDB IndexedDB + layar Masuk/Profil + Beranda + GameScreen host + ChapterInterface
+                  (21 & 22 dikerjakan di dalam branch 20 agar alur utuh diuji sekaligus)
+              [ ] feature/23 i18n: Indonesia (default) + English, saklar di nav landing & beranda
 [ ] Fase 4  : feature/06 Mode Frenzy + DOM Injection + XPBD + partikel; feature/07 A-Frame XR
 [ ] Fase 5  : feature/10 Prolog; 11 Kasus 1; 12 Kasus 2; 13 Kasus 3
 [ ] Fase 6  : feature/14 IndexedDB + Constellation Map; 15 LOD/instancing/QualityManager
@@ -249,6 +271,23 @@ research_sessions).
             Diverifikasi di browser: intro tersusun, transisi 751-1083 ms, kursor aktif.
             pembukaan.json (4 alinea, ~3 KB) diemisi parser agar intro tampil instan.
             Tes 73 -> 74. Prompt Claude Design: docs/design/PROMPT-claude-design.md (sudah ada).
+2026-09-12  Fase 3 / feature/20: AppShell (preloader dipasang sebelum import berat; 5 tahap nyata
+            dengan detail item: font per keluarga, naskah/bobot kata, modul engine, kata ke-N dari M
+            dirender SDF, audio; deskripsi berganti tiap 2 s dari LOADING_DESCRIPTIONS faktual),
+            intro acak dari intro-passages.json (14 kutipan: 4 alinea + 10 unit pasal kunci, label
+            kutipan ditampilkan), router hash (#/, #/masuk, #/beranda, #/main/<bab>), landing page:
+            nav sticky + menu mobile, hero (logotype, tagline, statistik dihitung dari data),
+            Singularitas (3 panel kaca tilt, kutipan 1(3)/28A/33(3)), 3 kasus (kutipan 28J(2)/33(2)/
+            22(1)), cara bermain, riset (kartu provenance SHA-256), unduh (Releases), footer;
+            HeroScene Three: 1300 partikel shader + 44 kata troika (font Playfair woff lokal, TIDAK
+            CDN) + busur resonansi + paralaks pointer + kamera ikut scroll; scrim rgba 0.78 + blur 7px
+            saat scroll (permintaan Fashich) + kata memudar. GameDB (idb) 5 store + ekspor JSON/CSV,
+            ProfileScreen (profil lokal, kode partisipan), HomeScreen (bab terkunci berjenjang,
+            progres, pengaturan, riset consent/ekspor/hapus, profil), GameScreen host bab +
+            ChapterInterface + registry (bab diisi Fase 5). Kalimat teknis (IndexedDB dsb.) dihapus
+            dari UI atas permintaan. Alur diuji di browser: intro -> loading -> landing -> masuk ->
+            beranda. Tes 84. PELAJARAN: [hidden] harus !important karena kelas display:grid;
+            troika butuh font lokal + timeout agar preloader tak terkunci.
 
 13. PATH PENTING
 ----------------
