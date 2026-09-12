@@ -19,6 +19,11 @@ export async function startShell(root: HTMLElement): Promise<void> {
     await runTypographyDemo(root);
     return;
   }
+  if (dev === 'audio') {
+    const { runAudioDemo } = await import('../dev/AudioDemo.ts');
+    runAudioDemo(root);
+    return;
+  }
 
   const capabilities = detectCapabilities();
 
