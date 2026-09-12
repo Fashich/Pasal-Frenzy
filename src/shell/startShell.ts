@@ -14,6 +14,11 @@ export async function startShell(root: HTMLElement): Promise<void> {
     runCorridorDemo(root);
     return;
   }
+  if (dev === 'typography') {
+    const { runTypographyDemo } = await import('../dev/TypographyDemo.ts');
+    await runTypographyDemo(root);
+    return;
+  }
 
   const capabilities = detectCapabilities();
 
