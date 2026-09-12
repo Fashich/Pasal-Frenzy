@@ -487,15 +487,15 @@
 }
 
 /* ---------- reveal ---------- */
-[data-reveal] {
+.pf-landing [data-reveal] {
   opacity: 0;
   transform: translateY(28px);
   clip-path: inset(0 0 12% 0);
   filter: blur(6px);
 }
 
-.pf-no-motion [data-reveal],
-[data-reveal].is-in {
+.pf-no-motion .pf-landing [data-reveal],
+.pf-landing [data-reveal].is-in {
   opacity: 1;
   transform: none;
   clip-path: inset(0 0 0 0);
