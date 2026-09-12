@@ -142,7 +142,9 @@ research_sessions).
               [x] 05 PhaserEngine overlay transparan (Scale.RESIZE, Matter, sleeping, mouse spring),
                   pasal-weights.json (tf-idf korpus nyata) + case-relevance.json (desain) +
                   algoritma massa kata + TypographyStyle + demo ?dev=typography
-              [ ] 08 AudioEngine + GavelSynth + HeartbeatWorklet
+              [x] 08 AudioEngine (HRTF, 3 ConvolverNode IR sintetis, kompresor, AnalyserNode),
+                  ResponsiveSoundscape 3 lapis, GavelSynth, HeartbeatWorklet (AudioWorklet + fallback),
+                  WhisperSynth formant, CorruptiveHiss, demo ?dev=audio
 [ ] Fase 3  : feature/09 preloader + cursor + transisi; feature/20 intro + landing 3D responsif
 [ ] Fase 4  : feature/06 Mode Frenzy + DOM Injection + XPBD + partikel; feature/07 A-Frame XR
 [ ] Fase 5  : feature/10 Prolog; 11 Kasus 1; 12 Kasus 2; 13 Kasus 3
@@ -223,6 +225,16 @@ research_sessions).
             setWordKind, event collide/drag/sleep, batas dunia atas terbuka). Demo
             ?dev=typography terverifikasi: 44 kata Pasal 33 jatuh; terberat "orang" 4.92,
             teringan "dan" 1.05. 9 tes baru (58 total).
+2026-09-12  Fase 2 / feature/08: AudioEngine singleton (unlock via gesture, graf dry -> 3 convolver
+            [sidang/digital/krisis] IR SINTETIS deterministik -> DynamicsCompressor -> master ->
+            Analyser), SpatialSource PannerNode HRTF + listener dari kamera, volume ikut audioSlice.
+            ResponsiveSoundscape: drone saw 3 osc 110->82.5 Hz ikut integritas, CrisisLayer parsial
+            disonan + noise band (<0.4), FrenzyLayer pulsa 130 BPM + sub. GavelSynth 80/200 Hz +
+            transien kayu. HeartbeatWorklet: processor via Blob URL (lub 55->38 Hz, dub 72->48 Hz,
+            interval 900->450 ms + jitter), fallback main thread. WhisperSynth formant a/i/u/e/o.
+            CorruptiveHiss korporasi/populis/eksekutif. VERIFIKASI NYATA di browser lewat RMS
+            AnalyserNode: drone 0.052, frenzy 0.129, pulih 0.042; AudioWorklet aktif; 48 kHz.
+            9 tes baru (67 total). FASE 2 SELESAI.
 
 13. PATH PENTING
 ----------------
