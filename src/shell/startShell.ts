@@ -24,6 +24,11 @@ export async function startShell(root: HTMLElement): Promise<void> {
     runAudioDemo(root);
     return;
   }
+  if (dev === 'preloader') {
+    const { runPreloaderDemo } = await import('../dev/PreloaderDemo.ts');
+    await runPreloaderDemo(root);
+    return;
+  }
 
   const capabilities = detectCapabilities();
 
