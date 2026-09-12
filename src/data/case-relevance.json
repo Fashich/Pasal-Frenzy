@@ -1,0 +1,34 @@
+{
+  "catatan": "PARAMETER DESAIN GAME, bukan klaim empiris: relevansi pasal terhadap setiap bab (0..1) dipakai untuk memodulasi massa kata dan prioritas kata yang jatuh saat Mode Frenzy. Nilai dipilih oleh perancang berdasarkan tema naratif PRD Bagian VII-X.",
+  "chapters": {
+    "prolog": {
+      "judul": "Prolog: Puzzle Spasial Pembukaan",
+      "bagian": { "pembukaan": 1.0 },
+      "pasal": {},
+      "antagonis": []
+    },
+    "case-1-ham": {
+      "judul": "Labirinto Hakiki: HAM vs Keamanan Negara",
+      "bagian": {},
+      "pasal": {
+        "28A": 1.0, "28B": 0.8, "28C": 0.8, "28D": 1.0, "28E": 1.0, "28F": 0.9,
+        "28G": 1.0, "28H": 0.8, "28I": 1.0, "28J": 1.0, "1": 0.6, "27": 0.5, "30": 0.4
+      },
+      "antagonis": ["28J-2", "30-1", "30-2"]
+    },
+    "case-2-pasal33": {
+      "judul": "Oligarki dalam Kabut Digital: Pasal 33",
+      "bagian": {},
+      "pasal": { "33": 1.0, "23": 0.4, "18A": 0.3, "27": 0.5, "28H": 0.4, "34": 0.5 },
+      "ayat": { "33-2": 1.0, "33-3": 1.0, "33-4": 0.8, "33-1": 0.7, "33-5": 0.4 },
+      "antagonis": []
+    },
+    "case-3-perppu": {
+      "judul": "Singularitas Perppu: Pasal 22",
+      "bagian": {},
+      "pasal": { "22": 1.0, "5": 0.5, "20": 0.6, "7C": 0.6, "24C": 0.5, "1": 0.7, "12": 0.4 },
+      "ayat": { "22-3": 1.0, "22-2": 0.9, "22-1": 0.8 },
+      "antagonis": ["22-1", "12"]
+    }
+  }
+}

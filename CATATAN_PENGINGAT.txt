@@ -139,7 +139,10 @@ research_sessions).
                   (GLSL + cermin CPU) + ConstitutionalAnchors + PortalSystem + demo ?dev=corridor
               [x] 04 ChromaticAberrationPass (+desaturasi), SpatialDistortion (simplex, tekanan,
                   temporal flux), GlitchDOM 4 tahap (WCAG <=3 Hz, reduced-motion, restore bersih)
-              [ ] 05 Phaser overlay + fisika tipografi; [ ] 08 AudioEngine + GavelSynth + HeartbeatWorklet
+              [x] 05 PhaserEngine overlay transparan (Scale.RESIZE, Matter, sleeping, mouse spring),
+                  pasal-weights.json (tf-idf korpus nyata) + case-relevance.json (desain) +
+                  algoritma massa kata + TypographyStyle + demo ?dev=typography
+              [ ] 08 AudioEngine + GavelSynth + HeartbeatWorklet
 [ ] Fase 3  : feature/09 preloader + cursor + transisi; feature/20 intro + landing 3D responsif
 [ ] Fase 4  : feature/06 Mode Frenzy + DOM Injection + XPBD + partikel; feature/07 A-Frame XR
 [ ] Fase 5  : feature/10 Prolog; 11 Kasus 1; 12 Kasus 2; 13 Kasus 3
@@ -209,6 +212,17 @@ research_sessions).
             Unicode periodik >=1.2 s, scrollbar palsu + micro-tremor [data-glitch-target] via
             IntersectionObserver, clip-path VHS tear + translate steps() >=1.6 s, reduced-motion
             -> opacity fade). Diverifikasi di browser + 10 tes baru (49 total).
+2026-09-12  Fase 2 / feature/05: scripts/build-pasal-weights.py -> pasal-weights.json (203 unit,
+            849 kosakata, 4.055 token; tf/df/dfRatio/idf/tfidf NYATA; kata fungsional dari daftar
+            linguistik eksplisit, bukan df-ratio; normatifSkema = PARAMETER DESAIN berlabel;
+            mkCitations = null dengan catatan). case-relevance.json = parameter desain per bab.
+            wordMass.ts: massa = 0.6 + 2.4*tfidfNorm + 1.5*normatif + 1.0*relevansi + 0.5*panjang;
+            kata tugas x0.25 & restitusi 0.6; fundamental restitusi 0.12. gravitasi = 0.35 +
+            (1-integritas)*1.05. PhaserEngine (Phaser 3.90 ESM, WEBGL transparan, z-index 1,
+            pointer-events none kecuali setInteractive), OverlayScene (spawnWord/clear/
+            setWordKind, event collide/drag/sleep, batas dunia atas terbuka). Demo
+            ?dev=typography terverifikasi: 44 kata Pasal 33 jatuh; terberat "orang" 4.92,
+            teringan "dan" 1.05. 9 tes baru (58 total).
 
 13. PATH PENTING
 ----------------
