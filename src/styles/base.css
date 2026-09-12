@@ -74,6 +74,23 @@ canvas {
   display: block;
 }
 
+/* Canvas engine mengisi container-nya; ukuran buffer diatur renderer, bukan CSS. */
+.pf-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100% !important;
+  height: 100% !important;
+  outline: none;
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.pf-canvas--phaser {
+  pointer-events: none;
+  z-index: 1;
+}
+
 :focus-visible {
   outline: 2px solid var(--pf-gold);
   outline-offset: 3px;

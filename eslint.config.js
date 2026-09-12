@@ -28,8 +28,6 @@ export default tseslint.config(
       globals: {
         ...globals.browser,
         ...globals.worker,
-        __APP_VERSION__: 'readonly',
-        __BUILD_TARGET__: 'readonly',
       },
     },
     rules: {
