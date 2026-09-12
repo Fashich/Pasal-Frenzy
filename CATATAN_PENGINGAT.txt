@@ -137,7 +137,8 @@ research_sessions).
               [x] feature/02 ConstitutionalStore (5 slice + Frenzy) + ConstitutionalEventBus + SettingsStore
 [~] Fase 2  : [x] feature/03 ThreeEngine + InputManager + FirstPersonRig + ruang hiperbolik
                   (GLSL + cermin CPU) + ConstitutionalAnchors + PortalSystem + demo ?dev=corridor
-              [ ] 04 shader (chromatic, distortion, GlitchDOM);
+              [x] 04 ChromaticAberrationPass (+desaturasi), SpatialDistortion (simplex, tekanan,
+                  temporal flux), GlitchDOM 4 tahap (WCAG <=3 Hz, reduced-motion, restore bersih)
               [ ] 05 Phaser overlay + fisika tipografi; [ ] 08 AudioEngine + GavelSynth + HeartbeatWorklet
 [ ] Fase 3  : feature/09 preloader + cursor + transisi; feature/20 intro + landing 3D responsif
 [ ] Fase 4  : feature/06 Mode Frenzy + DOM Injection + XPBD + partikel; feature/07 A-Frame XR
@@ -200,6 +201,14 @@ research_sessions).
             file baru ditambahkan (cache resolusi). Pane browser embedded tidak mengizinkan
             pointer lock (WrongDocumentError) -> uji mouse look harus di Chrome/Electron asli.
             fps di pane 22-60 (tidak representatif; benchmark resmi nanti via Playwright headed).
+2026-09-12  Fase 2 / feature/04: ChromaticAberrationPass (offset eksponensial maks 15 px, arah
+            radial+global, jitter Frenzy <3 Hz, desaturasi erosi demokrasi), simplexNoise.glsl
+            (Ashima, MIT) + spatialDistortion.glsl (u_democracyPressure, u_temporalFlux, sampel
+            ruang dunia agar sambungan mesh tidak bercelah) disuntik lewat applyConstitutionalWarp
+            bersama warp hiperbolik; GlitchDOM.ts = Browser Corruption Protocol 4 tahap (judul
+            Unicode periodik >=1.2 s, scrollbar palsu + micro-tremor [data-glitch-target] via
+            IntersectionObserver, clip-path VHS tear + translate steps() >=1.6 s, reduced-motion
+            -> opacity fade). Diverifikasi di browser + 10 tes baru (49 total).
 
 13. PATH PENTING
 ----------------
