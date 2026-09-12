@@ -182,8 +182,10 @@ research_sessions).
                   PIN opsional (hash SHA-256 + salt, lokal), penyimpanan: web = localStorage
                   browser (tanpa server/IndexedDB), aplikasi = IndexedDB (GameDB); satu kontrak
                   PersistenceAdapter untuk keduanya
-              [ ] feature/22 Beranda premium (desain ulang: latar ambien, gauge integritas,
-                  jalur bab, ubin statistik, panel kaca bergradien)
+              [x] feature/22 Beranda premium (latar ambien + butir, bilah atas kaca, judul serif
+                  besar dengan nama bergradien emas, gauge integritas SVG, ubin statistik, jalur
+                  4 bab bertepi gradien + angka Romawi, panel kaca; prompt Claude Design ditambah
+                  layar Masuk/Daftar dan Beranda)
               [ ] feature/23 i18n: Indonesia (default) + English, saklar di nav landing & beranda
 [ ] Fase 4  : feature/06 Mode Frenzy + DOM Injection + XPBD + partikel; feature/07 A-Frame XR
 [ ] Fase 5  : feature/10 Prolog; 11 Kasus 1; 12 Kasus 2; 13 Kasus 3
@@ -322,3 +324,11 @@ Skill referensi: C:\Users\ASUS\Downloads\Skill-Claude\ (makalah-word, blueprint-
             Pelajaran: heredoc Bash gagal parse bila isi mengandung kutip tak seimbang ->
             skrip patch ditulis ke file scratchpad lalu dijalankan python; setiap fitur
             dipisah branch sendiri (feature/20 dikomit bersih dulu, baru feature/21).
+2026-09-12  Fase 3 / feature/22: Beranda didesain ulang agar terasa premium (permintaan: "masih
+            jelek, ngga keliatan mahal"). screens.css ditulis ulang: .pf-ambient (glow biru/merah
+            bergerak 28 s + grain SVG), .pf-topbar--sticky dengan garis rambut emas, judul
+            clamp hingga 5.6rem dengan nama italic gradien emas, .pf-gauge (cincin SVG
+            stroke-dashoffset dari integrity nyata), .pf-stats, .pf-chapter (tepi gradien via
+            mask-composite, numeral Romawi, pill status, hover angkat), .pf-panel, saklar pill.
+            Tidak ada angka contoh: semua dari adapter penyimpanan & store. docs/design/PROMPT-
+            claude-design.md ditambah artboard 3b (Masuk/Daftar) dan 3c (Beranda) untuk dicopas.
