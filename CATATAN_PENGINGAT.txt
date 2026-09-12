@@ -1,0 +1,170 @@
+=====================================================================
+CATATAN PENGINGAT — PASAL FRENZY
+Dibuat: 12 September 2026. Diperbarui setiap fase. Bahasa: Indonesia.
+File ini adalah memori kerja proyek: permintaan pemilik proyek (Fashich),
+keputusan, fakta lingkungan, aturan kerja, dan log progres.
+=====================================================================
+
+1. IDENTITAS PROYEK
+-------------------
+Nama        : Pasal Frenzy
+Jenis       : Web game 3D naratif-kritis tentang UUD NRI 1945 (edukasi konstitusi)
+Pemilik     : Fashich (GitHub Fashich, thalassaaddict@gmail.com)
+Repo        : https://github.com/Fashich/Pasal-Frenzy  (public, dibuat 12 Sep 2026)
+Folder lokal: C:\laragon\www\Project.Self\Pasal Frenzy
+Dokumen     : docs/Pasal_Frenzy_PRD_v1.0.md (binding), docs/Pasal_Frenzy_Dev_Planning.md
+Sumber teks : data-source/UUD-NRI-1945-Dalam-Satu-Naskah.pdf (MPR RI, 49 hal)
+              SHA-256 ec6615bead1fa534af3a06c060716ab407b90fc3fbb3b7d2d25a646b49502445
+Peran AI    : "M-shaped talent" (game designer + arsitek teknis + engineer 3D/frontend
+              + DevOps + peneliti) dan peneliti lanjutan; membangun MVP penuh.
+
+2. PERMINTAAN PEMILIK PROYEK (dari percakapan 12 Sep 2026)
+----------------------------------------------------------
+[ ] Bangun project sesuai PRD (MVP: Prolog + 3 Kasus), berperan M-shaped talent.
+[ ] Setelah project selesai: riset untuk artikel jurnal terindeks Scopus.
+[ ] TIDAK boleh ada data fabrikasi/fiktif. Ini proyek nyata. Angka yang tidak
+    tersedia dibiarkan kosong (null) dan dijelaskan, bukan dikarang.
+[ ] Jadikan aplikasi desktop (.exe) dan Android (.apk).
+[ ] Responsif di semua perangkat, tanpa slop, jangan sampai ada kesalahan.
+[ ] Git dijalankan langsung lewat PowerShell/terminal (commit, push, merge, pull,
+    branch) tanpa PR manual. AI TIDAK boleh muncul sebagai kontributor:
+    tanpa trailer Co-Authored-By, tanpa commit bot. Author = Fashich.
+[ ] Self-hosting/hosting gratis: tanpa biaya, tanpa kartu kredit, tanpa trial.
+[ ] Pertimbangkan: perlu Docker? database apa (PostgreSQL/Postman/phpMyAdmin)?
+[ ] Website bergaya custom 3D designer: animasi penuh, elemen interaktif 3D,
+    fungsional, kesan premium (bukan web biasa).
+[ ] Sebelum landing page: intro + loading bar, dengan deskripsi di bawah bar.
+[ ] Pasal Frenzy harus bisa dipakai tanpa internet (offline).
+[ ] Semua isi percakapan dicatat di file .txt ini agar tidak lupa.
+
+3. KEPUTUSAN (disetujui Fashich, 12 Sep 2026)
+---------------------------------------------
+Docker      : TIDAK dipakai. Tidak ada server; build reproducible via GitHub Actions.
+Database    : IndexedDB di perangkat (bukan PostgreSQL/MySQL). Catatan: Postman adalah
+              API client, phpMyAdmin adalah admin MySQL; keduanya bukan database.
+Data riset  : Lokal + ekspor JSON/CSV (opt-in consent). Tanpa server.
+Hosting web : GitHub Pages lewat Actions artifact (tanpa branch gh-pages, tanpa commit bot).
+              URL target: https://fashich.github.io/Pasal-Frenzy/
+Desktop     : Electron 44 + electron-builder 26 (NSIS installer + portable .exe).
+Android     : Capacitor 8; APK dibangun di GitHub Actions (runner sudah punya Android SDK).
+WebXR       : A-Frame 1.8 implementasi penuh sesuai PRD, lazy-loaded; sesi immersive
+              ditandai jujur "belum diuji di headset".
+Atribusi    : Commit tanpa trailer AI apa pun. Author/committer = Fashich.
+Landing page: Dibuat in-world 3D (hero = void kata Pembukaan) agar tetap sejalan
+              dengan filosofi PRD "tidak ada title screen terpisah".
+Font        : @fontsource (self-hosted, OFL), BUKAN Google Fonts CDN (wajib offline).
+Aset        : Semua prosedural (geometri, teks, audio, impulse response). Tanpa CDN runtime.
+
+4. FAKTA LINGKUNGAN (diverifikasi 12 Sep 2026)
+----------------------------------------------
+OS/HW  : Windows 11 Home, RAM 14 GB, GPU AMD Radeon integrated 2 GB (kelas target PRD).
+Tools  : Node 25.6.0, npm 11.19.1, pnpm 10.33, Git 2.51.1 (credential.helper=manager),
+         Docker 29.5.3, Python 3.11.9 + pypdf 6.12.2, Java 25, VS Build Tools 2026,
+         WebView2 ada, winget 1.29. TIDAK ada: Rust, Android SDK, gh CLI, Blender.
+Disk   : C: sisa ~12,9 GB. Jangan install Android SDK lokal. Sebaiknya kosongkan >=5 GB.
+PDF    : Punya text layer; noise yang dibersihkan parser: footer jdih.bapeten.go.id,
+         nomor halaman, soft-hyphen U+00AD, pemenggalan baris, legenda footnote,
+         penanda amandemen 1)-4).
+Logo   : src/assets/brand/pasal-frenzy-logo-123px.png hanya 123x123 px -> ikon/favicon
+         saja; logotype landing dibuat tipografis (PASAL #DC2626 / FRENZY #F8F8F8).
+Repo   : Kosong saat init (size 0, default branch main).
+
+5. STACK & VERSI (terverifikasi npm 12 Sep 2026)
+------------------------------------------------
+vite 8.3.0 | typescript 5.9.3 (BUKAN 7.x: typescript-eslint butuh <6.1)
+super-three 0.184.0 di-alias sebagai "three" (+ resolve.dedupe) agar satu instance
+  dengan aframe 1.8.0 (yang mem-pin super-three 0.184.0); @types/three 0.184.1
+phaser 3.90.0 (Matter.js bawaan; bukan Phaser 4)
+zustand 5.0.15 (vanilla createStore) | gsap 3.15.0 (ScrollTrigger+SplitText gratis) | lenis 1.3.26
+troika-three-text 0.52.5 | idb 8.0.3 | comlink 4.4.2
+vite-plugin-glsl 1.6.1 | vite-plugin-pwa 1.3.0 (+ @vite-pwa/assets-generator 1.0.2)
+electron 44.3.0 | electron-builder 26.15.3
+@capacitor/core|cli|android 8.5.2
+vitest 5.0.0 | @playwright/test 1.63.0 | eslint 10.10.0 | prettier 3.9.6 | typescript-eslint 8.70.0
+@fontsource/playfair-display, space-grotesk, jetbrains-mono 5.3.0
+
+6. ATURAN KERJA GIT
+-------------------
+Branch : main <- development <- feature/NN-nama (dari development).
+         feature/01-project-setup ... feature/16-deployment (sesuai Dev Planning) +
+         feature/17-electron-desktop, feature/18-capacitor-android,
+         feature/19-research-telemetry, feature/20-landing-intro.
+Commit : git commit -m "<summary <=72 char>" -m "<description>" (template Dev Planning,
+         bahasa Indonesia). Tanpa trailer apa pun.
+Merge  : git merge --no-ff feature/x ke development dengan pesan template
+         "Merge feature/[nama] into development". development -> main saat rilis + tag v1.0.0.
+Push   : langsung ke origin. Push pertama membuka jendela login Git Credential Manager;
+         Fashich yang login (AI tidak memasukkan kredensial).
+CI     : ci.yml (lint/typecheck/test/build/playwright), deploy-pages.yml (main -> Pages via
+         artifact), release.yml (tag v* -> .exe di windows-latest, .apk di ubuntu-latest,
+         unggah ke GitHub Release). Tidak ada workflow yang membuat commit. Dependabot off.
+
+7. STRUKTUR REPO (target)
+-------------------------
+CATATAN_PENGINGAT.txt, README.md, docs/, data-source/, scripts/build-uud1945.py,
+src/{main.ts, core/{engine,store,audio,shaders,input,quality}, chapters/{ChapterInterface.ts,
+prolog,case-1-ham,case-2-pasal33,case-3-perppu}, landing/, ui/{preloader,hud,settings,
+transitions}, data/{uud-1945.json,pasal-weights.json,case-relevance.json}, research/,
+workers/}, electron/, android/, research/, .github/workflows/, vite.config.ts, tsconfig.json,
+eslint.config.js, playwright.config.ts, electron-builder.yml, capacitor.config.ts
+
+8. ALUR APLIKASI
+----------------
+Intro (layar hitam -> kata alinea I Pembukaan melayang -> logotype SplitText) ->
+Loading bar progres NYATA (data UUD, font, chunk Three, audio) + deskripsi di bawah bar ->
+Landing 3D in-world (hero void, section: Singularitas Konstitusional, 3 kasus, cara bermain,
+riset & data, unduh, footer) -> Mulai -> Prolog (void puzzle 4 alinea, Constitutional Ignition)
+-> Kasus 1 Labirinto Hakiki (28A-28J) -> Kasus 2 Oligarki Digital (Pasal 33) ->
+Kasus 3 Singularitas Perppu (Pasal 22, Browser Corruption Protocol).
+Pause/Settings in-world: volume, kualitas, reduced motion, consent riset, ekspor, reset.
+Save: IndexedDB (player_profile, chapter_progress, pasal_mastery, constitutional_history,
+research_sessions).
+
+9. DATA NYATA
+-------------
+- uud-1945.json: hasil parse PDF resmi + blok provenance (sumber, sha256, tanggal, tool).
+  Validasi: Pasal 1-37 lengkap, 28A-28J ada, Pasal 33 = 5 ayat, Pasal 22 = 3 ayat,
+  4 alinea Pembukaan; spot-check manual ke gambar halaman.
+- pasal-weights.json: HANYA dari fakta terhitung (TF-IDF korpus UUD, jumlah ayat, amandemen).
+  Field mkCitations = null (frekuensi yurisprudensi MK tidak tersedia offline; tidak dikarang).
+- case-relevance.json: parameter desain, dilabeli desain (bukan klaim empiris).
+- Vektor resonansi prolog: heuristik deterministik dari teks asli, bukan model NLP.
+
+10. RENCANA FASE & STATUS
+-------------------------
+[x] Fase 0  : init repo, docs/, data-source/, .gitignore, README, catatan ini, branch development
+[ ] Fase 1  : feature/01 scaffold Vite+TS+lint+vitest; parser PDF -> uud-1945.json;
+              feature/02 ConstitutionalStore (5 slice) + ConstitutionalEventBus
+[ ] Fase 2  : feature/03 ThreeEngine; 04 shader (hyperbolic, chromatic, distortion, GlitchDOM);
+              05 Phaser overlay + fisika tipografi; 08 AudioEngine + GavelSynth + HeartbeatWorklet
+[ ] Fase 3  : feature/09 preloader + cursor + transisi; feature/20 intro + landing 3D responsif
+[ ] Fase 4  : feature/06 Mode Frenzy + DOM Injection + XPBD + partikel; feature/07 A-Frame XR
+[ ] Fase 5  : feature/10 Prolog; 11 Kasus 1; 12 Kasus 2; 13 Kasus 3
+[ ] Fase 6  : feature/14 IndexedDB + Constellation Map; 15 LOD/instancing/QualityManager
+[ ] Fase 7  : feature/16 PWA + Pages CI; 17 Electron; 18 Capacitor; 19 telemetri riset
+[ ] Fase 8  : QA sweep (Playwright 7 viewport, offline, axe, Lighthouse), README, rilis v1.0.0
+[ ] Fase 9  : Riset jurnal Scopus (DSR + benchmark nyata + protokol studi pengguna + draft .docx)
+
+11. YANG PERLU DILAKUKAN FASHICH SENDIRI
+----------------------------------------
+1. Login GitHub di jendela Git Credential Manager saat push pertama.
+2. Jika configure-pages enablement gagal: Settings -> Pages -> Source: GitHub Actions.
+3. (Opsional) Secret GitHub: ANDROID_KEYSTORE_BASE64, ANDROID_KEYSTORE_PASSWORD,
+   ANDROID_KEY_ALIAS, ANDROID_KEY_PASSWORD untuk APK release-signed.
+4. (Opsional) Logo resolusi >=1024 px jika ingin logo gambar di hero.
+5. Kosongkan >=5 GB disk tambahan.
+6. Nanti saat submit jurnal: putuskan deklarasi penggunaan generative AI sesuai
+   kebijakan penerbit (Elsevier/Springer/IEEE umumnya mewajibkan).
+
+12. LOG PROGRES
+---------------
+2026-09-12  Riset kondisi mesin, PRD, Dev Planning, PDF UUD. Rencana disetujui.
+2026-09-12  Fase 0: git init (main), dokumen dipindah ke docs/, PDF sumber + SHA-256 ke
+            data-source/, .gitignore/.gitattributes/README, catatan ini. Branch development dibuat.
+
+13. PATH PENTING
+----------------
+Rencana penuh : C:\Users\ASUS\.claude\plans\c-users-asus-downloads-skill-claude-mak-binary-ladybug.md
+Memori sesi   : C:\Users\ASUS\.claude\projects\C--laragon-www-Project-Self-Pasal-Frenzy\memory\
+Skill referensi: C:\Users\ASUS\Downloads\Skill-Claude\ (makalah-word, blueprint-analyzer,
+                realtime-researcher, analytical-thinker, stop-slop)

@@ -1,0 +1,53 @@
+# dependencies
+node_modules/
+.pnpm-store/
+
+# build output
+dist/
+dist-electron/
+dist-ssr/
+release/
+out/
+.vite/
+*.tsbuildinfo
+
+# env & secrets
+.env
+.env.*
+!.env.example
+*.keystore
+*.jks
+*.pem
+*.p12
+
+# android build artefacts (project scaffold tetap di-commit)
+android/.gradle/
+android/build/
+android/app/build/
+android/app/release/
+android/local.properties
+android/.idea/
+android/*.iml
+android/app/*.iml
+android/captures/
+
+# tests
+coverage/
+playwright-report/
+test-results/
+blob-report/
+playwright/.cache/
+
+# tooling
+.eslintcache
+.lighthouseci/
+*.log
+npm-debug.log*
+
+# OS / editor
+desktop.ini
+Thumbs.db
+.DS_Store
+.idea/
+.vscode/*
+!.vscode/extensions.json
