@@ -35,6 +35,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 PDF_PATH = ROOT / "data-source" / "UUD-NRI-1945-Dalam-Satu-Naskah.pdf"
 OUT_PATH = ROOT / "src" / "data" / "uud-1945.json"
+PEMBUKAAN_PATH = ROOT / "src" / "data" / "pembukaan.json"
 REPORT_PATH = ROOT / "docs" / "data-validation" / "uud-1945-report.md"
 
 SOFT_HYPHEN = "­"
@@ -659,6 +660,14 @@ def build() -> int:
     OUT_PATH.parent.mkdir(parents=True, exist_ok=True)
     OUT_PATH.write_text(
         json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n"
+    )
+    # salinan kecil Pembukaan untuk shell/intro (dimuat statis, tanpa menunggu naskah penuh)
+    pembukaan = {
+        "provenance": {"sourceFile": provenance["sourceFile"], "sha256": provenance["sha256"]},
+        "alinea": data["pembukaan"]["alinea"],
+    }
+    PEMBUKAAN_PATH.write_text(
+        json.dumps(pembukaan, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n"
     )
 
     print(f"JSON  : {OUT_PATH.relative_to(ROOT).as_posix()} ({OUT_PATH.stat().st_size:,} byte)")

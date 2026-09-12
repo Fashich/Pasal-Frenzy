@@ -7,6 +7,8 @@
  * (lihat PRD Bagian III).
  */
 import './styles/base.css';
+import './styles/typography.css';
+import './styles/ui.css';
 import { APP_VERSION, BUILD_TARGET } from './buildInfo.ts';
 
 const root = document.getElementById('app');

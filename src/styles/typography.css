@@ -1,0 +1,122 @@
+/* Sistem tipografi global (Dev Planning 09 #2)
+   Playfair Display = hero & kutipan pasal (otoritatif)
+   Space Grotesk    = label UI & metadata (modern)
+   JetBrains Mono   = teks hukum (feel dokumen legal) */
+:root {
+  --pf-t-display: clamp(3rem, 1.8rem + 6.5vw, 7.5rem);
+  --pf-t-h1: clamp(2.25rem, 1.6rem + 3vw, 4.25rem);
+  --pf-t-h2: clamp(1.5rem, 1.2rem + 1.6vw, 2.5rem);
+  --pf-t-h3: clamp(1.15rem, 1.05rem + 0.6vw, 1.5rem);
+  --pf-t-lead: clamp(1.05rem, 1rem + 0.45vw, 1.35rem);
+  --pf-t-body: clamp(0.95rem, 0.9rem + 0.3vw, 1.125rem);
+  --pf-t-small: 0.875rem;
+  --pf-t-mono: 0.85rem;
+  --pf-lh-tight: 1.05;
+  --pf-lh-snug: 1.25;
+  --pf-lh-body: 1.6;
+  --pf-track-display: -0.025em;
+  --pf-track-eyebrow: 0.18em;
+}
+
+.pf-display {
+  font-family: var(--pf-font-display);
+  font-weight: 900;
+  font-size: var(--pf-t-display);
+  line-height: var(--pf-lh-tight);
+  letter-spacing: var(--pf-track-display);
+  margin: 0;
+}
+
+.pf-h1 {
+  font-family: var(--pf-font-display);
+  font-weight: 700;
+  font-size: var(--pf-t-h1);
+  line-height: var(--pf-lh-tight);
+  letter-spacing: -0.015em;
+  margin: 0;
+}
+
+.pf-h2 {
+  font-family: var(--pf-font-display);
+  font-weight: 700;
+  font-size: var(--pf-t-h2);
+  line-height: var(--pf-lh-snug);
+  margin: 0;
+}
+
+.pf-h3 {
+  font-family: var(--pf-font-ui);
+  font-weight: 700;
+  font-size: var(--pf-t-h3);
+  line-height: var(--pf-lh-snug);
+  margin: 0;
+}
+
+.pf-lead {
+  font-family: var(--pf-font-ui);
+  font-size: var(--pf-t-lead);
+  line-height: 1.5;
+  color: var(--pf-fg-muted);
+  margin: 0;
+}
+
+.pf-body {
+  font-family: var(--pf-font-ui);
+  font-size: var(--pf-t-body);
+  line-height: var(--pf-lh-body);
+  margin: 0;
+}
+
+.pf-eyebrow {
+  font-family: var(--pf-font-ui);
+  font-weight: 500;
+  font-size: var(--pf-t-small);
+  letter-spacing: var(--pf-track-eyebrow);
+  text-transform: uppercase;
+  color: var(--pf-red);
+  margin: 0;
+}
+
+.pf-mono {
+  font-family: var(--pf-font-mono);
+  font-size: var(--pf-t-mono);
+  line-height: 1.55;
+}
+
+.pf-quote {
+  font-family: var(--pf-font-mono);
+  font-size: clamp(0.9rem, 0.85rem + 0.35vw, 1.05rem);
+  line-height: 1.6;
+  color: var(--pf-fg);
+  margin: 0;
+}
+
+.pf-quote__ref {
+  display: block;
+  margin-top: 0.75rem;
+  font-family: var(--pf-font-ui);
+  font-size: var(--pf-t-small);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--pf-fg-muted);
+}
+
+/* Logotype: PASAL merah, FRENZY putih (Dev Planning 09) */
+.pf-logotype {
+  font-family: var(--pf-font-display);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  margin: 0;
+  display: inline-flex;
+  gap: 0.22em;
+  white-space: nowrap;
+}
+
+.pf-logotype__pasal {
+  color: var(--pf-red);
+}
+
+.pf-logotype__frenzy {
+  color: var(--pf-fg);
+}
