@@ -12,6 +12,25 @@
   pointer-events: none;
 }
 
+/* scene Spline opsional (slot landing-hero) di antara partikel dan konten */
+.pf-landing__spline {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 1200ms ease;
+}
+
+.pf-landing__spline.is-loaded {
+  opacity: 1;
+}
+
+.pf-landing--spline .pf-landing__hero-canvas {
+  opacity: 0.45;
+  transition: opacity 1200ms ease;
+}
+
 /* lapisan peredup + blur di atas canvas: latar memudar saat konten di-scroll */
 .pf-landing__scrim {
   position: fixed;

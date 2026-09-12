@@ -29,6 +29,11 @@ export async function startShell(root: HTMLElement): Promise<void> {
     await runPreloaderDemo(root);
     return;
   }
+  if (dev === 'spline') {
+    const { runSplineDemo } = await import('../dev/SplineDemo.ts');
+    await runSplineDemo(root);
+    return;
+  }
 
   const capabilities = detectCapabilities();
   if (dev === null) {

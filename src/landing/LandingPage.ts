@@ -10,6 +10,8 @@ import Lenis from 'lenis';
 import './landing.css';
 import { HERO, KASUS, KUTIPAN, LANGKAH, STATISTIK } from './content.ts';
 import { HeroScene } from './HeroScene.ts';
+import { resolveSplineScene } from '@data/splineScenes.ts';
+import { SplineStage } from '@ui/spline/SplineStage.ts';
 import { APP_VERSION, IS_APP_BUILD } from '../buildInfo.ts';
 import { PRODUCT_DESCRIPTION, SOURCE_STATEMENT } from '../shell/copy.ts';
 
@@ -38,6 +40,8 @@ export class LandingPage {
   private readonly options: LandingOptions;
   private lenis: Lenis | null = null;
   private session: LandingSession | null = null;
+  /** scene Spline opsional di atas partikel (slot 'landing-hero'); null bila slot kosong */
+  private spline: SplineStage | null = null;
   private triggers: ScrollTrigger[] = [];
   private rafTicker: ((time: number) => void) | null = null;
   private readonly pointerHandler = (e: PointerEvent) => {
@@ -61,6 +65,20 @@ export class LandingPage {
       lite: options.lite,
     });
     this.bind();
+    this.mountSpline();
+  }
+
+  /** memasang scene Spline bila slot 'landing-hero' terisi; gagal = tetap partikel Three.js */
+  private mountSpline(): void {
+    const url = resolveSplineScene('landing-hero');
+    if (!url || this.options.lite) return;
+    const host = this.element.querySelector('.pf-landing__spline') as HTMLElement;
+    this.spline = new SplineStage(host, {
+      url,
+      onLoad: () => this.element.classList.add('pf-landing--spline'),
+      onError: (err) => console.warn('[spline] landing-hero gagal dimuat:', err),
+    });
+    void this.spline.load();
   }
 
   private template(): string {
@@ -134,6 +152,7 @@ export class LandingPage {
     return `
       <a class="pf-skip-link" href="#pf-main">Lewati ke konten</a>
       <div class="pf-landing__hero-canvas" aria-hidden="true"></div>
+      <div class="pf-landing__spline" aria-hidden="true"></div>
       <div class="pf-landing__scrim" aria-hidden="true"></div>
       <div class="pf-landing__content">
         <header class="pf-nav">
@@ -378,6 +397,7 @@ export class LandingPage {
     if (this.started) return;
     this.started = true;
     this.hero.start();
+    this.spline?.resume();
     window.addEventListener('pointermove', this.pointerHandler, { passive: true });
     if (this.lenis) {
       this.lenis.start();
@@ -444,6 +464,7 @@ export class LandingPage {
     if (!this.started) return;
     this.started = false;
     this.hero.stop();
+    this.spline?.pause();
     this.lenis?.stop();
     window.removeEventListener('pointermove', this.pointerHandler);
   }
@@ -456,6 +477,8 @@ export class LandingPage {
     if (this.rafTicker) gsap.ticker.remove(this.rafTicker);
     this.lenis?.destroy();
     this.lenis = null;
+    this.spline?.dispose();
+    this.spline = null;
     this.hero.dispose();
     this.element.remove();
   }

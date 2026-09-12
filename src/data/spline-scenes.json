@@ -1,0 +1,5 @@
+{
+  "$comment": "Slot scene Spline yang di-host sendiri. Nilai null = slot kosong (tampilan fallback dipakai). Isi dengan path relatif ke public/, mis. \"spline/beranda.splinecode\", setelah mengekspor dari Spline (lihat docs/design/BRIEF-spline.md). Jalankan `npm run spline:sync` agar modul WASM runtime ikut tersalin ke public/spline/wasm/.",
+  "landing-hero": null,
+  "beranda": null
+}
