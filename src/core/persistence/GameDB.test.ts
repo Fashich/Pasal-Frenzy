@@ -74,6 +74,15 @@ describe('GameDB (IndexedDB)', () => {
     expect(exp?.pasalMastery[0]?.profileId).toBe(p.id);
   });
 
+  it('menyimpan PIN sebagai hash dan tidak mengekspornya', async () => {
+    const p = await db.createProfile({ name: 'Kunci', pin: '1234' });
+    expect(p.pinHash).toMatch(/^(sha256|fnv):/);
+    expect(p.pinSalt).toHaveLength(32);
+    const exp = await db.exportProfile(p.id, '0.1.0');
+    expect(exp?.profile.pinHash).toBeNull();
+    expect((await db.createProfile({ name: 'Bebas' })).pinHash).toBeNull();
+  });
+
   it('menghapus profil beserta seluruh datanya', async () => {
     const p = await db.createProfile({ name: 'Hapus' });
     await db.saveChapterProgress({

@@ -15,6 +15,8 @@
 import { openDB, type DBSchema, type IDBPDatabase } from 'idb';
 import type { ChapterOutcome } from '@core/engine/ConstitutionalEventBus.ts';
 import type { ConstitutionalSnapshot, PasalMastery } from '@core/store/types.ts';
+import type { CreateProfileInput, PersistenceAdapter } from './PersistenceAdapter.ts';
+import { hashPin, makeSalt } from './pin.ts';
 
 export const DB_NAME = 'pasal-frenzy';
 export const DB_VERSION = 1;
@@ -29,6 +31,9 @@ export interface PlayerProfile {
   lastActiveAt: number;
   participantCode: string | null;
   totalPlayTimeMs: number;
+  /** pengunci lokal opsional (lihat pin.ts); null/undefined = tanpa PIN */
+  pinHash?: string | null;
+  pinSalt?: string | null;
 }
 
 export interface ChapterProgressRecord {
@@ -116,7 +121,9 @@ export interface ProfileExport {
   researchSessions: ResearchSessionRecord[];
 }
 
-export class GameDB {
+export class GameDB implements PersistenceAdapter {
+  readonly mode = 'app' as const;
+
   private constructor(private readonly db: IDBPDatabase<PasalFrenzySchema>) {}
 
   static async open(name = DB_NAME): Promise<GameDB> {
@@ -150,14 +157,13 @@ export class GameDB {
     return this.db.get('player_profile', id);
   }
 
-  async createProfile(input: {
-    name: string;
-    color?: string;
-    participantCode?: string | null;
-  }): Promise<PlayerProfile> {
+  async createProfile(input: CreateProfileInput): Promise<PlayerProfile> {
     const now = Date.now();
     const existing = await this.listProfiles();
     const color = input.color ?? AVATAR_COLORS[existing.length % AVATAR_COLORS.length] ?? '#dc2626';
+    const pin = input.pin?.trim() || null;
+    const pinSalt = pin ? makeSalt() : null;
+    const pinHash = pin && pinSalt ? await hashPin(pin, pinSalt) : null;
     const profile: PlayerProfile = {
       id: makeId('p'),
       name: input.name.trim(),
@@ -166,6 +172,8 @@ export class GameDB {
       lastActiveAt: now,
       participantCode: input.participantCode?.trim() || null,
       totalPlayTimeMs: 0,
+      pinHash,
+      pinSalt,
     };
     await this.db.put('player_profile', profile);
     return profile;
@@ -293,7 +301,8 @@ export class GameDB {
     return {
       exportedAt: new Date().toISOString(),
       appVersion,
-      profile,
+      // hash PIN tidak ikut diekspor
+      profile: { ...profile, pinHash: null, pinSalt: null },
       chapterProgress: await this.listChapterProgress(profileId),
       pasalMastery: await this.db.getAllFromIndex('pasal_mastery', 'byProfile', profileId),
       history: await this.listHistory(profileId),
