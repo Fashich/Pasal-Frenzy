@@ -1,0 +1,927 @@
+{
+  "provenance": {
+    "sourceFile": "data-source/UUD-NRI-1945-Dalam-Satu-Naskah.pdf",
+    "sha256": "ec6615bead1fa534af3a06c060716ab407b90fc3fbb3b7d2d25a646b49502445"
+  },
+  "alinea": [
+    {
+      "nomor": 1,
+      "teks": "Bahwa sesungguhnya kemerdekaan itu ialah hak segala bangsa dan oleh sebab itu, maka penjajahan di atas dunia harus dihapuskan, karena tidak sesuai dengan peri-kemanusiaan dan peri-keadilan.",
+      "kata": [
+        {
+          "i": 0,
+          "teks": "Bahwa",
+          "bersih": "Bahwa"
+        },
+        {
+          "i": 1,
+          "teks": "sesungguhnya",
+          "bersih": "sesungguhnya"
+        },
+        {
+          "i": 2,
+          "teks": "kemerdekaan",
+          "bersih": "kemerdekaan"
+        },
+        {
+          "i": 3,
+          "teks": "itu",
+          "bersih": "itu"
+        },
+        {
+          "i": 4,
+          "teks": "ialah",
+          "bersih": "ialah"
+        },
+        {
+          "i": 5,
+          "teks": "hak",
+          "bersih": "hak"
+        },
+        {
+          "i": 6,
+          "teks": "segala",
+          "bersih": "segala"
+        },
+        {
+          "i": 7,
+          "teks": "bangsa",
+          "bersih": "bangsa"
+        },
+        {
+          "i": 8,
+          "teks": "dan",
+          "bersih": "dan"
+        },
+        {
+          "i": 9,
+          "teks": "oleh",
+          "bersih": "oleh"
+        },
+        {
+          "i": 10,
+          "teks": "sebab",
+          "bersih": "sebab"
+        },
+        {
+          "i": 11,
+          "teks": "itu,",
+          "bersih": "itu"
+        },
+        {
+          "i": 12,
+          "teks": "maka",
+          "bersih": "maka"
+        },
+        {
+          "i": 13,
+          "teks": "penjajahan",
+          "bersih": "penjajahan"
+        },
+        {
+          "i": 14,
+          "teks": "di",
+          "bersih": "di"
+        },
+        {
+          "i": 15,
+          "teks": "atas",
+          "bersih": "atas"
+        },
+        {
+          "i": 16,
+          "teks": "dunia",
+          "bersih": "dunia"
+        },
+        {
+          "i": 17,
+          "teks": "harus",
+          "bersih": "harus"
+        },
+        {
+          "i": 18,
+          "teks": "dihapuskan,",
+          "bersih": "dihapuskan"
+        },
+        {
+          "i": 19,
+          "teks": "karena",
+          "bersih": "karena"
+        },
+        {
+          "i": 20,
+          "teks": "tidak",
+          "bersih": "tidak"
+        },
+        {
+          "i": 21,
+          "teks": "sesuai",
+          "bersih": "sesuai"
+        },
+        {
+          "i": 22,
+          "teks": "dengan",
+          "bersih": "dengan"
+        },
+        {
+          "i": 23,
+          "teks": "peri-kemanusiaan",
+          "bersih": "peri-kemanusiaan"
+        },
+        {
+          "i": 24,
+          "teks": "dan",
+          "bersih": "dan"
+        },
+        {
+          "i": 25,
+          "teks": "peri-keadilan.",
+          "bersih": "peri-keadilan"
+        }
+      ]
+    },
+    {
+      "nomor": 2,
+      "teks": "Dan perjuangan pergerakan kemerdekaan Indonesia telah sampailah kepada saat yang berbahagia dengan selamat sentausa mengantarkan rakyat Indonesia ke depan pintu gerbang kemerdekaan Negara Indonesia, yang merdeka, bersatu, berdaulat, adil dan makmur.",
+      "kata": [
+        {
+          "i": 0,
+          "teks": "Dan",
+          "bersih": "Dan"
+        },
+        {
+          "i": 1,
+          "teks": "perjuangan",
+          "bersih": "perjuangan"
+        },
+        {
+          "i": 2,
+          "teks": "pergerakan",
+          "bersih": "pergerakan"
+        },
+        {
+          "i": 3,
+          "teks": "kemerdekaan",
+          "bersih": "kemerdekaan"
+        },
+        {
+          "i": 4,
+          "teks": "Indonesia",
+          "bersih": "Indonesia"
+        },
+        {
+          "i": 5,
+          "teks": "telah",
+          "bersih": "telah"
+        },
+        {
+          "i": 6,
+          "teks": "sampailah",
+          "bersih": "sampailah"
+        },
+        {
+          "i": 7,
+          "teks": "kepada",
+          "bersih": "kepada"
+        },
+        {
+          "i": 8,
+          "teks": "saat",
+          "bersih": "saat"
+        },
+        {
+          "i": 9,
+          "teks": "yang",
+          "bersih": "yang"
+        },
+        {
+          "i": 10,
+          "teks": "berbahagia",
+          "bersih": "berbahagia"
+        },
+        {
+          "i": 11,
+          "teks": "dengan",
+          "bersih": "dengan"
+        },
+        {
+          "i": 12,
+          "teks": "selamat",
+          "bersih": "selamat"
+        },
+        {
+          "i": 13,
+          "teks": "sentausa",
+          "bersih": "sentausa"
+        },
+        {
+          "i": 14,
+          "teks": "mengantarkan",
+          "bersih": "mengantarkan"
+        },
+        {
+          "i": 15,
+          "teks": "rakyat",
+          "bersih": "rakyat"
+        },
+        {
+          "i": 16,
+          "teks": "Indonesia",
+          "bersih": "Indonesia"
+        },
+        {
+          "i": 17,
+          "teks": "ke",
+          "bersih": "ke"
+        },
+        {
+          "i": 18,
+          "teks": "depan",
+          "bersih": "depan"
+        },
+        {
+          "i": 19,
+          "teks": "pintu",
+          "bersih": "pintu"
+        },
+        {
+          "i": 20,
+          "teks": "gerbang",
+          "bersih": "gerbang"
+        },
+        {
+          "i": 21,
+          "teks": "kemerdekaan",
+          "bersih": "kemerdekaan"
+        },
+        {
+          "i": 22,
+          "teks": "Negara",
+          "bersih": "Negara"
+        },
+        {
+          "i": 23,
+          "teks": "Indonesia,",
+          "bersih": "Indonesia"
+        },
+        {
+          "i": 24,
+          "teks": "yang",
+          "bersih": "yang"
+        },
+        {
+          "i": 25,
+          "teks": "merdeka,",
+          "bersih": "merdeka"
+        },
+        {
+          "i": 26,
+          "teks": "bersatu,",
+          "bersih": "bersatu"
+        },
+        {
+          "i": 27,
+          "teks": "berdaulat,",
+          "bersih": "berdaulat"
+        },
+        {
+          "i": 28,
+          "teks": "adil",
+          "bersih": "adil"
+        },
+        {
+          "i": 29,
+          "teks": "dan",
+          "bersih": "dan"
+        },
+        {
+          "i": 30,
+          "teks": "makmur.",
+          "bersih": "makmur"
+        }
+      ]
+    },
+    {
+      "nomor": 3,
+      "teks": "Atas berkat rakhmat Allah Yang Maha Kuasa dan dengan didorongkan oleh keinginan luhur, supaya berkehidupan kebangsaan yang bebas, maka rakyat Indonesia menyatakan dengan ini kemerdekaannya.",
+      "kata": [
+        {
+          "i": 0,
+          "teks": "Atas",
+          "bersih": "Atas"
+        },
+        {
+          "i": 1,
+          "teks": "berkat",
+          "bersih": "berkat"
+        },
+        {
+          "i": 2,
+          "teks": "rakhmat",
+          "bersih": "rakhmat"
+        },
+        {
+          "i": 3,
+          "teks": "Allah",
+          "bersih": "Allah"
+        },
+        {
+          "i": 4,
+          "teks": "Yang",
+          "bersih": "Yang"
+        },
+        {
+          "i": 5,
+          "teks": "Maha",
+          "bersih": "Maha"
+        },
+        {
+          "i": 6,
+          "teks": "Kuasa",
+          "bersih": "Kuasa"
+        },
+        {
+          "i": 7,
+          "teks": "dan",
+          "bersih": "dan"
+        },
+        {
+          "i": 8,
+          "teks": "dengan",
+          "bersih": "dengan"
+        },
+        {
+          "i": 9,
+          "teks": "didorongkan",
+          "bersih": "didorongkan"
+        },
+        {
+          "i": 10,
+          "teks": "oleh",
+          "bersih": "oleh"
+        },
+        {
+          "i": 11,
+          "teks": "keinginan",
+          "bersih": "keinginan"
+        },
+        {
+          "i": 12,
+          "teks": "luhur,",
+          "bersih": "luhur"
+        },
+        {
+          "i": 13,
+          "teks": "supaya",
+          "bersih": "supaya"
+        },
+        {
+          "i": 14,
+          "teks": "berkehidupan",
+          "bersih": "berkehidupan"
+        },
+        {
+          "i": 15,
+          "teks": "kebangsaan",
+          "bersih": "kebangsaan"
+        },
+        {
+          "i": 16,
+          "teks": "yang",
+          "bersih": "yang"
+        },
+        {
+          "i": 17,
+          "teks": "bebas,",
+          "bersih": "bebas"
+        },
+        {
+          "i": 18,
+          "teks": "maka",
+          "bersih": "maka"
+        },
+        {
+          "i": 19,
+          "teks": "rakyat",
+          "bersih": "rakyat"
+        },
+        {
+          "i": 20,
+          "teks": "Indonesia",
+          "bersih": "Indonesia"
+        },
+        {
+          "i": 21,
+          "teks": "menyatakan",
+          "bersih": "menyatakan"
+        },
+        {
+          "i": 22,
+          "teks": "dengan",
+          "bersih": "dengan"
+        },
+        {
+          "i": 23,
+          "teks": "ini",
+          "bersih": "ini"
+        },
+        {
+          "i": 24,
+          "teks": "kemerdekaannya.",
+          "bersih": "kemerdekaannya"
+        }
+      ]
+    },
+    {
+      "nomor": 4,
+      "teks": "Kemudian dari pada itu untuk membentuk suatu Pemerintah Negara Indonesia yang melindungi segenap bangsa Indonesia dan seluruh tumpah darah Indonesia dan untuk memajukan kesejahteraan umum, mencerdaskan kehidupan bangsa, dan ikut melaksanakan ketertiban dunia yang berdasarkan kemerdekaan, perdamaian abadi dan keadilan sosial, maka disusunlah Kemerdekaan Kebangsaan Indonesia itu dalam suatu Undang-Undang Dasar Negara Indonesia, yang terbentuk dalam suatu susunan Negara Republik Indonesia yang berkedaulatan rakyat dengan berdasarkan kepada Ketuhanan Yang Maha Esa, Kemanusiaan Yang Adil dan Beradab, Persatuan Indonesia dan Kerakyatan yang dipimpin oleh hikmat kebijaksanaan dalam Permusyawaratan/Perwakilan, serta dengan mewujudkan suatu Keadilan sosial bagi seluruh rakyat Indonesia.",
+      "kata": [
+        {
+          "i": 0,
+          "teks": "Kemudian",
+          "bersih": "Kemudian"
+        },
+        {
+          "i": 1,
+          "teks": "dari",
+          "bersih": "dari"
+        },
+        {
+          "i": 2,
+          "teks": "pada",
+          "bersih": "pada"
+        },
+        {
+          "i": 3,
+          "teks": "itu",
+          "bersih": "itu"
+        },
+        {
+          "i": 4,
+          "teks": "untuk",
+          "bersih": "untuk"
+        },
+        {
+          "i": 5,
+          "teks": "membentuk",
+          "bersih": "membentuk"
+        },
+        {
+          "i": 6,
+          "teks": "suatu",
+          "bersih": "suatu"
+        },
+        {
+          "i": 7,
+          "teks": "Pemerintah",
+          "bersih": "Pemerintah"
+        },
+        {
+          "i": 8,
+          "teks": "Negara",
+          "bersih": "Negara"
+        },
+        {
+          "i": 9,
+          "teks": "Indonesia",
+          "bersih": "Indonesia"
+        },
+        {
+          "i": 10,
+          "teks": "yang",
+          "bersih": "yang"
+        },
+        {
+          "i": 11,
+          "teks": "melindungi",
+          "bersih": "melindungi"
+        },
+        {
+          "i": 12,
+          "teks": "segenap",
+          "bersih": "segenap"
+        },
+        {
+          "i": 13,
+          "teks": "bangsa",
+          "bersih": "bangsa"
+        },
+        {
+          "i": 14,
+          "teks": "Indonesia",
+          "bersih": "Indonesia"
+        },
+        {
+          "i": 15,
+          "teks": "dan",
+          "bersih": "dan"
+        },
+        {
+          "i": 16,
+          "teks": "seluruh",
+          "bersih": "seluruh"
+        },
+        {
+          "i": 17,
+          "teks": "tumpah",
+          "bersih": "tumpah"
+        },
+        {
+          "i": 18,
+          "teks": "darah",
+          "bersih": "darah"
+        },
+        {
+          "i": 19,
+          "teks": "Indonesia",
+          "bersih": "Indonesia"
+        },
+        {
+          "i": 20,
+          "teks": "dan",
+          "bersih": "dan"
+        },
+        {
+          "i": 21,
+          "teks": "untuk",
+          "bersih": "untuk"
+        },
+        {
+          "i": 22,
+          "teks": "memajukan",
+          "bersih": "memajukan"
+        },
+        {
+          "i": 23,
+          "teks": "kesejahteraan",
+          "bersih": "kesejahteraan"
+        },
+        {
+          "i": 24,
+          "teks": "umum,",
+          "bersih": "umum"
+        },
+        {
+          "i": 25,
+          "teks": "mencerdaskan",
+          "bersih": "mencerdaskan"
+        },
+        {
+          "i": 26,
+          "teks": "kehidupan",
+          "bersih": "kehidupan"
+        },
+        {
+          "i": 27,
+          "teks": "bangsa,",
+          "bersih": "bangsa"
+        },
+        {
+          "i": 28,
+          "teks": "dan",
+          "bersih": "dan"
+        },
+        {
+          "i": 29,
+          "teks": "ikut",
+          "bersih": "ikut"
+        },
+        {
+          "i": 30,
+          "teks": "melaksanakan",
+          "bersih": "melaksanakan"
+        },
+        {
+          "i": 31,
+          "teks": "ketertiban",
+          "bersih": "ketertiban"
+        },
+        {
+          "i": 32,
+          "teks": "dunia",
+          "bersih": "dunia"
+        },
+        {
+          "i": 33,
+          "teks": "yang",
+          "bersih": "yang"
+        },
+        {
+          "i": 34,
+          "teks": "berdasarkan",
+          "bersih": "berdasarkan"
+        },
+        {
+          "i": 35,
+          "teks": "kemerdekaan,",
+          "bersih": "kemerdekaan"
+        },
+        {
+          "i": 36,
+          "teks": "perdamaian",
+          "bersih": "perdamaian"
+        },
+        {
+          "i": 37,
+          "teks": "abadi",
+          "bersih": "abadi"
+        },
+        {
+          "i": 38,
+          "teks": "dan",
+          "bersih": "dan"
+        },
+        {
+          "i": 39,
+          "teks": "keadilan",
+          "bersih": "keadilan"
+        },
+        {
+          "i": 40,
+          "teks": "sosial,",
+          "bersih": "sosial"
+        },
+        {
+          "i": 41,
+          "teks": "maka",
+          "bersih": "maka"
+        },
+        {
+          "i": 42,
+          "teks": "disusunlah",
+          "bersih": "disusunlah"
+        },
+        {
+          "i": 43,
+          "teks": "Kemerdekaan",
+          "bersih": "Kemerdekaan"
+        },
+        {
+          "i": 44,
+          "teks": "Kebangsaan",
+          "bersih": "Kebangsaan"
+        },
+        {
+          "i": 45,
+          "teks": "Indonesia",
+          "bersih": "Indonesia"
+        },
+        {
+          "i": 46,
+          "teks": "itu",
+          "bersih": "itu"
+        },
+        {
+          "i": 47,
+          "teks": "dalam",
+          "bersih": "dalam"
+        },
+        {
+          "i": 48,
+          "teks": "suatu",
+          "bersih": "suatu"
+        },
+        {
+          "i": 49,
+          "teks": "Undang-Undang",
+          "bersih": "Undang-Undang"
+        },
+        {
+          "i": 50,
+          "teks": "Dasar",
+          "bersih": "Dasar"
+        },
+        {
+          "i": 51,
+          "teks": "Negara",
+          "bersih": "Negara"
+        },
+        {
+          "i": 52,
+          "teks": "Indonesia,",
+          "bersih": "Indonesia"
+        },
+        {
+          "i": 53,
+          "teks": "yang",
+          "bersih": "yang"
+        },
+        {
+          "i": 54,
+          "teks": "terbentuk",
+          "bersih": "terbentuk"
+        },
+        {
+          "i": 55,
+          "teks": "dalam",
+          "bersih": "dalam"
+        },
+        {
+          "i": 56,
+          "teks": "suatu",
+          "bersih": "suatu"
+        },
+        {
+          "i": 57,
+          "teks": "susunan",
+          "bersih": "susunan"
+        },
+        {
+          "i": 58,
+          "teks": "Negara",
+          "bersih": "Negara"
+        },
+        {
+          "i": 59,
+          "teks": "Republik",
+          "bersih": "Republik"
+        },
+        {
+          "i": 60,
+          "teks": "Indonesia",
+          "bersih": "Indonesia"
+        },
+        {
+          "i": 61,
+          "teks": "yang",
+          "bersih": "yang"
+        },
+        {
+          "i": 62,
+          "teks": "berkedaulatan",
+          "bersih": "berkedaulatan"
+        },
+        {
+          "i": 63,
+          "teks": "rakyat",
+          "bersih": "rakyat"
+        },
+        {
+          "i": 64,
+          "teks": "dengan",
+          "bersih": "dengan"
+        },
+        {
+          "i": 65,
+          "teks": "berdasarkan",
+          "bersih": "berdasarkan"
+        },
+        {
+          "i": 66,
+          "teks": "kepada",
+          "bersih": "kepada"
+        },
+        {
+          "i": 67,
+          "teks": "Ketuhanan",
+          "bersih": "Ketuhanan"
+        },
+        {
+          "i": 68,
+          "teks": "Yang",
+          "bersih": "Yang"
+        },
+        {
+          "i": 69,
+          "teks": "Maha",
+          "bersih": "Maha"
+        },
+        {
+          "i": 70,
+          "teks": "Esa,",
+          "bersih": "Esa"
+        },
+        {
+          "i": 71,
+          "teks": "Kemanusiaan",
+          "bersih": "Kemanusiaan"
+        },
+        {
+          "i": 72,
+          "teks": "Yang",
+          "bersih": "Yang"
+        },
+        {
+          "i": 73,
+          "teks": "Adil",
+          "bersih": "Adil"
+        },
+        {
+          "i": 74,
+          "teks": "dan",
+          "bersih": "dan"
+        },
+        {
+          "i": 75,
+          "teks": "Beradab,",
+          "bersih": "Beradab"
+        },
+        {
+          "i": 76,
+          "teks": "Persatuan",
+          "bersih": "Persatuan"
+        },
+        {
+          "i": 77,
+          "teks": "Indonesia",
+          "bersih": "Indonesia"
+        },
+        {
+          "i": 78,
+          "teks": "dan",
+          "bersih": "dan"
+        },
+        {
+          "i": 79,
+          "teks": "Kerakyatan",
+          "bersih": "Kerakyatan"
+        },
+        {
+          "i": 80,
+          "teks": "yang",
+          "bersih": "yang"
+        },
+        {
+          "i": 81,
+          "teks": "dipimpin",
+          "bersih": "dipimpin"
+        },
+        {
+          "i": 82,
+          "teks": "oleh",
+          "bersih": "oleh"
+        },
+        {
+          "i": 83,
+          "teks": "hikmat",
+          "bersih": "hikmat"
+        },
+        {
+          "i": 84,
+          "teks": "kebijaksanaan",
+          "bersih": "kebijaksanaan"
+        },
+        {
+          "i": 85,
+          "teks": "dalam",
+          "bersih": "dalam"
+        },
+        {
+          "i": 86,
+          "teks": "Permusyawaratan/Perwakilan,",
+          "bersih": "Permusyawaratan/Perwakilan"
+        },
+        {
+          "i": 87,
+          "teks": "serta",
+          "bersih": "serta"
+        },
+        {
+          "i": 88,
+          "teks": "dengan",
+          "bersih": "dengan"
+        },
+        {
+          "i": 89,
+          "teks": "mewujudkan",
+          "bersih": "mewujudkan"
+        },
+        {
+          "i": 90,
+          "teks": "suatu",
+          "bersih": "suatu"
+        },
+        {
+          "i": 91,
+          "teks": "Keadilan",
+          "bersih": "Keadilan"
+        },
+        {
+          "i": 92,
+          "teks": "sosial",
+          "bersih": "sosial"
+        },
+        {
+          "i": 93,
+          "teks": "bagi",
+          "bersih": "bagi"
+        },
+        {
+          "i": 94,
+          "teks": "seluruh",
+          "bersih": "seluruh"
+        },
+        {
+          "i": 95,
+          "teks": "rakyat",
+          "bersih": "rakyat"
+        },
+        {
+          "i": 96,
+          "teks": "Indonesia.",
+          "bersih": "Indonesia"
+        }
+      ]
+    }
+  ]
+}

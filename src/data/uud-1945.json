@@ -17,7 +17,7 @@
     "sourceTitle": "UUD NRI 1945 Dalam Satu Naskah (Sekretariat Jenderal MPR RI); salinan jdih.bapeten.go.id",
     "sha256": "ec6615bead1fa534af3a06c060716ab407b90fc3fbb3b7d2d25a646b49502445",
     "pageCount": 49,
-    "extractedAt": "2026-09-12T10:12:57+00:00",
+    "extractedAt": "2026-09-12T11:59:57+00:00",
     "tool": "PyMuPDF 1.28.2",
     "python": "3.11.9",
     "script": "scripts/build-uud1945.py",

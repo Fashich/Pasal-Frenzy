@@ -143,6 +143,17 @@ describe('uud-1945.json: integritas struktural', () => {
   });
 });
 
+describe('pembukaan.json (salinan ringkas untuk shell)', () => {
+  it('identik dengan Pembukaan di naskah penuh dan menunjuk sumber yang sama', async () => {
+    const { pembukaan, kataAlinea } = await import('./pembukaan.ts');
+    expect(pembukaan.alinea).toEqual(uud1945.pembukaan.alinea);
+    expect(pembukaan.provenance.sha256).toBe(uud1945.provenance.sha256);
+    expect(kataAlinea(1).map((k) => k.teks)).toEqual(
+      uud1945.pembukaan.alinea[0]?.kata.map((k) => k.teks),
+    );
+  });
+});
+
 describe('pengindeks', () => {
   it('menyediakan id ayat yang stabil', () => {
     const ayat = index.ayatById.get('22-1');

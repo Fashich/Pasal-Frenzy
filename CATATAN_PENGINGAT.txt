@@ -145,7 +145,10 @@ research_sessions).
               [x] 08 AudioEngine (HRTF, 3 ConvolverNode IR sintetis, kompresor, AnalyserNode),
                   ResponsiveSoundscape 3 lapis, GavelSynth, HeartbeatWorklet (AudioWorklet + fallback),
                   WhisperSynth formant, CorruptiveHiss, demo ?dev=audio
-[ ] Fase 3  : feature/09 preloader + cursor + transisi; feature/20 intro + landing 3D responsif
+[~] Fase 3  : [x] feature/09 preloader sinematik (intro alinea I -> logotype SplitText -> bar progres
+                  NYATA + label tahap + deskripsi produk -> reveal clip-path), CustomCursor,
+                  SceneTransition 3 jenis (~800 ms), typography.css + ui.css, demo ?dev=preloader
+              [ ] feature/20 landing page 3D responsif + AppShell (intro -> loading -> landing -> game)
 [ ] Fase 4  : feature/06 Mode Frenzy + DOM Injection + XPBD + partikel; feature/07 A-Frame XR
 [ ] Fase 5  : feature/10 Prolog; 11 Kasus 1; 12 Kasus 2; 13 Kasus 3
 [ ] Fase 6  : feature/14 IndexedDB + Constellation Map; 15 LOD/instancing/QualityManager
@@ -235,6 +238,17 @@ research_sessions).
             CorruptiveHiss korporasi/populis/eksekutif. VERIFIKASI NYATA di browser lewat RMS
             AnalyserNode: drone 0.052, frenzy 0.129, pulih 0.042; AudioWorklet aktif; 48 kHz.
             9 tes baru (67 total). FASE 2 SELESAI.
+2026-09-12  Fase 3 / feature/09: loadingStages.ts (progres tertimbang NYATA, minStageMs, error
+            dilaporkan & dilanjutkan), Preloader.ts (Fase A kata alinea I Pembukaan datang dari
+            posisi acak + blur lalu beresonansi biru; Fase B logotype SplitText stagger 0.03 s,
+            bar 2 px merah->putih, persen mono, label tahap + deskripsi produk DI BAWAH bar,
+            tombol Lewati intro; finish = logotype zoom 1.12 + circular clip-path wipe; reduced
+            motion = fade saja), CustomCursor (dot 4 px + ring 40 px lerp 0.1, hover/klik, mati di
+            pointer coarse), SceneTransition (void-collapse mask radial, constitutional-dive teks
+            membesar+blur + hook cameraDolly, chromatic-shatter hook setAberration + cut 60 ms).
+            Diverifikasi di browser: intro tersusun, transisi 751-1083 ms, kursor aktif.
+            pembukaan.json (4 alinea, ~3 KB) diemisi parser agar intro tampil instan.
+            Tes 73 -> 74. Prompt Claude Design: docs/design/PROMPT-claude-design.md (sudah ada).
 
 13. PATH PENTING
 ----------------
