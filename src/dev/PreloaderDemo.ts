@@ -8,7 +8,7 @@ import { Preloader } from '@ui/preloader/Preloader.ts';
 import { runLoadingStages, type LoadingStage } from '@ui/preloader/loadingStages.ts';
 import { SceneTransition, type TransitionKind } from '@ui/transitions/SceneTransition.ts';
 import { settingsStore } from '@core/store/SettingsStore.ts';
-import { kataAlinea } from '@data/pembukaan.ts';
+import { pickIntroPassage } from '@data/introPassages.ts';
 import { PRODUCT_DESCRIPTION } from '../shell/copy.ts';
 
 export async function runPreloaderDemo(root: HTMLElement): Promise<() => void> {
@@ -18,11 +18,12 @@ export async function runPreloaderDemo(root: HTMLElement): Promise<() => void> {
     (settingsStore.getState().reducedMotion === 'sistem' &&
       window.matchMedia('(prefers-reduced-motion: reduce)').matches);
 
-  const introWords = kataAlinea(1).map((k) => k.teks);
+  const passage = pickIntroPassage();
+  const introWords = passage.kata.map((k) => k.teks);
 
   const preloader = new Preloader({
     introWords,
-    introLabel: 'Alinea pertama Pembukaan UUD 1945',
+    introLabel: passage.label,
     description: PRODUCT_DESCRIPTION,
     reducedMotion,
     showSkip: settingsStore.getState().introSeen,

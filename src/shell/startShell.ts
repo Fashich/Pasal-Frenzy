@@ -31,6 +31,11 @@ export async function startShell(root: HTMLElement): Promise<void> {
   }
 
   const capabilities = detectCapabilities();
+  if (dev === null) {
+    const { startApp } = await import('./AppShell.ts');
+    await startApp(root);
+    return;
+  }
 
   root.innerHTML = `
     <main class="shell" aria-labelledby="shell-title">
