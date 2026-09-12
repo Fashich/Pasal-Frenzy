@@ -1,0 +1,126 @@
+/* Font self-hosted (OFL) agar tetap tersedia offline; tanpa CDN.
+   Hanya subset latin + latin-ext (cukup untuk bahasa Indonesia) agar precache PWA ringkas. */
+@import '@fontsource/playfair-display/latin-400.css';
+@import '@fontsource/playfair-display/latin-700.css';
+@import '@fontsource/playfair-display/latin-900.css';
+@import '@fontsource/playfair-display/latin-ext-400.css';
+@import '@fontsource/playfair-display/latin-ext-700.css';
+@import '@fontsource/playfair-display/latin-ext-900.css';
+@import '@fontsource/space-grotesk/latin-400.css';
+@import '@fontsource/space-grotesk/latin-500.css';
+@import '@fontsource/space-grotesk/latin-700.css';
+@import '@fontsource/space-grotesk/latin-ext-400.css';
+@import '@fontsource/space-grotesk/latin-ext-500.css';
+@import '@fontsource/space-grotesk/latin-ext-700.css';
+@import '@fontsource/jetbrains-mono/latin-400.css';
+@import '@fontsource/jetbrains-mono/latin-700.css';
+@import '@fontsource/jetbrains-mono/latin-ext-400.css';
+@import '@fontsource/jetbrains-mono/latin-ext-700.css';
+
+:root {
+  color-scheme: dark;
+
+  /* Palet PRD Bagian XIV: biru = konstitusional solid, merah = antagonis, emas = pencapaian */
+  --pf-bg: #080810;
+  --pf-void: #000005;
+  --pf-fg: #f8f8f8;
+  --pf-fg-muted: #b3b3bd;
+  --pf-red: #dc2626;
+  --pf-red-deep: #7f1d1d;
+  --pf-blue: #1e3a8a;
+  --pf-blue-bright: #3b82f6;
+  --pf-gold: #d4a017;
+  --pf-gray: #6b7280;
+
+  --pf-font-display: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --pf-font-ui: 'Space Grotesk', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --pf-font-mono: 'JetBrains Mono', ui-monospace, 'Cascadia Mono', Consolas, monospace;
+
+  --pf-safe-top: env(safe-area-inset-top, 0px);
+  --pf-safe-right: env(safe-area-inset-right, 0px);
+  --pf-safe-bottom: env(safe-area-inset-bottom, 0px);
+  --pf-safe-left: env(safe-area-inset-left, 0px);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100%;
+  background: var(--pf-bg);
+  color: var(--pf-fg);
+  font-family: var(--pf-font-ui);
+  font-size: clamp(0.95rem, 0.9rem + 0.25vw, 1.125rem);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+#app {
+  min-height: 100dvh;
+}
+
+canvas {
+  display: block;
+}
+
+:focus-visible {
+  outline: 2px solid var(--pf-gold);
+  outline-offset: 3px;
+}
+
+.shell {
+  min-height: 100dvh;
+  display: grid;
+  place-content: center;
+  gap: 1rem;
+  padding: calc(1.5rem + var(--pf-safe-top)) calc(1.5rem + var(--pf-safe-right))
+    calc(1.5rem + var(--pf-safe-bottom)) calc(1.5rem + var(--pf-safe-left));
+  text-align: center;
+}
+
+.shell__title {
+  margin: 0;
+  font-family: var(--pf-font-display);
+  font-weight: 900;
+  font-size: clamp(2.5rem, 2rem + 6vw, 7rem);
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.shell__pasal {
+  color: var(--pf-red);
+}
+
+.shell__frenzy {
+  color: var(--pf-fg);
+  margin-left: 0.25em;
+}
+
+.shell__status {
+  margin: 0;
+  color: var(--pf-fg-muted);
+  font-family: var(--pf-font-mono);
+  font-size: 0.85rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

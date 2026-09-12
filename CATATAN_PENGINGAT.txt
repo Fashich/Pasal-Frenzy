@@ -133,8 +133,8 @@ research_sessions).
 10. RENCANA FASE & STATUS
 -------------------------
 [x] Fase 0  : init repo, docs/, data-source/, .gitignore, README, catatan ini, branch development
-[ ] Fase 1  : feature/01 scaffold Vite+TS+lint+vitest; parser PDF -> uud-1945.json;
-              feature/02 ConstitutionalStore (5 slice) + ConstitutionalEventBus
+[~] Fase 1  : [x] feature/01 scaffold Vite+TS+lint+vitest; parser PDF -> uud-1945.json (lulus)
+              [ ] feature/02 ConstitutionalStore (5 slice) + ConstitutionalEventBus
 [ ] Fase 2  : feature/03 ThreeEngine; 04 shader (hyperbolic, chromatic, distortion, GlitchDOM);
               05 Phaser overlay + fisika tipografi; 08 AudioEngine + GavelSynth + HeartbeatWorklet
 [ ] Fase 3  : feature/09 preloader + cursor + transisi; feature/20 intro + landing 3D responsif
@@ -161,6 +161,20 @@ research_sessions).
 2026-09-12  Riset kondisi mesin, PRD, Dev Planning, PDF UUD. Rencana disetujui.
 2026-09-12  Fase 0: git init (main), dokumen dipindah ke docs/, PDF sumber + SHA-256 ke
             data-source/, .gitignore/.gitattributes/README, catatan ini. Branch development dibuat.
+            Push pertama ke origin berhasil (kredensial GitHub sudah ada di Credential Manager).
+2026-09-12  Fase 1 / feature/01: scaffold Vite 8 + TS 5.9 + ESLint 10 + Prettier + vitest 5,
+            npm install 516 paket (three ter-dedupe ke satu super-three 0.184.0).
+            TEMUAN: PDF sumber memuat naskah DUA KALI (hal. 2-28 format MPR penanda *),
+            hal. 29-49 salinan dengan penanda angka + typo "daitur", "sebaganya", "Indoensia").
+            Rendisi A dijadikan kanonik; rendisi B pembanding otomatis (217 unit, 17 beda,
+            semuanya typo di B). BAB IV tercatat dihapus (Perubahan Keempat). Validasi lulus,
+            12 tes lulus, build produksi OK (PWA precache), shell tampil di dev server.
+            Ejaan asli naskah dipertahankan apa adanya (mis. "aggaran", "tekhnologi" di
+            Pasal 31 ada di kedua rendisi sumber) -- tidak dikoreksi, tidak dikarang.
+            Ikon PWA/favicon/Electron dibuat dari logo 123px (scripts/build-icons.py).
+            Fashich menawarkan Claude Design -> prompt siap-copas dibuat di
+            docs/design/PROMPT-claude-design.md (memakai teks UUD asli dan token desain kode).
+            .claude/ (launch.json alat lokal) diabaikan git agar tidak muncul di repo.
 
 13. PATH PENTING
 ----------------

@@ -1,0 +1,3125 @@
+{
+  "meta": {
+    "judul": "Undang-Undang Dasar Negara Republik Indonesia Tahun 1945",
+    "edisi": "Dalam Satu Naskah (Pembukaan dan pasal-pasal hasil Perubahan Pertama sampai Keempat)",
+    "penerbit": "Majelis Permusyawaratan Rakyat Republik Indonesia, Sekretariat Jenderal",
+    "bahasa": "id",
+    "keteranganAmandemen": {
+      "1": "Perubahan Pertama (1999)",
+      "2": "Perubahan Kedua (2000)",
+      "3": "Perubahan Ketiga (2001)",
+      "4": "Perubahan Keempat (2002)"
+    },
+    "catatan": "Teks disalin apa adanya dari lapisan teks PDF sumber, termasuk ejaan asli naskah. Daftar amandemen kosong berarti teks asli 1945 yang tidak diubah."
+  },
+  "provenance": {
+    "sourceFile": "data-source/UUD-NRI-1945-Dalam-Satu-Naskah.pdf",
+    "sourceTitle": "UUD NRI 1945 Dalam Satu Naskah (Sekretariat Jenderal MPR RI); salinan jdih.bapeten.go.id",
+    "sha256": "ec6615bead1fa534af3a06c060716ab407b90fc3fbb3b7d2d25a646b49502445",
+    "pageCount": 49,
+    "extractedAt": "2026-09-12T10:12:57+00:00",
+    "tool": "PyMuPDF 1.28.2",
+    "python": "3.11.9",
+    "script": "scripts/build-uud1945.py",
+    "canonicalRendition": "A",
+    "renditionPages": {
+      "A": "2-28",
+      "B": "29-49"
+    },
+    "crossCheck": {
+      "unitDibandingkan": 217,
+      "jumlahPerbedaan": 17,
+      "laporan": "docs/data-validation/uud-1945-report.md"
+    }
+  },
+  "pembukaan": {
+    "alinea": [
+      {
+        "nomor": 1,
+        "teks": "Bahwa sesungguhnya kemerdekaan itu ialah hak segala bangsa dan oleh sebab itu, maka penjajahan di atas dunia harus dihapuskan, karena tidak sesuai dengan peri-kemanusiaan dan peri-keadilan.",
+        "kata": [
+          {
+            "i": 0,
+            "teks": "Bahwa",
+            "bersih": "Bahwa"
+          },
+          {
+            "i": 1,
+            "teks": "sesungguhnya",
+            "bersih": "sesungguhnya"
+          },
+          {
+            "i": 2,
+            "teks": "kemerdekaan",
+            "bersih": "kemerdekaan"
+          },
+          {
+            "i": 3,
+            "teks": "itu",
+            "bersih": "itu"
+          },
+          {
+            "i": 4,
+            "teks": "ialah",
+            "bersih": "ialah"
+          },
+          {
+            "i": 5,
+            "teks": "hak",
+            "bersih": "hak"
+          },
+          {
+            "i": 6,
+            "teks": "segala",
+            "bersih": "segala"
+          },
+          {
+            "i": 7,
+            "teks": "bangsa",
+            "bersih": "bangsa"
+          },
+          {
+            "i": 8,
+            "teks": "dan",
+            "bersih": "dan"
+          },
+          {
+            "i": 9,
+            "teks": "oleh",
+            "bersih": "oleh"
+          },
+          {
+            "i": 10,
+            "teks": "sebab",
+            "bersih": "sebab"
+          },
+          {
+            "i": 11,
+            "teks": "itu,",
+            "bersih": "itu"
+          },
+          {
+            "i": 12,
+            "teks": "maka",
+            "bersih": "maka"
+          },
+          {
+            "i": 13,
+            "teks": "penjajahan",
+            "bersih": "penjajahan"
+          },
+          {
+            "i": 14,
+            "teks": "di",
+            "bersih": "di"
+          },
+          {
+            "i": 15,
+            "teks": "atas",
+            "bersih": "atas"
+          },
+          {
+            "i": 16,
+            "teks": "dunia",
+            "bersih": "dunia"
+          },
+          {
+            "i": 17,
+            "teks": "harus",
+            "bersih": "harus"
+          },
+          {
+            "i": 18,
+            "teks": "dihapuskan,",
+            "bersih": "dihapuskan"
+          },
+          {
+            "i": 19,
+            "teks": "karena",
+            "bersih": "karena"
+          },
+          {
+            "i": 20,
+            "teks": "tidak",
+            "bersih": "tidak"
+          },
+          {
+            "i": 21,
+            "teks": "sesuai",
+            "bersih": "sesuai"
+          },
+          {
+            "i": 22,
+            "teks": "dengan",
+            "bersih": "dengan"
+          },
+          {
+            "i": 23,
+            "teks": "peri-kemanusiaan",
+            "bersih": "peri-kemanusiaan"
+          },
+          {
+            "i": 24,
+            "teks": "dan",
+            "bersih": "dan"
+          },
+          {
+            "i": 25,
+            "teks": "peri-keadilan.",
+            "bersih": "peri-keadilan"
+          }
+        ]
+      },
+      {
+        "nomor": 2,
+        "teks": "Dan perjuangan pergerakan kemerdekaan Indonesia telah sampailah kepada saat yang berbahagia dengan selamat sentausa mengantarkan rakyat Indonesia ke depan pintu gerbang kemerdekaan Negara Indonesia, yang merdeka, bersatu, berdaulat, adil dan makmur.",
+        "kata": [
+          {
+            "i": 0,
+            "teks": "Dan",
+            "bersih": "Dan"
+          },
+          {
+            "i": 1,
+            "teks": "perjuangan",
+            "bersih": "perjuangan"
+          },
+          {
+            "i": 2,
+            "teks": "pergerakan",
+            "bersih": "pergerakan"
+          },
+          {
+            "i": 3,
+            "teks": "kemerdekaan",
+            "bersih": "kemerdekaan"
+          },
+          {
+            "i": 4,
+            "teks": "Indonesia",
+            "bersih": "Indonesia"
+          },
+          {
+            "i": 5,
+            "teks": "telah",
+            "bersih": "telah"
+          },
+          {
+            "i": 6,
+            "teks": "sampailah",
+            "bersih": "sampailah"
+          },
+          {
+            "i": 7,
+            "teks": "kepada",
+            "bersih": "kepada"
+          },
+          {
+            "i": 8,
+            "teks": "saat",
+            "bersih": "saat"
+          },
+          {
+            "i": 9,
+            "teks": "yang",
+            "bersih": "yang"
+          },
+          {
+            "i": 10,
+            "teks": "berbahagia",
+            "bersih": "berbahagia"
+          },
+          {
+            "i": 11,
+            "teks": "dengan",
+            "bersih": "dengan"
+          },
+          {
+            "i": 12,
+            "teks": "selamat",
+            "bersih": "selamat"
+          },
+          {
+            "i": 13,
+            "teks": "sentausa",
+            "bersih": "sentausa"
+          },
+          {
+            "i": 14,
+            "teks": "mengantarkan",
+            "bersih": "mengantarkan"
+          },
+          {
+            "i": 15,
+            "teks": "rakyat",
+            "bersih": "rakyat"
+          },
+          {
+            "i": 16,
+            "teks": "Indonesia",
+            "bersih": "Indonesia"
+          },
+          {
+            "i": 17,
+            "teks": "ke",
+            "bersih": "ke"
+          },
+          {
+            "i": 18,
+            "teks": "depan",
+            "bersih": "depan"
+          },
+          {
+            "i": 19,
+            "teks": "pintu",
+            "bersih": "pintu"
+          },
+          {
+            "i": 20,
+            "teks": "gerbang",
+            "bersih": "gerbang"
+          },
+          {
+            "i": 21,
+            "teks": "kemerdekaan",
+            "bersih": "kemerdekaan"
+          },
+          {
+            "i": 22,
+            "teks": "Negara",
+            "bersih": "Negara"
+          },
+          {
+            "i": 23,
+            "teks": "Indonesia,",
+            "bersih": "Indonesia"
+          },
+          {
+            "i": 24,
+            "teks": "yang",
+            "bersih": "yang"
+          },
+          {
+            "i": 25,
+            "teks": "merdeka,",
+            "bersih": "merdeka"
+          },
+          {
+            "i": 26,
+            "teks": "bersatu,",
+            "bersih": "bersatu"
+          },
+          {
+            "i": 27,
+            "teks": "berdaulat,",
+            "bersih": "berdaulat"
+          },
+          {
+            "i": 28,
+            "teks": "adil",
+            "bersih": "adil"
+          },
+          {
+            "i": 29,
+            "teks": "dan",
+            "bersih": "dan"
+          },
+          {
+            "i": 30,
+            "teks": "makmur.",
+            "bersih": "makmur"
+          }
+        ]
+      },
+      {
+        "nomor": 3,
+        "teks": "Atas berkat rakhmat Allah Yang Maha Kuasa dan dengan didorongkan oleh keinginan luhur, supaya berkehidupan kebangsaan yang bebas, maka rakyat Indonesia menyatakan dengan ini kemerdekaannya.",
+        "kata": [
+          {
+            "i": 0,
+            "teks": "Atas",
+            "bersih": "Atas"
+          },
+          {
+            "i": 1,
+            "teks": "berkat",
+            "bersih": "berkat"
+          },
+          {
+            "i": 2,
+            "teks": "rakhmat",
+            "bersih": "rakhmat"
+          },
+          {
+            "i": 3,
+            "teks": "Allah",
+            "bersih": "Allah"
+          },
+          {
+            "i": 4,
+            "teks": "Yang",
+            "bersih": "Yang"
+          },
+          {
+            "i": 5,
+            "teks": "Maha",
+            "bersih": "Maha"
+          },
+          {
+            "i": 6,
+            "teks": "Kuasa",
+            "bersih": "Kuasa"
+          },
+          {
+            "i": 7,
+            "teks": "dan",
+            "bersih": "dan"
+          },
+          {
+            "i": 8,
+            "teks": "dengan",
+            "bersih": "dengan"
+          },
+          {
+            "i": 9,
+            "teks": "didorongkan",
+            "bersih": "didorongkan"
+          },
+          {
+            "i": 10,
+            "teks": "oleh",
+            "bersih": "oleh"
+          },
+          {
+            "i": 11,
+            "teks": "keinginan",
+            "bersih": "keinginan"
+          },
+          {
+            "i": 12,
+            "teks": "luhur,",
+            "bersih": "luhur"
+          },
+          {
+            "i": 13,
+            "teks": "supaya",
+            "bersih": "supaya"
+          },
+          {
+            "i": 14,
+            "teks": "berkehidupan",
+            "bersih": "berkehidupan"
+          },
+          {
+            "i": 15,
+            "teks": "kebangsaan",
+            "bersih": "kebangsaan"
+          },
+          {
+            "i": 16,
+            "teks": "yang",
+            "bersih": "yang"
+          },
+          {
+            "i": 17,
+            "teks": "bebas,",
+            "bersih": "bebas"
+          },
+          {
+            "i": 18,
+            "teks": "maka",
+            "bersih": "maka"
+          },
+          {
+            "i": 19,
+            "teks": "rakyat",
+            "bersih": "rakyat"
+          },
+          {
+            "i": 20,
+            "teks": "Indonesia",
+            "bersih": "Indonesia"
+          },
+          {
+            "i": 21,
+            "teks": "menyatakan",
+            "bersih": "menyatakan"
+          },
+          {
+            "i": 22,
+            "teks": "dengan",
+            "bersih": "dengan"
+          },
+          {
+            "i": 23,
+            "teks": "ini",
+            "bersih": "ini"
+          },
+          {
+            "i": 24,
+            "teks": "kemerdekaannya.",
+            "bersih": "kemerdekaannya"
+          }
+        ]
+      },
+      {
+        "nomor": 4,
+        "teks": "Kemudian dari pada itu untuk membentuk suatu Pemerintah Negara Indonesia yang melindungi segenap bangsa Indonesia dan seluruh tumpah darah Indonesia dan untuk memajukan kesejahteraan umum, mencerdaskan kehidupan bangsa, dan ikut melaksanakan ketertiban dunia yang berdasarkan kemerdekaan, perdamaian abadi dan keadilan sosial, maka disusunlah Kemerdekaan Kebangsaan Indonesia itu dalam suatu Undang-Undang Dasar Negara Indonesia, yang terbentuk dalam suatu susunan Negara Republik Indonesia yang berkedaulatan rakyat dengan berdasarkan kepada Ketuhanan Yang Maha Esa, Kemanusiaan Yang Adil dan Beradab, Persatuan Indonesia dan Kerakyatan yang dipimpin oleh hikmat kebijaksanaan dalam Permusyawaratan/Perwakilan, serta dengan mewujudkan suatu Keadilan sosial bagi seluruh rakyat Indonesia.",
+        "kata": [
+          {
+            "i": 0,
+            "teks": "Kemudian",
+            "bersih": "Kemudian"
+          },
+          {
+            "i": 1,
+            "teks": "dari",
+            "bersih": "dari"
+          },
+          {
+            "i": 2,
+            "teks": "pada",
+            "bersih": "pada"
+          },
+          {
+            "i": 3,
+            "teks": "itu",
+            "bersih": "itu"
+          },
+          {
+            "i": 4,
+            "teks": "untuk",
+            "bersih": "untuk"
+          },
+          {
+            "i": 5,
+            "teks": "membentuk",
+            "bersih": "membentuk"
+          },
+          {
+            "i": 6,
+            "teks": "suatu",
+            "bersih": "suatu"
+          },
+          {
+            "i": 7,
+            "teks": "Pemerintah",
+            "bersih": "Pemerintah"
+          },
+          {
+            "i": 8,
+            "teks": "Negara",
+            "bersih": "Negara"
+          },
+          {
+            "i": 9,
+            "teks": "Indonesia",
+            "bersih": "Indonesia"
+          },
+          {
+            "i": 10,
+            "teks": "yang",
+            "bersih": "yang"
+          },
+          {
+            "i": 11,
+            "teks": "melindungi",
+            "bersih": "melindungi"
+          },
+          {
+            "i": 12,
+            "teks": "segenap",
+            "bersih": "segenap"
+          },
+          {
+            "i": 13,
+            "teks": "bangsa",
+            "bersih": "bangsa"
+          },
+          {
+            "i": 14,
+            "teks": "Indonesia",
+            "bersih": "Indonesia"
+          },
+          {
+            "i": 15,
+            "teks": "dan",
+            "bersih": "dan"
+          },
+          {
+            "i": 16,
+            "teks": "seluruh",
+            "bersih": "seluruh"
+          },
+          {
+            "i": 17,
+            "teks": "tumpah",
+            "bersih": "tumpah"
+          },
+          {
+            "i": 18,
+            "teks": "darah",
+            "bersih": "darah"
+          },
+          {
+            "i": 19,
+            "teks": "Indonesia",
+            "bersih": "Indonesia"
+          },
+          {
+            "i": 20,
+            "teks": "dan",
+            "bersih": "dan"
+          },
+          {
+            "i": 21,
+            "teks": "untuk",
+            "bersih": "untuk"
+          },
+          {
+            "i": 22,
+            "teks": "memajukan",
+            "bersih": "memajukan"
+          },
+          {
+            "i": 23,
+            "teks": "kesejahteraan",
+            "bersih": "kesejahteraan"
+          },
+          {
+            "i": 24,
+            "teks": "umum,",
+            "bersih": "umum"
+          },
+          {
+            "i": 25,
+            "teks": "mencerdaskan",
+            "bersih": "mencerdaskan"
+          },
+          {
+            "i": 26,
+            "teks": "kehidupan",
+            "bersih": "kehidupan"
+          },
+          {
+            "i": 27,
+            "teks": "bangsa,",
+            "bersih": "bangsa"
+          },
+          {
+            "i": 28,
+            "teks": "dan",
+            "bersih": "dan"
+          },
+          {
+            "i": 29,
+            "teks": "ikut",
+            "bersih": "ikut"
+          },
+          {
+            "i": 30,
+            "teks": "melaksanakan",
+            "bersih": "melaksanakan"
+          },
+          {
+            "i": 31,
+            "teks": "ketertiban",
+            "bersih": "ketertiban"
+          },
+          {
+            "i": 32,
+            "teks": "dunia",
+            "bersih": "dunia"
+          },
+          {
+            "i": 33,
+            "teks": "yang",
+            "bersih": "yang"
+          },
+          {
+            "i": 34,
+            "teks": "berdasarkan",
+            "bersih": "berdasarkan"
+          },
+          {
+            "i": 35,
+            "teks": "kemerdekaan,",
+            "bersih": "kemerdekaan"
+          },
+          {
+            "i": 36,
+            "teks": "perdamaian",
+            "bersih": "perdamaian"
+          },
+          {
+            "i": 37,
+            "teks": "abadi",
+            "bersih": "abadi"
+          },
+          {
+            "i": 38,
+            "teks": "dan",
+            "bersih": "dan"
+          },
+          {
+            "i": 39,
+            "teks": "keadilan",
+            "bersih": "keadilan"
+          },
+          {
+            "i": 40,
+            "teks": "sosial,",
+            "bersih": "sosial"
+          },
+          {
+            "i": 41,
+            "teks": "maka",
+            "bersih": "maka"
+          },
+          {
+            "i": 42,
+            "teks": "disusunlah",
+            "bersih": "disusunlah"
+          },
+          {
+            "i": 43,
+            "teks": "Kemerdekaan",
+            "bersih": "Kemerdekaan"
+          },
+          {
+            "i": 44,
+            "teks": "Kebangsaan",
+            "bersih": "Kebangsaan"
+          },
+          {
+            "i": 45,
+            "teks": "Indonesia",
+            "bersih": "Indonesia"
+          },
+          {
+            "i": 46,
+            "teks": "itu",
+            "bersih": "itu"
+          },
+          {
+            "i": 47,
+            "teks": "dalam",
+            "bersih": "dalam"
+          },
+          {
+            "i": 48,
+            "teks": "suatu",
+            "bersih": "suatu"
+          },
+          {
+            "i": 49,
+            "teks": "Undang-Undang",
+            "bersih": "Undang-Undang"
+          },
+          {
+            "i": 50,
+            "teks": "Dasar",
+            "bersih": "Dasar"
+          },
+          {
+            "i": 51,
+            "teks": "Negara",
+            "bersih": "Negara"
+          },
+          {
+            "i": 52,
+            "teks": "Indonesia,",
+            "bersih": "Indonesia"
+          },
+          {
+            "i": 53,
+            "teks": "yang",
+            "bersih": "yang"
+          },
+          {
+            "i": 54,
+            "teks": "terbentuk",
+            "bersih": "terbentuk"
+          },
+          {
+            "i": 55,
+            "teks": "dalam",
+            "bersih": "dalam"
+          },
+          {
+            "i": 56,
+            "teks": "suatu",
+            "bersih": "suatu"
+          },
+          {
+            "i": 57,
+            "teks": "susunan",
+            "bersih": "susunan"
+          },
+          {
+            "i": 58,
+            "teks": "Negara",
+            "bersih": "Negara"
+          },
+          {
+            "i": 59,
+            "teks": "Republik",
+            "bersih": "Republik"
+          },
+          {
+            "i": 60,
+            "teks": "Indonesia",
+            "bersih": "Indonesia"
+          },
+          {
+            "i": 61,
+            "teks": "yang",
+            "bersih": "yang"
+          },
+          {
+            "i": 62,
+            "teks": "berkedaulatan",
+            "bersih": "berkedaulatan"
+          },
+          {
+            "i": 63,
+            "teks": "rakyat",
+            "bersih": "rakyat"
+          },
+          {
+            "i": 64,
+            "teks": "dengan",
+            "bersih": "dengan"
+          },
+          {
+            "i": 65,
+            "teks": "berdasarkan",
+            "bersih": "berdasarkan"
+          },
+          {
+            "i": 66,
+            "teks": "kepada",
+            "bersih": "kepada"
+          },
+          {
+            "i": 67,
+            "teks": "Ketuhanan",
+            "bersih": "Ketuhanan"
+          },
+          {
+            "i": 68,
+            "teks": "Yang",
+            "bersih": "Yang"
+          },
+          {
+            "i": 69,
+            "teks": "Maha",
+            "bersih": "Maha"
+          },
+          {
+            "i": 70,
+            "teks": "Esa,",
+            "bersih": "Esa"
+          },
+          {
+            "i": 71,
+            "teks": "Kemanusiaan",
+            "bersih": "Kemanusiaan"
+          },
+          {
+            "i": 72,
+            "teks": "Yang",
+            "bersih": "Yang"
+          },
+          {
+            "i": 73,
+            "teks": "Adil",
+            "bersih": "Adil"
+          },
+          {
+            "i": 74,
+            "teks": "dan",
+            "bersih": "dan"
+          },
+          {
+            "i": 75,
+            "teks": "Beradab,",
+            "bersih": "Beradab"
+          },
+          {
+            "i": 76,
+            "teks": "Persatuan",
+            "bersih": "Persatuan"
+          },
+          {
+            "i": 77,
+            "teks": "Indonesia",
+            "bersih": "Indonesia"
+          },
+          {
+            "i": 78,
+            "teks": "dan",
+            "bersih": "dan"
+          },
+          {
+            "i": 79,
+            "teks": "Kerakyatan",
+            "bersih": "Kerakyatan"
+          },
+          {
+            "i": 80,
+            "teks": "yang",
+            "bersih": "yang"
+          },
+          {
+            "i": 81,
+            "teks": "dipimpin",
+            "bersih": "dipimpin"
+          },
+          {
+            "i": 82,
+            "teks": "oleh",
+            "bersih": "oleh"
+          },
+          {
+            "i": 83,
+            "teks": "hikmat",
+            "bersih": "hikmat"
+          },
+          {
+            "i": 84,
+            "teks": "kebijaksanaan",
+            "bersih": "kebijaksanaan"
+          },
+          {
+            "i": 85,
+            "teks": "dalam",
+            "bersih": "dalam"
+          },
+          {
+            "i": 86,
+            "teks": "Permusyawaratan/Perwakilan,",
+            "bersih": "Permusyawaratan/Perwakilan"
+          },
+          {
+            "i": 87,
+            "teks": "serta",
+            "bersih": "serta"
+          },
+          {
+            "i": 88,
+            "teks": "dengan",
+            "bersih": "dengan"
+          },
+          {
+            "i": 89,
+            "teks": "mewujudkan",
+            "bersih": "mewujudkan"
+          },
+          {
+            "i": 90,
+            "teks": "suatu",
+            "bersih": "suatu"
+          },
+          {
+            "i": 91,
+            "teks": "Keadilan",
+            "bersih": "Keadilan"
+          },
+          {
+            "i": 92,
+            "teks": "sosial",
+            "bersih": "sosial"
+          },
+          {
+            "i": 93,
+            "teks": "bagi",
+            "bersih": "bagi"
+          },
+          {
+            "i": 94,
+            "teks": "seluruh",
+            "bersih": "seluruh"
+          },
+          {
+            "i": 95,
+            "teks": "rakyat",
+            "bersih": "rakyat"
+          },
+          {
+            "i": 96,
+            "teks": "Indonesia.",
+            "bersih": "Indonesia"
+          }
+        ]
+      }
+    ]
+  },
+  "batangTubuh": {
+    "bab": [
+      {
+        "nomor": "I",
+        "judul": "BENTUK DAN KEDAULATAN",
+        "amandemen": [],
+        "dihapus": false,
+        "pasal": [
+          {
+            "id": "1",
+            "nomor": "1",
+            "amandemen": [],
+            "teks": null,
+            "ayat": [
+              {
+                "id": "1-1",
+                "nomor": 1,
+                "teks": "Negara Indonesia ialah Negara Kesatuan, yang berbentuk Republik.",
+                "amandemen": []
+              },
+              {
+                "id": "1-2",
+                "nomor": 2,
+                "teks": "Kedaulatan berada di tangan rakyat dan dilaksanakan menurut Undang-Undang Dasar.",
+                "amandemen": [
+                  3
+                ]
+              },
+              {
+                "id": "1-3",
+                "nomor": 3,
+                "teks": "Negara Indonesia adalah negara hukum.",
+                "amandemen": [
+                  3
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "nomor": "II",
+        "judul": "MAJELIS PERMUSYAWARATAN RAKYAT",
+        "amandemen": [],
+        "dihapus": false,
+        "pasal": [
+          {
+            "id": "2",
+            "nomor": "2",
+            "amandemen": [],
+            "teks": null,
+            "ayat": [
+              {
+                "id": "2-1",
+                "nomor": 1,
+                "teks": "Majelis Permusyawaratan Rakyat terdiri atas anggota Dewan Perwakilan Rakyat dan anggota Dewan Perwakilan Daerah yang dipilih melalui pemilihan umum dan diatur lebih lanjut dengan undang-undang.",
+                "amandemen": [
+                  4
+                ]
+              },
+              {
+                "id": "2-2",
+                "nomor": 2,
+                "teks": "Majelis Permusyawaratan Rakyat bersidang sedikitnya sekali dalam lima tahun di ibu kota negara.",
+                "amandemen": []
+              },
+              {
+                "id": "2-3",
+                "nomor": 3,
+                "teks": "Segala putusan Majelis Permusyawaratan Rakyat ditetapkan dengan suara yang terbanyak.",
+                "amandemen": []
+              }
+            ]
+          },
+          {
+            "id": "3",
+            "nomor": "3",
+            "amandemen": [],
+            "teks": null,
+            "ayat": [
+              {
+                "id": "3-1",
+                "nomor": 1,
+                "teks": "Majelis Permusyawaratan Rakyat berwenang mengubah dan menetapkan Undang-Undang Dasar.",
+                "amandemen": [
+                  3
+                ]
+              },
+              {
+                "id": "3-2",
+                "nomor": 2,
+                "teks": "Majelis Permusyawaratan Rakyat melantik Presiden dan/atau Wakil Presiden.",
+                "amandemen": [
+                  3,
+                  4
+                ]
+              },
+              {
+                "id": "3-3",
+                "nomor": 3,
+                "teks": "Majelis Permusyawaratan Rakyat hanya dapat memberhentikan Presiden dan/atau Wakil Presiden dalam masa jabatannya menurut Undang-Undang Dasar.",
+                "amandemen": [
+                  3,
+                  4
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "nomor": "III",
+        "judul": "KEKUASAAN PEMERINTAHAN NEGARA",
+        "amandemen": [],
+        "dihapus": false,
+        "pasal": [
+          {
+            "id": "4",
+            "nomor": "4",
+            "amandemen": [],
+            "teks": null,
+            "ayat": [
+              {
+                "id": "4-1",
+                "nomor": 1,
+                "teks": "Presiden Republik Indonesia memegang kekuasaan pemerintahan menurut Undang-Undang Dasar.",
+                "amandemen": []
+              },
+              {
+                "id": "4-2",
+                "nomor": 2,
+                "teks": "Dalam melakukan kewajibannya Presiden dibantu oleh satu orang Wakil Presiden.",
+                "amandemen": []
+              }
+            ]
+          },
+          {
+            "id": "5",
+            "nomor": "5",
+            "amandemen": [],
+            "teks": null,
+            "ayat": [
+              {
+                "id": "5-1",
+                "nomor": 1,
+                "teks": "Presiden berhak mengajukan rancangan undang-undang kepada Dewan Perwakilan Rakyat",
+                "amandemen": [
+                  1
+                ]
+              },
+              {
+                "id": "5-2",
+                "nomor": 2,
+                "teks": "Presiden menetapkan peraturan pemerintah untuk menjalankan undang-undang sebagaimana mestinya.",
+                "amandemen": []
+              }
+            ]
+          },
+          {
+            "id": "6",
+            "nomor": "6",
+            "amandemen": [],
+            "teks": null,
+            "ayat": [
+              {
+                "id": "6-1",
+                "nomor": 1,
+                "teks": "Calon Presiden dan calon Wakil Presiden harus seorang warga negara Indonesia sejak kelahirannya dan tidak pernah menerima kewarganegaraan lain karena kehendaknya sendiri, tidak pernah mengkhianati negara, serta mampu secara rohani dan jasmani untuk melaksanakan tugas dan kewajiban sebagai Presiden dan Wakil Presiden.",
+                "amandemen": [
+                  3
+                ]
+              },
+              {
+                "id": "6-2",
+                "nomor": 2,
+                "teks": "Syarat-syarat untuk menjadi Presiden dan Wakil Presiden diatur lebih lanjut dengan undang-undang.",
+                "amandemen": [
+                  3
+                ]
+              }
+            ]
+          },
+          {
+            "id": "6A",
+            "nomor": "6A",
+            "amandemen": [],
+            "teks": null,
+            "ayat": [
+              {
+                "id": "6A-1",
+                "nomor": 1,
+                "teks": "Presiden dan Wakil Presiden dipilih dalam satu pasangan secara langsung oleh rakyat.",
+                "amandemen": [
+                  3
+                ]
+              },
+              {
+                "id": "6A-2",
+                "nomor": 2,
+                "teks": "Pasangan calon Presiden dan Wakil Presiden diusulkan oleh partai politik atau gabungan partai politik peserta pemilihan umum sebelum pelaksanaan pemilihan umum.",
+                "amandemen": [
+                  3
+                ]
+              },
+              {
+                "id": "6A-3",
+                "nomor": 3,
+                "teks": "Pasangan calon Presiden dan Wakil Presiden yang mendapatkan suara lebih dari lima puluh persen dari jumlah suara dalam pemilihan umum dengan sedikitnya dua puluh persen suara di setiap provinsi yang tersebar di lebih dari setengah jumlah provinsi di Indonesia, dilantik menjadi Presiden dan Wakil Presiden.",
+                "amandemen": [
+                  3
+                ]
+              },
+              {
+                "id": "6A-4",
+                "nomor": 4,
+                "teks": "Dalam hal tidak ada pasangan calon Presiden dan Wakil Presiden terpilih dua pasangan calon yang memperoleh suara terbanyak pertama dan kedua dalam pemilihan umum dipilih oleh rakyat secara langsung dan pasangan yang memperoleh suara rakyat terbanyak dilantik sebagai Presiden dan Wakil Presiden.",
+                "amandemen": [
+                  4
+                ]
+              },
+              {
+                "id": "6A-5",
+                "nomor": 5,
+                "teks": "Tata cara pelaksanaan pemilihan Presiden dan Wakil Presiden lebih lanjut diatur dalam undang-undang.",
+                "amandemen": [
+                  3
+                ]
+              }
+            ]
+          },
+          {
+            "id": "7",
+            "nomor": "7",
+            "amandemen": [
+              1
+            ],
+            "teks": "Presiden dan Wakil Presiden memegang jabatan selama lima tahun, dan sesudahnya dapat dipilih kembali dalam jabatan yang sama, hanya untuk satu kali masa jabatan.",
+            "ayat": []
+          },
+          {
+            "id": "7A",
+            "nomor": "7A",
+            "amandemen": [
+              3
+            ],
+            "teks": "Presiden dan/atau Wakil Presiden dapat diberhentikan dalam masa jabatannya oleh Majelis Permusyawaratan Rakyat atas usul Dewan Perwakilan Rakyat, baik apabila terbukti telah melakukan pelanggaran hukum berupa pengkhianatan terhadap negara, korupsi, penyuapan, tindak pidana berat lainnya, atau perbuatan tercela maupun apabila terbukti tidak lagi memenuhi syarat sebagai Presiden dan/atau Wakil Presiden.",
+            "ayat": []
+          },
+          {
+            "id": "7B",
+            "nomor": "7B",
+            "amandemen": [],
+            "teks": null,
+            "ayat": [
+              {
+                "id": "7B-1",
+                "nomor": 1,
+                "teks": "Usul pemberhentian Presiden dan/atau Wakil Presiden dapat diajukan oleh Dewan Perwakilan Rakyat kepada Majelis Permusyawaratan Rakyat hanya dengan terlebih dahulu mengajukan permintaan kepada Mahkamah Konstitusi untuk memeriksa, mengadili, dan memutus pendapat Dewan Perwakilan Rakyat bahwa Presiden dan/atau Wakil Presiden telah melakukan pelanggaran hukum berupa pengkhianatan terhadap negara, korupsi, penyuapan, tindak pidana berat lainnya, atau perbuatan tercela; dan/atau pendapat bahwa Presiden dan/atau Wakil Presiden tidak lagi memenuhi syarat sebagai Presiden dan/atau Wakil Presiden.",
+                "amandemen": [
+                  3
+                ]
+              },
+              {
+                "id": "7B-2",
+                "nomor": 2,
+                "teks": "Pendapat Dewan Perwakilan Rakyat bahwa Presiden dan/atau Wakil Presiden telah melakukan pelanggaran hukum tersebut ataupun telah tidak lagi memenuhi syarat sebagai Presiden dan/atau Wakil Presiden adalah dalam rangka pelaksanaan fungsi pengawasan Dewan Perwakilan Rakyat.",
+                "amandemen": [
+                  3
+                ]
+              },
+              {
+                "id": "7B-3",
+                "nomor": 3,
+                "teks": "Pengajuan permintaan Dewan Perwakilan Rakyat kepada Mahkamah Konstitusi hanya dapat dilakukan dengan dukungan sekurang-kurangnya 2/3 dari jumlah anggota Dewan Perwakilan Rakyat yang hadir dalam sidang paripurna yang dihadiri oleh sekurang-kurangnya 2/3 dari jumlah anggota Dewan Perwakilan Rakyat.",
+                "amandemen": [
+                  3
+                ]
+              },
+              {
+                "id": "7B-4",
+                "nomor": 4,
+                "teks": "Mahkamah Konstitusi wajib memeriksa, mengadili, dan memutus dengan seadil-adilnya terhadap pendapat Dewan Perwakilan Rakyat tersebut paling lama sembilan puluh hari setelah permintaan Dewan Perwakilan Rakyat itu diterima oleh Mahkamah Konstitusi.",
+                "amandemen": [
+                  3
+                ]
+              },
+              {
+                "id": "7B-5",
+                "nomor": 5,
+                "teks": "Apabila Mahkamah Konstitusi memutuskan bahwa Presiden dan/atau Wakil Presiden terbukti melakukan pelanggaran hukum berupa pengkhianatan terhadap negara, korupsi, penyuapan, tindak pidana berat lainnya, atau perbuatan tercela; dan/atau terbukti bahwa Presiden dan/atau Wakil Presiden tidak lagi memenuhi syarat sebagai Presiden dan/atau Wakil Presiden, Dewan Perwakilan Rakyat menyelenggarakan sidang paripurna untuk meneruskan usul pemberhentian Presiden dan/atau Wakil Presiden kepada Majelis Permusyawaratan Rakyat.",
+                "amandemen": [
+                  3
+                ]
+              },
+              {
+                "id": "7B-6",
+                "nomor": 6,
+                "teks": "Majelis Permusyawaratan Rakyat wajib menyelenggarakan sidang untuk memutuskan usul Dewan Perwakilan Rakyat tersebut paling lambat tiga puluh hari sejak Majelis Permusyawaratan Rakyat menerima usul tersebut.",
+                "amandemen": [
+                  3
+                ]
+              },
+              {
+                "id": "7B-7",
+                "nomor": 7,
+                "teks": "Keputusan Majelis Permusyawaratan Rakyat atas usul pemberhentian Presiden dan/atau Wakil Presiden harus diambil dalam rapat paripurna Majelis Permusyawaratan Rakyat yang dihadiri oleh sekurang-kurangnya 3/4 dari jumlah anggota dan disetujui oleh sekurang-kurangnya 2/3 dari jumlah anggota yang hadir, setelah Presiden dan/atau Wakil Presiden diberi kesempatan menyampaikan penjelasan dalam rapat paripurna Majelis Permusyawaratan Rakyat.",
+                "amandemen": [
+                  3
+                ]
+              }
+            ]
+          },
+          {
+            "id": "7C",
+            "nomor": "7C",
+            "amandemen": [
+              3
+            ],
+            "teks": "Presiden tidak dapat membekukan dan/atau membubarkan Dewan Perwakilan Rakyat.",
+            "ayat": []
+          },
+          {
+            "id": "8",
+            "nomor": "8",
+            "amandemen": [],
+            "teks": null,
+            "ayat": [
+              {
+                "id": "8-1",
+                "nomor": 1,
+                "teks": "Jika Presiden mangkat, berhenti, diberhentikan, atau tidak dapat melakukan kewajibannya dalam masa jabatannya, ia digantikan oleh Wakil Presiden sampai habis masa jabatannya.",
+                "amandemen": [
+                  3
+                ]
+              },
+              {
+                "id": "8-2",
+                "nomor": 2,
+                "teks": "Dalam hal terjadi kekosongan Wakil Presiden, selambat-lambatnya dalam waktu enam puluh hari, Majelis Permusyawaratan Rakyat menyelenggarakan sidang untuk memilih Wakil Presiden dari dua calon yang diusulkan oleh Presiden.",
+                "amandemen": [
+                  3
+                ]
+              },
+              {
+                "id": "8-3",
+                "nomor": 3,
+                "teks": "Jika Presiden dan Wakil Presiden mangkat, berhenti, diberhentikan atau tidak dapat melakukan kewajibannya dalam masa jabatannya secara bersamaan, pelaksana tugas kepresidenan adalah Menteri Luar Negeri, Menteri Dalam Negeri, dan Menteri Pertahanan secara bersama-sama. Selambat-lambatnya tigapuluh hari setelah itu, Majelis Permusyawaratan Rakyat menyelenggarakan sidang untuk memilih Presiden dan Wakil Presiden dari dua pasangan calon Presiden dan Wakil Presiden yang diusulkan oleh partai polotik yang psangan calon Presiden dan Wakil Presidennya meraih suara terbanyak pertama dan kedua dalam pemilihan umum sebelumnya, sampai akhir masa jabatannya.",
+                "amandemen": [
+                  4
+                ]
+              }
+            ]
+          },
+          {
+            "id": "9",
+            "nomor": "9",
+            "amandemen": [],
+            "teks": null,
+            "ayat": [
+              {
+                "id": "9-1",
+                "nomor": 1,
+                "teks": "Sebelum memangku jabatannya, Presiden dan Wakil Presiden bersumpah menurut agama, atau berjanji dengan sungguh-sungguh dihadapan Majelis Permusyawaratan Rakyat atau Dewan Perwakilan Rakyat sebagai berikut : Sumpah Presiden (Wakil Presiden): “ Demi Allah, saya bersumpah akan memenuhi kewajiban Presiden Republik Indonesia (Wakil Presiden Republik Indonesia) dengan sebaik-baiknya dan seadil-adilnya, memegang teguh Undang-Undang Dasar dan menjalankan segala undang-undang dan peraturannya dengan selurus-lurusnya serta berbakti, kepada Nusa dan Bangsa”. Janji Presiden (Wakil Presiden) : “Saya berjanji dengan sungguh-sungguh akan memenuhi kewajiban Presiden Republik Indonesia (Wakil Presiden Republik Indonesia) dengan sebaik-baiknya dan seadil-adilnya, memegang teguh Undang-Undang Dasar dan menjalankan segala undang-undang dan peraturannya dengan selurus-lurusnya serta berbakti kepada Nusa dan Bangsa” .",
+                "amandemen": [
+                  1
+                ]
+              },
+              {
+                "id": "9-2",
+                "nomor": 2,
+                "teks": "Jika Majelis Permusyawaratan Rakyat atau Dewan Perwakilan Rakyat tidak dapat mengadakan sidang, Presiden dan Wakil Presiden bersumpah menurut agama, atau berjanji dengan sungguh-sungguh di hadapan pimpinan Majelis Permusyawaratan Rakyat dengan disaksikan oleh pimpinan Mahkamah Agung.",
+                "amandemen": [
+                  1
+                ]
+              }
+            ]
+          },
+          {
+            "id": "10",
+            "nomor": "10",
+            "amandemen": [],
+            "teks": "Presiden memegang kekuasaan yang tertinggi atas Angkatan Darat, Angkatan Laut dan Angkatan Udara.",
+            "ayat": []
+          },
+          {
+            "id": "11",
+            "nomor": "11",
+            "amandemen": [],
+            "teks": null,
+            "ayat": [
+              {
+                "id": "11-1",
+                "nomor": 1,
+                "teks": "Presiden dengan persetujuan Dewan Perwakilan Rakyat menyatakan perang, membuat perdamaian dan perjanjian dengan negara lain.",
+                "amandemen": [
+                  4
+                ]
+              },
+              {
+                "id": "11-2",
+                "nomor": 2,
+                "teks": "Presiden dalam membuat perjanjian internasional lainnya yang menimbulkan akibat yang luas dan mendasar bagi kehidupan rakyat yang terkait dengan beban keuangan negara, dan/atau mengharuskan perubahan atau pembentukan undang-undang harus dengan persetujuan Dewan Perwakilan Rakyat.",
+                "amandemen": [
+                  3
+                ]
+              },
+              {
+                "id": "11-3",
+                "nomor": 3,
+                "teks": "Ketentuan lebih lanjut tentang perjanjian internasional diatur dengan undang-undang.",
+                "amandemen": [
+                  3
+                ]
+              }
+            ]
+          },
+          {
+            "id": "12",
+            "nomor": "12",
+            "amandemen": [],
+            "teks": "Presiden menyatakan keadaan bahaya. Syarat-syarat dan akibatnya keadaan bahaya ditetapkan dengan undang-undang.",
+            "ayat": []
+          },
+          {
+            "id": "13",
+            "nomor": "13",
+            "amandemen": [],
+            "teks": null,
+            "ayat": [
+              {
+                "id": "13-1",
+                "nomor": 1,
+                "teks": "Presiden mengangkat duta dan konsul.",
+                "amandemen": []
+              },
+              {
+                "id": "13-2",
+                "nomor": 2,
+                "teks": "Dalam hal mengangkat duta, Presiden memperhatikan pertimbangan Dewan Perwakilan Rakyat.",
+                "amandemen": [
+                  1
+                ]
+              },
+              {
+                "id": "13-3",
+                "nomor": 3,
+                "teks": "Presiden menerima penempatan duta negara lain dengan menperhatikan pertimbangan Dewan Perwakilan Rakyat.",
+                "amandemen": [
+                  1
+                ]
+              }
+            ]
+          },
+          {
+            "id": "14",
+            "nomor": "14",
+            "amandemen": [],
+            "teks": null,
+            "ayat": [
+              {
+                "id": "14-1",
+                "nomor": 1,
+                "teks": "Presiden memberi grasi dan rehabilitasi dengan memperhatikan pertimbangan Mahkamah Agung.",
+                "amandemen": [
+                  1
+                ]
+              },
+              {
+                "id": "14-2",
+                "nomor": 2,
+                "teks": "Presiden memberi amnesti dan abolisi dengan memperhatikan pertimbangan Dewan Perwakilan Rakyat.",
+                "amandemen": [
+                  1
+                ]
+              }
+            ]
+          },
+          {
+            "id": "15",
+            "nomor": "15",
+            "amandemen": [
+              1
+            ],
+            "teks": "Presiden memberi gelar, tanda jasa, dan lain-lain tanda kehormatan yang diatur dengan undang-undang.",
+            "ayat": []
+          },
+          {
+            "id": "16",
+            "nomor": "16",
+            "amandemen": [
+              4
+            ],
+            "teks": "Presiden membentuk suatu dewan pertimbangan yang bertugas memberikan nasihat dan pertimbangan kepada Presiden, yang selanjutanya diatur dalam undang-undang.",
+            "ayat": []
+          }
+        ]
+      },
+      {
+        "nomor": "IV",
+        "judul": "DEWAN PERTIMBANGAN AGUNG",
+        "amandemen": [
+          4
+        ],
+        "dihapus": true,
+        "pasal": []
+      },
+      {
+        "nomor": "V",
+        "judul": "KEMENTERIAN NEGARA",
+        "amandemen": [],
+        "dihapus": false,
+        "pasal": [
+          {
+            "id": "17",
+            "nomor": "17",
+            "amandemen": [],
+            "teks": null,
+            "ayat": [
+              {
+                "id": "17-1",
+                "nomor": 1,
+                "teks": "Presiden dibantu oleh menteri-menteri negara.",
+                "amandemen": []
+              },
+              {
+                "id": "17-2",
+                "nomor": 2,
+                "teks": "Menteri-menteri itu diangkat dan diberhentikan oleh Presiden.",
+                "amandemen": [
+                  1
+                ]
+              },
+              {
+                "id": "17-3",
+                "nomor": 3,
+                "teks": "Setiap menteri membidangi urusan tertentu dalam pemerintahan.",
+                "amandemen": [
+                  1
+                ]
+              },
+              {
+                "id": "17-4",
+                "nomor": 4,
+                "teks": "Pembentukan, pengubahan, dan pembubaran kementerian negara diatur dalam undang-undang.",
+                "amandemen": [
+                  3
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "nomor": "VI",
+        "judul": "PEMERINTAH DAERAH",
+        "amandemen": [],
+        "dihapus": false,
+        "pasal": [
+          {
+            "id": "18",
+            "nomor": "18",
+            "amandemen": [],
+            "teks": null,
+            "ayat": [
+              {
+                "id": "18-1",
+                "nomor": 1,
+                "teks": "Negara Kesatuan Republik Indonesia dibagi atas daerah-daerah provinsi dan daerah provinsi itu dibagi atas kabupaten dan kota, yang tiap-tiap provinsi, kabupaten, dan kota itu mempunyai pemerintahan daerah, yang diatur dengan undang-undang.",
+                "amandemen": [
+                  2
+                ]
+              },
+              {
+                "id": "18-2",
+                "nomor": 2,
+                "teks": "Pemerintahan daerah provinsi, daerah kabupaten, dan kota mengatur dan mengurus sendiri urusan pemerintahan menurut asas otonomi dan tugas pembantuan.",
+                "amandemen": [
+                  2
+                ]
+              },
+              {
+                "id": "18-3",
+                "nomor": 3,
+                "teks": "Pemerintahan daerah provinsi, daerah kabupaten, dan kota memiliki Dewan Perwakilan Rakyat Daerah yang anggota-anggotanya dipilih melalui pemilihan umum.",
+                "amandemen": [
+                  2
+                ]
+              },
+              {
+                "id": "18-4",
+                "nomor": 4,
+                "teks": "Gubernur, Bupati dan Walikota masing-masing sebagai Kepala Pemerintah Daerah Provinsi, Kabupaten dan Kota dipilih secara demokratis.",
+                "amandemen": [
+                  2
+                ]
+              },
+              {
+                "id": "18-5",
+                "nomor": 5,
+                "teks": "Pemerintah daerah menjalankan otonomi seluas-luasnya, kecuali urusan pemerintahan yang oleh undang-undang ditentukan sebagai urusan Pemerintah Pusat.",
+                "amandemen": [
+                  2
+                ]
+              },
+              {
+                "id": "18-6",
+                "nomor": 6,
+                "teks": "Pemerintahan daerah berhak menetapkan peraturan daerah dan peraturan-peraturan lain untuk melaksanakan otonomi dan tugas pembantuan.",
+                "amandemen": [
+                  2
+                ]
+              },
+              {
+                "id": "18-7",
+                "nomor": 7,
+                "teks": "Susunan dan tata cara penyelenggaraan pemerintahan daerah diatur dalam undang-undang.",
+                "amandemen": [
+                  2
+                ]
+              }
+            ]
+          },
+          {
+            "id": "18A",
+            "nomor": "18A",
+            "amandemen": [],
+            "teks": null,
+            "ayat": [
+              {
+                "id": "18A-1",
+                "nomor": 1,
+                "teks": "Hubungan wewenang antara pemerintah pusat dan pemerintah daerah provinsi, kabupaten, dan kota atau antara provinsi dan kabupaten dan kota, diatur dengan Undang-undang dengan memperhatikan kekhususan dan keragaman daerah.",
+                "amandemen": [
+                  2
+                ]
+              },
+              {
+                "id": "18A-2",
+                "nomor": 2,
+                "teks": "Hubungan keuangan, pelayanan umum, pemanfatan sumber daya alam dan sumber daya lainnya antara pemerintah pusat dan pemerintahan daerah diatur dan dilaksanakan secara adil dan selaras berdasarkan undang-undang.",
+                "amandemen": [
+                  2
+                ]
+              }
+            ]
+          },
+          {
+            "id": "18B",
+            "nomor": "18B",
+            "amandemen": [],
+            "teks": null,
+            "ayat": [
+              {
+                "id": "18B-1",
+                "nomor": 1,
+                "teks": "Negara mengakui dan menghormati satuan-satuan pemerintahan daerah yang bersifat khusus atau bersifat istimewa yang diatur dengan Undang-undang.",
+                "amandemen": [
+                  2
+                ]
+              },
+              {
+                "id": "18B-2",
+                "nomor": 2,
+                "teks": "Negara mengakui dan menghormati kesatuan-kesatuan masyarakat hukum adat serta hak-hak tradisonalnya sepanjang masih hidup dan sesuai dengan perkembangan masyarakat dan prinsip Negara Kesatuan Republik Indonesia, yang diatur dalam undang-undang.",
+                "amandemen": [
+                  2
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "nomor": "VII",
+        "judul": "DEWAN PERWAKILAN RAKYAT",
+        "amandemen": [],
+        "dihapus": false,
+        "pasal": [
+          {
+            "id": "19",
+            "nomor": "19",
+            "amandemen": [],
+            "teks": null,
+            "ayat": [
+              {
+                "id": "19-1",
+                "nomor": 1,
+                "teks": "Anggota Dewan Perwakilan Rakyat dipilih melalui pemilihan umum.",
+                "amandemen": [
+                  2
+                ]
+              },
+              {
+                "id": "19-2",
+                "nomor": 2,
+                "teks": "Susunan Dewan Perwakilan rakyat diatur dengan undang-undang.",
+                "amandemen": [
+                  2
+                ]
+              },
+              {
+                "id": "19-3",
+                "nomor": 3,
+                "teks": "Dewan Perwakilan Rakyat bersidang sedikitnya sekali dalam setahun.",
+                "amandemen": [
+                  2
+                ]
+              }
+            ]
+          },
+          {
+            "id": "20",
+            "nomor": "20",
+            "amandemen": [],
+            "teks": null,
+            "ayat": [
+              {
+                "id": "20-1",
+                "nomor": 1,
+                "teks": "Dewan Perwakilan Rakyat memegang kekuasaan membentuk undang-undang.",
+                "amandemen": [
+                  1
+                ]
+              },
+              {
+                "id": "20-2",
+                "nomor": 2,
+                "teks": "Setiap rancangan undang-undang dibahas oleh Dewan Perwakilan Rakyat dan Presiden untuk mendapat persetujuan bersama.",
+                "amandemen": [
+                  1
+                ]
+              },
+              {
+                "id": "20-3",
+                "nomor": 3,
+                "teks": "Jika rancangan undang-undang itu tidak mendapat persetujuan bersama, rancangan undang-undang itu tidak boleh diajukan lagi dalam persidangan Dewan Perwakilan Rakyat masa itu.",
+                "amandemen": [
+                  1
+                ]
+              },
+              {
+                "id": "20-4",
+                "nomor": 4,
+                "teks": "Presiden mengesahkan rancangan undang-undang yang telah disetujui bersama untuk menjadi undang-undang.",
+                "amandemen": [
+                  1
+                ]
+              },
+              {
+                "id": "20-5",
+                "nomor": 5,
+                "teks": "Dalam hal rancangan undang-undang yang telah disetujui bersama tersebut tidak disahkan oleh Presiden dalam waktu tiga puluh hari semenjak rancangan undang-undang tersebut disetujui, rancangan undang-undang tersebut sah menjadi undang-undang dan wajib diundangkan.",
+                "amandemen": [
+                  2
+                ]
+              }
+            ]
+          },
+          {
+            "id": "20A",
+            "nomor": "20A",
+            "amandemen": [],
+            "teks": null,
+            "ayat": [
+              {
+                "id": "20A-1",
+                "nomor": 1,
+                "teks": "Dewan Perwakilan Rakyat memiliki fungsi legislasi, fungsi anggaran dan fungsi pengawasan.",
+                "amandemen": [
+                  2
+                ]
+              },
+              {
+                "id": "20A-2",
+                "nomor": 2,
+                "teks": "Dalam melaksanakan fungsinya, selain hak yang diatur dalam pasal-pasal lain Undang-Undang Dasar ini, Dewan Perwakilan Rakyat mempunyai hak interpelasi, hak angket, dan hak menyatakan pendapat.",
+                "amandemen": [
+                  2
+                ]
+              },
+              {
+                "id": "20A-3",
+                "nomor": 3,
+                "teks": "Selain hak yang diatur dalam pasal-pasal lain Undang-Undang Dasar ini, Dewan Perwakilan Rakyat mempunyai hak mengajukan pertanyaan, menyampaikan usul dan pendapat, serta hak imunitas.",
+                "amandemen": [
+                  2
+                ]
+              },
+              {
+                "id": "20A-4",
+                "nomor": 4,
+                "teks": "Ketentuan lebih lanjut tentang hak Dewan Perwakilan Rakyat dan hak anggota Dewan Perwakilan Rakyat diatur dalam undang-undang.",
+                "amandemen": [
+                  2
+                ]
+              }
+            ]
+          },
+          {
+            "id": "21",
+            "nomor": "21",
+            "amandemen": [
+              1
+            ],
+            "teks": "Anggota Dewan Perwakilan Rakyat berhak mengajukan usul rancangan undang-undang.",
+            "ayat": []
+          },
+          {
+            "id": "22",
+            "nomor": "22",
+            "amandemen": [],
+            "teks": null,
+            "ayat": [
+              {
+                "id": "22-1",
+                "nomor": 1,
+                "teks": "Dalam hal ihwal kegentingan yang memaksa, Presiden berhak menetapkan peraturan pemerintah sebagai pengganti undang-undang.",
+                "amandemen": []
+              },
+              {
+                "id": "22-2",
+                "nomor": 2,
+                "teks": "Peraturan pemerintah itu harus mendapat persetujuan Dewan Perwakilan Rakyat dalam persidangan yang berikut.",
+                "amandemen": []
+              },
+              {
+                "id": "22-3",
+                "nomor": 3,
+                "teks": "Jika tidak mendapat persetujuan, maka peraturan pemerintah itu harus dicabut.",
+                "amandemen": []
+              }
+            ]
+          },
+          {
+            "id": "22A",
+            "nomor": "22A",
+            "amandemen": [
+              2
+            ],
+            "teks": "Ketentuan lebih lanjut tentang tata cara pembentukan undang-undang diatur dengan undang-undang.",
+            "ayat": []
+          },
+          {
+            "id": "22B",
+            "nomor": "22B",
+            "amandemen": [
+              2
+            ],
+            "teks": "Anggota Dewan Perwakilan Rakyat dapat diberhentikan dari jabatannya, yang syarat-syarat dan tata caranya diatur dalam undang-undang.",
+            "ayat": []
+          }
+        ]
+      },
+      {
+        "nomor": "VIIA",
+        "judul": "DEWAN PERWAKILAN DAERAH",
+        "amandemen": [
+          3
+        ],
+        "dihapus": false,
+        "pasal": [
+          {
+            "id": "22C",
+            "nomor": "22C",
+            "amandemen": [],
+            "teks": null,
+            "ayat": [
+              {
+                "id": "22C-1",
+                "nomor": 1,
+                "teks": "Anggota Dewan Perwakilan Daerah dipilih dari setiap provinsi melalui pemilihan umum.",
+                "amandemen": [
+                  3
+                ]
+              },
+              {
+                "id": "22C-2",
+                "nomor": 2,
+                "teks": "Anggota Dewan Perwakilan Daerah dari setiap provinsi jumlahnya sama dan jumlah seluruh anggota Dewan Perwakilan Daerah itu tidak lebih dari sepertiga jumlah anggota Dewan Perwakilan Rakyat.",
+                "amandemen": [
+                  3
+                ]
+              },
+              {
+                "id": "22C-3",
+                "nomor": 3,
+                "teks": "Dewan Perwakilan Daerah bersidang sedikitnya sekali dalam setahun.",
+                "amandemen": [
+                  3
+                ]
+              },
+              {
+                "id": "22C-4",
+                "nomor": 4,
+                "teks": "Susunan dan kedudukan Dewan Perwakilan Daerah diatur dengan undang-undang.",
+                "amandemen": [
+                  3
+                ]
+              }
+            ]
+          },
+          {
+            "id": "22D",
+            "nomor": "22D",
+            "amandemen": [],
+            "teks": null,
+            "ayat": [
+              {
+                "id": "22D-1",
+                "nomor": 1,
+                "teks": "Dewan Perwakilan Daerah dapat mengajukan kepada Dewan Perwakilan Rakyat rancangan undang-undang yang berkaitan dengan otonomi daerah, hubungan pusat dan daerah, pembentukan dan pemekaran serta penggabungan daerah, pengelolaan sumber daya alam dan sumber daya ekonomi lainnya, serta yang berkaitan dengan perimbangan keuangan pusat dan daerah.",
+                "amandemen": [
+                  3
+                ]
+              },
+              {
+                "id": "22D-2",
+                "nomor": 2,
+                "teks": "Dewan Perwakilan Daerah ikut membahas rancangan undang-undang yang berkaitan dengan otonomi daerah; hubungan pusat dan daerah; pembentukan, pemekaran, dan penggabungan daerah; pengelolaan sumber daya alam dan sumber daya ekonomi lainnya, serta perimbangan keuangan pusat dan daerah; serta memberikan pertimbangan kepada Dewan Perwakilan Rakyat atas rancangan undang-undang anggaran pendapatan dan belanja negara dan rancangan undang-undang yang berkaitan dengan pajak, pendidikan, dan agama.",
+                "amandemen": [
+                  3
+                ]
+              },
+              {
+                "id": "22D-3",
+                "nomor": 3,
+                "teks": "Dewan Perwakilan Daerah dapat melakukan pengawasan atas pelaksanaan undang-undang mengenai : otonomi daerah, pembentukan, pemekaran dan penggabungan daerah, hubungan pusat dan daerah, pengelolaan sumber daya alam dan sumber daya ekonomi lainnya, pelaksanaan anggaran pendapatan dan belanja negara, pajak, pendidikan, dan agama serta menyampaikan hasil pengawasannya itu kepada Dewan Perwakilan Rakyat sebagai bahan pertimbangan untuk ditindaklanjuti.",
+                "amandemen": [
+                  3
+                ]
+              },
+              {
+                "id": "22D-4",
+                "nomor": 4,
+                "teks": "Anggota Dewan Perwakilan Daerah dapat diberhentikan dari jabatannya, yang syarat-syarat dan tata caranya diatur dalam undang-undang.",
+                "amandemen": [
+                  3
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "nomor": "VIIB",
+        "judul": "PEMILIHAN UMUM",
+        "amandemen": [
+          3
+        ],
+        "dihapus": false,
+        "pasal": [
+          {
+            "id": "22E",
+            "nomor": "22E",
+            "amandemen": [],
+            "teks": null,
+            "ayat": [
+              {
+                "id": "22E-1",
+                "nomor": 1,
+                "teks": "Pemilihan umum dilaksanakan secara langsung, umum, bebas, rahasia, jujur, dan adil setiap lima tahun sekali.",
+                "amandemen": [
+                  3
+                ]
+              },
+              {
+                "id": "22E-2",
+                "nomor": 2,
+                "teks": "Pemilihan umum diselenggarakan untuk memilih anggota Dewan Perwakilan Rakyat, Dewan Perwakilan Daerah, Presiden dan Wakil Presiden dan Dewan Perwakilan Rakyat Daerah.",
+                "amandemen": [
+                  3
+                ]
+              },
+              {
+                "id": "22E-3",
+                "nomor": 3,
+                "teks": "Peserta pemilihan umum untuk memilih anggota Dewan Perwakilan Rakyat dan anggota Dewan Perwakilan Rakyat Daerah adalah partai politik.",
+                "amandemen": [
+                  3
+                ]
+              },
+              {
+                "id": "22E-4",
+                "nomor": 4,
+                "teks": "Peserta pemilihan umum untuk memilih anggota Dewan Perwakilan Daerah adalah perseorangan.",
+                "amandemen": [
+                  3
+                ]
+              },
+              {
+                "id": "22E-5",
+                "nomor": 5,
+                "teks": "Pemilihan umum diselenggarakan oleh suatu komisi pemilihan umum yang bersifat nasional, tetap, dan mandiri.",
+                "amandemen": [
+                  3
+                ]
+              },
+              {
+                "id": "22E-6",
+                "nomor": 6,
+                "teks": "Ketentuan lebih lanjut tentang pemilihan umum diatur dengan undang-undang.",
+                "amandemen": [
+                  3
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "nomor": "VIII",
+        "judul": "HAL KEUANGAN",
+        "amandemen": [],
+        "dihapus": false,
+        "pasal": [
+          {
+            "id": "23",
+            "nomor": "23",
+            "amandemen": [],
+            "teks": null,
+            "ayat": [
+              {
+                "id": "23-1",
+                "nomor": 1,
+                "teks": "Anggaran pendapatan dan belanja negara sebagai wujud dari pengelolaan keuangan negara ditetapkan setiap tahun dengan undang-undang dan dilaksanakan secara terbuka dan bertanggung jawab untuk sebesar-besarnya kemakmuran rakyat.",
+                "amandemen": [
+                  3
+                ]
+              },
+              {
+                "id": "23-2",
+                "nomor": 2,
+                "teks": "Rancangan undang-undang anggaran pendapatan dan belanja negara diajukan oleh Presiden untuk dibahas bersama Dewan Perwakilan Rakyat dengan memperhatikan pertimbangan Dewan Perwakilan Daerah.",
+                "amandemen": [
+                  3
+                ]
+              },
+              {
+                "id": "23-3",
+                "nomor": 3,
+                "teks": "Apabila Dewan Perwakilan Rakyat tidak menyetujui rancangan anggaran pendapatan dan belanja negara yang diusulkan oleh Presiden, Pemerintah menjalankan Anggaran Pendapatan dan Belanja Negara tahun yang lalu.",
+                "amandemen": [
+                  3
+                ]
+              }
+            ]
+          },
+          {
+            "id": "23A",
+            "nomor": "23A",
+            "amandemen": [
+              3
+            ],
+            "teks": "Pajak dan pungutan lain yang bersifat memaksa untuk keperluan negara diatur dengan undang-undang.",
+            "ayat": []
+          },
+          {
+            "id": "23B",
+            "nomor": "23B",
+            "amandemen": [
+              4
+            ],
+            "teks": "Macam dan harga mata uang ditetapkan dengan undang-undang.",
+            "ayat": []
+          },
+          {
+            "id": "23C",
+            "nomor": "23C",
+            "amandemen": [
+              3
+            ],
+            "teks": "Hal-hal lain mengenai keuangan negara diatur dengan undang-undang.",
+            "ayat": []
+          },
+          {
+            "id": "23D",
+            "nomor": "23D",
+            "amandemen": [
+              4
+            ],
+            "teks": "Negara memiliki suatu bank sentral yang susunan, kedudukan, kewenangan, tanggung jawab, dan independensinya diatur dengan undang-undang.",
+            "ayat": []
+          }
+        ]
+      },
+      {
+        "nomor": "VIIIA",
+        "judul": "BADAN PEMERIKSA KEUANGAN",
+        "amandemen": [
+          3
+        ],
+        "dihapus": false,
+        "pasal": [
+          {
+            "id": "23E",
+            "nomor": "23E",
+            "amandemen": [],
+            "teks": null,
+            "ayat": [
+              {
+                "id": "23E-1",
+                "nomor": 1,
+                "teks": "Untuk memeriksa pengelolaan dan tanggung jawab tentang keuangan negara diadakan satu Badan Pemeriksa Keuangan yang bebas dan mandiri.",
+                "amandemen": [
+                  3
+                ]
+              },
+              {
+                "id": "23E-2",
+                "nomor": 2,
+                "teks": "Hasil pemeriksaan keuangan negara diserahkan kepada Dewan Perwakilan Rakyat, Dewan Perwakilan Daerah, dan Dewan Perwakilan Rakyat Daerah, sesuai dengan kewenangannya.",
+                "amandemen": [
+                  3
+                ]
+              },
+              {
+                "id": "23E-3",
+                "nomor": 3,
+                "teks": "Hasil pemeriksaan tersebut ditindaklanjuti oleh lembaga perwakilan dan/atau badan sesuai dengan undang-undang.",
+                "amandemen": [
+                  3
+                ]
+              }
+            ]
+          },
+          {
+            "id": "23F",
+            "nomor": "23F",
+            "amandemen": [],
+            "teks": null,
+            "ayat": [
+              {
+                "id": "23F-1",
+                "nomor": 1,
+                "teks": "Anggota Badan Pemeriksa Keuangan dipilih oleh Dewan Perwakilan Rakyat dengan memperhatikan pertimbangan Dewan Perwakilan Daerah dan diresmikan oleh Presiden.",
+                "amandemen": [
+                  3
+                ]
+              },
+              {
+                "id": "23F-2",
+                "nomor": 2,
+                "teks": "Pimpinan Badan Pemeriksa Keuangan dipilih dari dan oleh anggota.",
+                "amandemen": [
+                  3
+                ]
+              }
+            ]
+          },
+          {
+            "id": "23G",
+            "nomor": "23G",
+            "amandemen": [],
+            "teks": null,
+            "ayat": [
+              {
+                "id": "23G-1",
+                "nomor": 1,
+                "teks": "Badan Pemeriksa Keuangan berkedudukan di ibu kota negara, dan memiliki perwakilan di setiap provinsi.",
+                "amandemen": [
+                  3
+                ]
+              },
+              {
+                "id": "23G-2",
+                "nomor": 2,
+                "teks": "Ketentuan lebih lanjut mengenai Badan Pemeriksa Keuangan diatur dengan undang-undang.",
+                "amandemen": [
+                  3
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "nomor": "IX",
+        "judul": "KEKUASAAN KEHAKIMAN",
+        "amandemen": [],
+        "dihapus": false,
+        "pasal": [
+          {
+            "id": "24",
+            "nomor": "24",
+            "amandemen": [],
+            "teks": null,
+            "ayat": [
+              {
+                "id": "24-1",
+                "nomor": 1,
+                "teks": "Kekuasaan kehakiman merupakan kekuasaan yang merdeka untuk menyelenggarakan peradilan guna menegakkan hukum dan keadilan.",
+                "amandemen": [
+                  3
+                ]
+              },
+              {
+                "id": "24-2",
+                "nomor": 2,
+                "teks": "Kekuasaan kehakiman dilakukan oleh sebuah Mahkamah Agung dan badan peradilan yang berada di bawahnya dalam lingkungan peradilan umum, lingkungan peradilan agama, lingkungan peradilan militer, lingkungan peradilan tata usaha negara, dan oleh sebuah Mahkamah Konstitusi.",
+                "amandemen": [
+                  3
+                ]
+              },
+              {
+                "id": "24-3",
+                "nomor": 3,
+                "teks": "Badan-badan lain yang fungsinya berkaitan dengan kekuasaan kehakiman diatur dalam undang-undang.",
+                "amandemen": [
+                  4
+                ]
+              }
+            ]
+          },
+          {
+            "id": "24A",
+            "nomor": "24A",
+            "amandemen": [],
+            "teks": null,
+            "ayat": [
+              {
+                "id": "24A-1",
+                "nomor": 1,
+                "teks": "Mahkamah Agung berwenang mengadili pada tingkat kasasi, menguji peraturan perundang-undangan di bawah undang-undang terhadap undang-undang, dan mempunyai wewenang lainnya yang diberikan oleh undang-undang.",
+                "amandemen": [
+                  3
+                ]
+              },
+              {
+                "id": "24A-2",
+                "nomor": 2,
+                "teks": "Hakim agung harus memiliki integritas dan kepribadian yang tidak tercela, adil, profesional, dan berpengalaman di bidang hukum.",
+                "amandemen": [
+                  3
+                ]
+              },
+              {
+                "id": "24A-3",
+                "nomor": 3,
+                "teks": "Calon hakim agung diusulkan Komisi Yudisial kepada Dewan Perwakilan Rakyat untuk mendapatkan persetujuan dan selanjutnya ditetapkan sebagai hakim agung oleh Presiden.",
+                "amandemen": [
+                  3
+                ]
+              },
+              {
+                "id": "24A-4",
+                "nomor": 4,
+                "teks": "Ketua dan wakil ketua Mahkamah Agung dipilih dari dan oleh hakim agung.",
+                "amandemen": [
+                  3
+                ]
+              },
+              {
+                "id": "24A-5",
+                "nomor": 5,
+                "teks": "Susunan, kedudukan, keanggotaan, dan hukum acara Mahkamah Agung serta badan peradilan di bawahnya diatur dengan undang-undang.",
+                "amandemen": [
+                  3
+                ]
+              }
+            ]
+          },
+          {
+            "id": "24B",
+            "nomor": "24B",
+            "amandemen": [],
+            "teks": null,
+            "ayat": [
+              {
+                "id": "24B-1",
+                "nomor": 1,
+                "teks": "Komisi Yudisial bersifat mandiri yang berwenang mengusulkan pengangkatan hakim agung dan mempunyai wewenang lain dalam rangka menjaga dan menegakkan kehormatan, keluhuran martabat, serta perilaku hakim.",
+                "amandemen": [
+                  3
+                ]
+              },
+              {
+                "id": "24B-2",
+                "nomor": 2,
+                "teks": "Anggota Komisi Yudisial harus mempunyai pengetahuan dan pengalaman di bidang hukum serta memiliki integritas dan kepribadian yang tidak tercela.",
+                "amandemen": [
+                  3
+                ]
+              },
+              {
+                "id": "24B-3",
+                "nomor": 3,
+                "teks": "Anggota Komisi Yudisial diangkat dan diberhentikan oleh Presiden dengan persetujuan Dewan Perwakilan Rakyat.",
+                "amandemen": [
+                  3
+                ]
+              },
+              {
+                "id": "24B-4",
+                "nomor": 4,
+                "teks": "Susunan, kedudukan, dan keanggotaan Komisi Yudisial diatur dengan undang-undang.",
+                "amandemen": [
+                  3
+                ]
+              }
+            ]
+          },
+          {
+            "id": "24C",
+            "nomor": "24C",
+            "amandemen": [],
+            "teks": null,
+            "ayat": [
+              {
+                "id": "24C-1",
+                "nomor": 1,
+                "teks": "Mahkamah Konstitusi berwenang mengadili pada tingkat pertama dan terakhir yang putusannya bersifat final untuk menguji undang-undang terhadap Undang-Undang Dasar, memutus sengketa kewenangan lembaga negara yang kewenangannya diberikan oleh Undang-Undang Dasar, memutus pembubaran partai politik, dan memutus perselisihan tentang hasil pemilihan umum.",
+                "amandemen": [
+                  3
+                ]
+              },
+              {
+                "id": "24C-2",
+                "nomor": 2,
+                "teks": "Mahkamah Konstitusi wajib memberikan putusan atas pendapat Dewan Perwakilan Rakyat mengenai dugaan pelanggaran oleh Presiden dan/atau Wakil Presiden menurut Undang-Undang Dasar.",
+                "amandemen": [
+                  3
+                ]
+              },
+              {
+                "id": "24C-3",
+                "nomor": 3,
+                "teks": "Mahkamah Konstitusi mempunyai sembilan orang anggota hakim konstitusi yang ditetapkan oleh Presiden, yang diajukan masing-masing tiga orang oleh Mahkamah Agung, tiga orang oleh Dewan Perwakilan Rakyat, dan tiga orang oleh Presiden.",
+                "amandemen": [
+                  3
+                ]
+              },
+              {
+                "id": "24C-4",
+                "nomor": 4,
+                "teks": "Ketua dan Wakil Ketua Mahkamah Konstitusi dipilih dari dan oleh hakim konstitusi.",
+                "amandemen": [
+                  3
+                ]
+              },
+              {
+                "id": "24C-5",
+                "nomor": 5,
+                "teks": "Hakim konstitusi harus memiliki integritas dan kepribadian yang tidak tercela, adil, negarawan yang menguasai konstitusi dan ketatanegaraan, serta tidak merangkap sebagai pejabat negara.",
+                "amandemen": [
+                  3
+                ]
+              },
+              {
+                "id": "24C-6",
+                "nomor": 6,
+                "teks": "Pengangkatan dan pemberhentian hakim konstitusi, hukum acara serta ketentuan lainnya tentang Mahkamah Konstitusi diatur dengan undang-undang.",
+                "amandemen": [
+                  3
+                ]
+              }
+            ]
+          },
+          {
+            "id": "25",
+            "nomor": "25",
+            "amandemen": [],
+            "teks": "Syarat-syarat untuk menjadi dan untuk diperhentikan sebagai hakim ditetapkan dengan undang-undang.",
+            "ayat": []
+          }
+        ]
+      },
+      {
+        "nomor": "IXA",
+        "judul": "WILAYAH NEGARA",
+        "amandemen": [
+          2
+        ],
+        "dihapus": false,
+        "pasal": [
+          {
+            "id": "25A",
+            "nomor": "25A",
+            "amandemen": [
+              2,
+              4
+            ],
+            "teks": "Negara Kesatuan Republik Indonesia adalah sebuah negara kepulauan yang berciri Nusantara dengan wilayah yang batas-batas dan hak-haknya ditetapkan dengan undang-undang.",
+            "ayat": []
+          }
+        ]
+      },
+      {
+        "nomor": "X",
+        "judul": "WARGA NEGARA DAN PENDUDUK",
+        "amandemen": [
+          2
+        ],
+        "dihapus": false,
+        "pasal": [
+          {
+            "id": "26",
+            "nomor": "26",
+            "amandemen": [],
+            "teks": null,
+            "ayat": [
+              {
+                "id": "26-1",
+                "nomor": 1,
+                "teks": "Yang menjadi warga negara ialah orang-orang bangsa Indonesia asli dan orang-orang bangsa lain yang disahkan dengan undang-undang sebagai warga negara.",
+                "amandemen": []
+              },
+              {
+                "id": "26-2",
+                "nomor": 2,
+                "teks": "Penduduk ialah warga negara Indonesia dan orang asing yang bertempat tinggal di Indonesia.",
+                "amandemen": [
+                  2
+                ]
+              },
+              {
+                "id": "26-3",
+                "nomor": 3,
+                "teks": "Hal-hal mengenai warga negara dan penduduk diatur dengan undang-undang.",
+                "amandemen": [
+                  2
+                ]
+              }
+            ]
+          },
+          {
+            "id": "27",
+            "nomor": "27",
+            "amandemen": [],
+            "teks": null,
+            "ayat": [
+              {
+                "id": "27-1",
+                "nomor": 1,
+                "teks": "Segala warga negara bersamaan kedudukannya di dalam hukum dan pemerintahan dan wajib menjunjung hukum dan pemerintahan itu dengan tidak ada kecualinya.",
+                "amandemen": []
+              },
+              {
+                "id": "27-2",
+                "nomor": 2,
+                "teks": "Tiap-tiap warga negara berhak atas pekerjaan dan penghidupan yang layak bagi kemanusiaan.",
+                "amandemen": []
+              },
+              {
+                "id": "27-3",
+                "nomor": 3,
+                "teks": "Setiap warga negara berhak dan wajib ikut serta dalam upaya pembelaan negara.",
+                "amandemen": [
+                  2
+                ]
+              }
+            ]
+          },
+          {
+            "id": "28",
+            "nomor": "28",
+            "amandemen": [],
+            "teks": "Kemerdekaan berserikat dan berkumpul, mengeluarkan pikiran dengan lisan dan tulisan dan sebagainya ditetapkan dengan undang-undang.",
+            "ayat": []
+          }
+        ]
+      },
+      {
+        "nomor": "XA",
+        "judul": "HAK ASASI MANUSIA",
+        "amandemen": [
+          2
+        ],
+        "dihapus": false,
+        "pasal": [
+          {
+            "id": "28A",
+            "nomor": "28A",
+            "amandemen": [
+              2
+            ],
+            "teks": "Setiap orang berhak untuk hidup serta berhak mempertahankan hidup dan kehidupannya.",
+            "ayat": []
+          },
+          {
+            "id": "28B",
+            "nomor": "28B",
+            "amandemen": [],
+            "teks": null,
+            "ayat": [
+              {
+                "id": "28B-1",
+                "nomor": 1,
+                "teks": "Setiap orang berhak membentuk keluarga dan melanjutkan keturunan melalui perkawinan yang sah.",
+                "amandemen": [
+                  2
+                ]
+              },
+              {
+                "id": "28B-2",
+                "nomor": 2,
+                "teks": "Setiap anak berhak atas kelangsungan hidup, tumbuh, dan berkembang serta berhak atas perlindungan dari kekerasan dan diskriminasi.",
+                "amandemen": [
+                  2
+                ]
+              }
+            ]
+          },
+          {
+            "id": "28C",
+            "nomor": "28C",
+            "amandemen": [],
+            "teks": null,
+            "ayat": [
+              {
+                "id": "28C-1",
+                "nomor": 1,
+                "teks": "Setiap orang berhak mengembangkan diri melalui pemenuhan kebutuhan dasarnya, berhak mendapat pendidikan dan memperoleh manfaat dari ilmu pengetahuan dan teknologi, seni dan budaya, demi meningkatkan kualitas hidupnya dan demi kesejahteraan umat manusia.",
+                "amandemen": [
+                  2
+                ]
+              },
+              {
+                "id": "28C-2",
+                "nomor": 2,
+                "teks": "Setiap orang berhak untuk memajukan dirinya dalam memperjuangkan haknya secara kolektif untuk membangun masyarakat, bangsa dan negaranya.",
+                "amandemen": [
+                  2
+                ]
+              }
+            ]
+          },
+          {
+            "id": "28D",
+            "nomor": "28D",
+            "amandemen": [],
+            "teks": null,
+            "ayat": [
+              {
+                "id": "28D-1",
+                "nomor": 1,
+                "teks": "Setiap orang berhak atas pengakuan, jaminan, perlindungan, dan kepastian hukum yang adil serta perlakuan yang sama dihadapan hukum.",
+                "amandemen": [
+                  2
+                ]
+              },
+              {
+                "id": "28D-2",
+                "nomor": 2,
+                "teks": "Setiap orang berhak untuk bekerja serta mendapat imbalan dan perlakuan yang adil dan layak dalam hubungan kerja.",
+                "amandemen": [
+                  2
+                ]
+              },
+              {
+                "id": "28D-3",
+                "nomor": 3,
+                "teks": "Setiap warga negara berhak memperoleh kesempatan yang sama dalam pemerintahan.",
+                "amandemen": [
+                  2
+                ]
+              },
+              {
+                "id": "28D-4",
+                "nomor": 4,
+                "teks": "Setiap orang berhak atas status kewarganegaraan.",
+                "amandemen": [
+                  2
+                ]
+              }
+            ]
+          },
+          {
+            "id": "28E",
+            "nomor": "28E",
+            "amandemen": [],
+            "teks": null,
+            "ayat": [
+              {
+                "id": "28E-1",
+                "nomor": 1,
+                "teks": "Setiap orang bebas memeluk agama dan beribadat menurut agamanya, memilih pendidikan dan pengajaran, memilih pekerjaan, memilih kewarganegaraan, memilih tempat tinggal diwilayah negara dan meninggalkannya, serta berhak kembali.",
+                "amandemen": [
+                  2
+                ]
+              },
+              {
+                "id": "28E-2",
+                "nomor": 2,
+                "teks": "Setiap orang atas kebebasan meyakini kepercayaan, menyatakan pikiran dan sikap, sesuai dengan hati nuraninya.",
+                "amandemen": [
+                  2
+                ]
+              },
+              {
+                "id": "28E-3",
+                "nomor": 3,
+                "teks": "Setiap orang berhak atas kebebasan berserikat, berkumpul, dan mengeluarkan pendapat.",
+                "amandemen": [
+                  2
+                ]
+              }
+            ]
+          },
+          {
+            "id": "28F",
+            "nomor": "28F",
+            "amandemen": [
+              2
+            ],
+            "teks": "Setiap orang berhak untuk berkomunikasi dan memperoleh informasi untuk mengembangkan pribadi dan lingkungan sosialnya, serta berhak untuk mencari, memperoleh, memiliki, menyimpan, mengolah, dan menyampaikan informasi dengan menggunakan segala jenis saluran yang tersedia.",
+            "ayat": []
+          },
+          {
+            "id": "28G",
+            "nomor": "28G",
+            "amandemen": [],
+            "teks": null,
+            "ayat": [
+              {
+                "id": "28G-1",
+                "nomor": 1,
+                "teks": "Setiap orang berhak atas perlindungan diri pribadi, keluarga, kehormatan, martabat, dan harta benda yang dibawah kekuasaannya, serta berhak atas rasa aman dan perlindungan dari ancaman ketakutan untuk berbuat atau tidak berbuat sesuatu yang merupakan hak asasi.",
+                "amandemen": [
+                  2
+                ]
+              },
+              {
+                "id": "28G-2",
+                "nomor": 2,
+                "teks": "Setiap orang berhak untuk bebas dari penyiksaan dan perlakuan yang merendahkan derajat martabat manusia dan berhak memperoleh suaka politik dari negara lain.",
+                "amandemen": [
+                  2
+                ]
+              }
+            ]
+          },
+          {
+            "id": "28H",
+            "nomor": "28H",
+            "amandemen": [],
+            "teks": null,
+            "ayat": [
+              {
+                "id": "28H-1",
+                "nomor": 1,
+                "teks": "Setiap orang berhak hidup sejahtera lahir dan batin, bertempat tinggal, dan medapatkan lingkungan hidup baik dan sehat serta berhak memperoleh pelayanan kesehatan.",
+                "amandemen": [
+                  2
+                ]
+              },
+              {
+                "id": "28H-2",
+                "nomor": 2,
+                "teks": "Setiap orang mendapat kemudahan dan perlakuan khusus untuk memperoleh kesempatan dan manfaat yang sama guna mencapai persamaan dan keadilan.",
+                "amandemen": [
+                  2
+                ]
+              },
+              {
+                "id": "28H-3",
+                "nomor": 3,
+                "teks": "Setiap orang berhak atas jaminan sosial yang memungkinkan pengembangan dirinya secara utuh sebagai manusia yang bermartabat.",
+                "amandemen": [
+                  2
+                ]
+              },
+              {
+                "id": "28H-4",
+                "nomor": 4,
+                "teks": "Setiap orang berhak mempunyai hak milik pribadi dan hak milik tersebut tidak boleh diambil alih secara sewenang-wenang oleh siapa pun.",
+                "amandemen": [
+                  2
+                ]
+              }
+            ]
+          },
+          {
+            "id": "28I",
+            "nomor": "28I",
+            "amandemen": [],
+            "teks": null,
+            "ayat": [
+              {
+                "id": "28I-1",
+                "nomor": 1,
+                "teks": "Hak untuk hidup, hak untuk tidak disiksa, hak kemerdekaan pikiran dan hati nurani, hak beragama, hak untuk tidak diperbudak, hak untuk diakui sebagai pribadi dihadapan hukum, dan hak untuk tidak dituntut atas dasar hukum yang berlaku surut adalah hak asasi manusia yang tidak dapat dikurangi dalam keadaan apa pun.",
+                "amandemen": [
+                  2
+                ]
+              },
+              {
+                "id": "28I-2",
+                "nomor": 2,
+                "teks": "Setiap orang berhak bebas atas perlakuan yang bersifat diskriminatif atas dasar apa pun dan berhak mendapatkan perlindungan terhadap perlakuan yang bersifat diskriminatif itu.",
+                "amandemen": [
+                  2
+                ]
+              },
+              {
+                "id": "28I-3",
+                "nomor": 3,
+                "teks": "Identitas budaya dan hak masyarakat tradisional dihormati selaras dengan perkembangan zaman dan peradaban.",
+                "amandemen": [
+                  2
+                ]
+              },
+              {
+                "id": "28I-4",
+                "nomor": 4,
+                "teks": "Perlindungan, pemajuan, penegakan, dan pemenuhan hak asasi manusia adalah tanggung jawab negara, terutama pemerintah.",
+                "amandemen": [
+                  2
+                ]
+              },
+              {
+                "id": "28I-5",
+                "nomor": 5,
+                "teks": "Untuk menegakan dan melindungi hak assi manusia sesuai dengan prinsip negara hukum yang demokratis, maka pelaksanaan hak asasi manusia dijamin, diatur, dan dituangkan dalam peraturan perundangan-undangan.",
+                "amandemen": [
+                  2
+                ]
+              }
+            ]
+          },
+          {
+            "id": "28J",
+            "nomor": "28J",
+            "amandemen": [],
+            "teks": null,
+            "ayat": [
+              {
+                "id": "28J-1",
+                "nomor": 1,
+                "teks": "Setiap orang wajib menghormati hak asasi manusia orang lain dalam tertib kehidupan bermasyarakat, berbangsa, dan bernegara.",
+                "amandemen": [
+                  2
+                ]
+              },
+              {
+                "id": "28J-2",
+                "nomor": 2,
+                "teks": "Dalam menjalankan hak dan kebebasannya, setiap orang wajib tunduk kepada pembatasan yang ditetapkan dengan undang-undang dengan maksud semata-mata untuk menjamin pengakuan serta penghormatan atas hak kebebasan orang lain dan untuk memenuhi tuntutan yang adil sesuai dengan pertimbangan moral, nilai-nilai agama, keamanan, dan ketertiban umum dalam suatu masyarakat demokratis.",
+                "amandemen": [
+                  2
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "nomor": "XI",
+        "judul": "A G A M A",
+        "amandemen": [],
+        "dihapus": false,
+        "pasal": [
+          {
+            "id": "29",
+            "nomor": "29",
+            "amandemen": [],
+            "teks": null,
+            "ayat": [
+              {
+                "id": "29-1",
+                "nomor": 1,
+                "teks": "Negara berdasar atas Ketuhanan Yang Maha Esa.",
+                "amandemen": []
+              },
+              {
+                "id": "29-2",
+                "nomor": 2,
+                "teks": "Negara menjamin kemerdekaan tiap-tiap penduduk untuk memeluk agamanya masing-masing dan untuk beribadat menurut agamanya dan kepercayaannya itu.",
+                "amandemen": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "nomor": "XII",
+        "judul": "PERTAHANAN DAN KEAMANAN NEGARA",
+        "amandemen": [
+          2
+        ],
+        "dihapus": false,
+        "pasal": [
+          {
+            "id": "30",
+            "nomor": "30",
+            "amandemen": [],
+            "teks": null,
+            "ayat": [
+              {
+                "id": "30-1",
+                "nomor": 1,
+                "teks": "Tiap-tiap warga negara berhak dan wajib ikut serta dalam usaha pertahanan dan keamanan negara.",
+                "amandemen": [
+                  2
+                ]
+              },
+              {
+                "id": "30-2",
+                "nomor": 2,
+                "teks": "Usaha pertahanan dan keamanan negara dilaksanakan melalui sistem pertahanan dan keamanan rakyat semesta oleh Tentara Nasional Indonesia dan Kepolisian Negara Indonesia Republik Indonesia, sebagai kekuatan utama, dan rakyat, sebagai kekuatan pendukung.",
+                "amandemen": [
+                  2
+                ]
+              },
+              {
+                "id": "30-3",
+                "nomor": 3,
+                "teks": "Tentara Nasional Indonesia terdiri atas Angkatan Darat, Angkatan Laut dan Angkatan Udara sebagai alat negara bertugas mempertahankan, melindungi, dan memelihara keutuhan dan kedaulatan negara.",
+                "amandemen": [
+                  2
+                ]
+              },
+              {
+                "id": "30-4",
+                "nomor": 4,
+                "teks": "Kepolisian Negara Republik Indonesia sebagai alat negara yang menjaga kemanan dan ketertiban masyarakat bertugas melindungi, mengayomi, melayani masyarakat, serta menegakkan hukum.",
+                "amandemen": [
+                  2
+                ]
+              },
+              {
+                "id": "30-5",
+                "nomor": 5,
+                "teks": "Susunan dan kedudukan Tentara Nasional Indonesia, Kepolisian Negara Republik Indonesia, hubungan kewenangan Tentara Nasional Indonesia dan Kepolisian Negara Republik Indonesia di dalam menjalankan tugasnya, syarat-syarat keikutsertaan warga negara dalam usaha pertahanan dan keamanan diatur dengan undang-undang.",
+                "amandemen": [
+                  2
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "nomor": "XIII",
+        "judul": "PENDIDIKAN DAN KEBUDAYAAN",
+        "amandemen": [
+          4
+        ],
+        "dihapus": false,
+        "pasal": [
+          {
+            "id": "31",
+            "nomor": "31",
+            "amandemen": [],
+            "teks": null,
+            "ayat": [
+              {
+                "id": "31-1",
+                "nomor": 1,
+                "teks": "Setiap warga negara berhak mendapat pendidikan.",
+                "amandemen": [
+                  4
+                ]
+              },
+              {
+                "id": "31-2",
+                "nomor": 2,
+                "teks": "Setiap warga negara wajib mengikuti pendidikan dasar dan pemerintah wajib membiayainya.",
+                "amandemen": [
+                  4
+                ]
+              },
+              {
+                "id": "31-3",
+                "nomor": 3,
+                "teks": "Pemerintah mengusahakan dan menyelenggarakan satu sistem pendidikan nasional, yang meningkatkan keimanan dan ketakwaan serta akhlak mulia dalam rangka mencerdaskan kehidupan bangsa, yang diatur dengan undang-undang.",
+                "amandemen": [
+                  4
+                ]
+              },
+              {
+                "id": "31-4",
+                "nomor": 4,
+                "teks": "Negara memprioritaskan anggaran pendidikan sekurang-kurangnya dua puluh persen dari anggaran pendapatan dan belanja negara serta dari aggaran pendapatan dan belanja daerah untuk memenuhi kebutuhan penyelenggaraan pendidikan nasional.",
+                "amandemen": [
+                  4
+                ]
+              },
+              {
+                "id": "31-5",
+                "nomor": 5,
+                "teks": "Pemerintah memajukan ilmu pengetahuan dan tekhnologi dengan menjunjung tinggi nilai-nilai agama dan persatuan bangsa untuk kemajuan peradaban serta kesejahteraan umat manusia.",
+                "amandemen": [
+                  4
+                ]
+              }
+            ]
+          },
+          {
+            "id": "32",
+            "nomor": "32",
+            "amandemen": [],
+            "teks": null,
+            "ayat": [
+              {
+                "id": "32-1",
+                "nomor": 1,
+                "teks": "Negara memajukan kebudayaan nasional Indonesia di tengah peradaban dunia dengan menjamin kebebasan masyarakat dalam memelihara dalam mengembangkan nilai-nilai budayanya.",
+                "amandemen": [
+                  4
+                ]
+              },
+              {
+                "id": "32-2",
+                "nomor": 2,
+                "teks": "Negara menghormati dan memelihara bahasa daerah sebagai kekayaan budaya nasional.",
+                "amandemen": [
+                  4
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "nomor": "XIV",
+        "judul": "PEREKONOMIAN NASIONAL DAN KESEJAHTERAAN SOSIAL",
+        "amandemen": [
+          4
+        ],
+        "dihapus": false,
+        "pasal": [
+          {
+            "id": "33",
+            "nomor": "33",
+            "amandemen": [],
+            "teks": null,
+            "ayat": [
+              {
+                "id": "33-1",
+                "nomor": 1,
+                "teks": "Perekonomian disusun sebagai usaha bersama berdasar atas asas kekeluargaan.",
+                "amandemen": []
+              },
+              {
+                "id": "33-2",
+                "nomor": 2,
+                "teks": "Cabang-cabang produksi yang penting bagi negara dan yang menguasai hajat hidup orang banyak dikuasai oleh negara.",
+                "amandemen": []
+              },
+              {
+                "id": "33-3",
+                "nomor": 3,
+                "teks": "Bumi dan air dan kekayaan alam yang terkandung di dalamnya dikuasai oleh negara dan dipergunakan untuk sebesar-besar kemakmuran rakyat.",
+                "amandemen": []
+              },
+              {
+                "id": "33-4",
+                "nomor": 4,
+                "teks": "Perekonomian nasional diselenggarakan berdasar atas demokrasi ekonomi dengan prinsip kebersamaan, efisiensi berkeadilan, berkelanjutan, berwawasan lingkungan, kemandirian, serta dengan menjaga keseimbangan kemajuan dan kesatuan ekonomi nasional.",
+                "amandemen": [
+                  4
+                ]
+              },
+              {
+                "id": "33-5",
+                "nomor": 5,
+                "teks": "Ketentuan lebih lanjut mengenai pelaksanaan pasal ini diatur dalam undang-undang.",
+                "amandemen": [
+                  4
+                ]
+              }
+            ]
+          },
+          {
+            "id": "34",
+            "nomor": "34",
+            "amandemen": [],
+            "teks": null,
+            "ayat": [
+              {
+                "id": "34-1",
+                "nomor": 1,
+                "teks": "Fakir miskin dan anak-anak terlantar dipelihara oleh negara.",
+                "amandemen": [
+                  4
+                ]
+              },
+              {
+                "id": "34-2",
+                "nomor": 2,
+                "teks": "Negara mengembangkan sistim jaminan sosial bagi seluruah rakyat dan memberdayakan masyarakat yang lemah dan tidak mampu sesuai dengan martabat kemanusiaan.",
+                "amandemen": [
+                  4
+                ]
+              },
+              {
+                "id": "34-3",
+                "nomor": 3,
+                "teks": "Negara bertanggungjawab atas penyediaan fasilitas pelayanan kesehatan dan fasilitas pelayanan umum yang layak.",
+                "amandemen": [
+                  4
+                ]
+              },
+              {
+                "id": "34-4",
+                "nomor": 4,
+                "teks": "Ketentuan lebih lanjut mengenai pelaksanaan pasal ini diatur dalam undang-undang.",
+                "amandemen": [
+                  4
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "nomor": "XV",
+        "judul": "BENDERA, BAHASA, DAN LAMBANG NEGARA , SERTA LAGU KEBANGSAAN",
+        "amandemen": [
+          2
+        ],
+        "dihapus": false,
+        "pasal": [
+          {
+            "id": "35",
+            "nomor": "35",
+            "amandemen": [],
+            "teks": "Bendera Negara Indonesia ialah Sang Merah Putih.",
+            "ayat": []
+          },
+          {
+            "id": "36",
+            "nomor": "36",
+            "amandemen": [],
+            "teks": "Bahasa Negara ialah Bahasa Indonesia.",
+            "ayat": []
+          },
+          {
+            "id": "36A",
+            "nomor": "36A",
+            "amandemen": [
+              2
+            ],
+            "teks": "Lambang negara ialah Garuda Pancasila dengan semboyan Bhinneka Tunggal Ika.",
+            "ayat": []
+          },
+          {
+            "id": "36B",
+            "nomor": "36B",
+            "amandemen": [
+              2
+            ],
+            "teks": "Lagu Kebangsaan ialah Indonesia Raya.",
+            "ayat": []
+          },
+          {
+            "id": "36C",
+            "nomor": "36C",
+            "amandemen": [
+              2
+            ],
+            "teks": "Ketentuan lebih lanjut mengenai Bendera, Bahasa, dan Lambang Negara, serta Lagu Kebangsaan diatur dengan undang-undang.",
+            "ayat": []
+          }
+        ]
+      },
+      {
+        "nomor": "XVI",
+        "judul": "PERUBAHAN UNDANG-UNDANG DASAR",
+        "amandemen": [],
+        "dihapus": false,
+        "pasal": [
+          {
+            "id": "37",
+            "nomor": "37",
+            "amandemen": [],
+            "teks": null,
+            "ayat": [
+              {
+                "id": "37-1",
+                "nomor": 1,
+                "teks": "Usul perubahan pasal-pasal Undang-Undang Dasar dapat diagendakan dalam sidang Majelis Permusyawaratan Rakyat apabila diajukan oleh sekurang-kurangnya 1/3 dari jumlah anggota Majelis Permusyawaratan Rakyat.",
+                "amandemen": [
+                  4
+                ]
+              },
+              {
+                "id": "37-2",
+                "nomor": 2,
+                "teks": "Setiap usul perubahan pasal-pasal Undang-Undang Dasar diajukan secara tertulis dan ditunjukkan dengan jelas bagian yang diusulkan untuk diubah beserta alasannya.",
+                "amandemen": [
+                  4
+                ]
+              },
+              {
+                "id": "37-3",
+                "nomor": 3,
+                "teks": "Untuk mengubah pasal-pasal Undang-Undang Dasar, sidang Majelis Permusyawaratan Rakyat dihadiri sekurang-kurangnya 2/3 dari jumlah anggota Majelis Permusyawaratan Rakyat.",
+                "amandemen": [
+                  4
+                ]
+              },
+              {
+                "id": "37-4",
+                "nomor": 4,
+                "teks": "Putusan untuk mengubah pasal-pasal Undang-Undang Dasar dilakukan dengan persetujuan sekurang-kurangnya limapuluh persen ditambah satu anggota dari seluruh anggota Majelis Permusyawaratan Rakyat.",
+                "amandemen": [
+                  4
+                ]
+              },
+              {
+                "id": "37-5",
+                "nomor": 5,
+                "teks": "Khusus mengenai bentuk negara Kesatuan Republik Indonesia tidak dapat dilakukan perubahan.",
+                "amandemen": [
+                  4
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "aturanPeralihan": {
+    "pasal": [
+      {
+        "id": "peralihan-I",
+        "nomor": "I",
+        "amandemen": [
+          4
+        ],
+        "teks": "Segala peraturan perundang-undangan yang ada masih tetap berlaku selama belum diadakan yang baru menurut Undang-Undang Dasar ini.",
+        "ayat": []
+      },
+      {
+        "id": "peralihan-II",
+        "nomor": "II",
+        "amandemen": [
+          4
+        ],
+        "teks": "Semua lembaga negara yang ada masih tetap berfungsi sepanjang untuk melaksanakan ketentuan Undang-Undang Dasar dan belum diadakan yang baru menurut Undang-Undang Dasar ini.",
+        "ayat": []
+      },
+      {
+        "id": "peralihan-III",
+        "nomor": "III",
+        "amandemen": [
+          4
+        ],
+        "teks": "Mahkamah Konstitusi dibentuk selambat-lambatnya pada 17 Agustus 2003 dan sebelum dibentuk segala kewenangannya dilakukan oleh Mahkamah Agung.",
+        "ayat": []
+      }
+    ]
+  },
+  "aturanTambahan": {
+    "pasal": [
+      {
+        "id": "tambahan-I",
+        "nomor": "I",
+        "amandemen": [
+          4
+        ],
+        "teks": "Majelis Permusyawaratan Rakyat ditugasi untuk melakukan peninjauan terhadap materi dan status hukum Ketetapan Majelis Permusyawaratan Rakyat Sementara dan Ketetapan Majelis Permusyawaratan Rakyat untuk diambil putusan pada sidang Majelis Permusyawaratan Rakyat tahun 2003.",
+        "ayat": []
+      },
+      {
+        "id": "tambahan-II",
+        "nomor": "II",
+        "amandemen": [
+          4
+        ],
+        "teks": "Dengan ditetapkannya perubahan Undang-Undang Dasar ini, Undang-Undang Dasar Negara Republik Indonesia Tahun 1945 terdiri atas Pembukaan dan pasal-pasal.",
+        "ayat": []
+      }
+    ]
+  }
+}
