@@ -3,24 +3,20 @@
  * riset (consent + ekspor), profil.
  */
 import './screens.css';
-import {
-  gameDB,
-  getActiveProfileId,
-  researchSessionsToCsv,
-  setActiveProfileId,
-  type ChapterProgressRecord,
-} from '@core/persistence/GameDB.ts';
+import { researchSessionsToCsv, type ChapterProgressRecord } from '@core/persistence/GameDB.ts';
+import { getActiveSession, persistenceMode, signOut } from '@core/persistence/persistence.ts';
 import { constitutionalStore } from '@core/store/ConstitutionalStore.ts';
 import { settingsStore } from '@core/store/SettingsStore.ts';
 import { APP_VERSION } from '../buildInfo.ts';
 import type { Screen } from '../shell/AppShell.ts';
 import { CHAPTER_IDS, type ChapterId } from '../shell/router.ts';
-import { formatPlayTime } from './ProfileScreen.ts';
+import { escapeHtml, formatPlayTime } from './format.ts';
 import { downloadTextFile } from './download.ts';
 
 export interface HomeScreenOptions {
   onPlay: (chapterId: ChapterId) => void;
   onSwitchProfile: () => void;
+  onSignOut: () => void;
   onLanding: () => void;
 }
 
@@ -66,13 +62,12 @@ export class HomeScreen implements Screen {
   constructor(private readonly options: HomeScreenOptions) {}
 
   async mount(root: HTMLElement): Promise<void> {
-    const db = await gameDB();
-    const activeId = getActiveProfileId();
-    const profile = activeId ? await db.getProfile(activeId) : undefined;
-    if (!profile) {
+    const session = await getActiveSession();
+    if (!session) {
       this.options.onSwitchProfile();
       return;
     }
+    const { adapter: db, profile } = session;
     await db.touchProfile(profile.id);
     const progress = await db.listChapterProgress(profile.id);
     const mastery = await db.loadMastery(profile.id);
@@ -99,7 +94,7 @@ export class HomeScreen implements Screen {
         </div>
         <div style="display:flex;gap:.5rem;flex-wrap:wrap">
           <button type="button" class="pf-btn pf-btn--ghost" data-action="landing">Halaman utama</button>
-          <button type="button" class="pf-btn pf-btn--secondary" data-action="ganti">Ganti profil</button>
+          <button type="button" class="pf-btn pf-btn--secondary" data-action="ganti">Ganti akun</button>
         </div>
       </header>
       <div class="pf-screen__body">
@@ -175,7 +170,7 @@ export class HomeScreen implements Screen {
           </section>
 
           <section class="pf-glass pf-card" aria-labelledby="pf-profil-title">
-            <p class="pf-eyebrow" id="pf-profil-title">Profil</p>
+            <p class="pf-eyebrow" id="pf-profil-title">Akun · ${persistenceMode === 'web' ? 'tersimpan di browser ini' : 'tersimpan di perangkat ini'}</p>
             <div style="display:flex;align-items:center;gap:.9rem">
               <span class="pf-avatar" style="background:${profile.color}" aria-hidden="true">${escapeHtml(profile.name.charAt(0).toUpperCase())}</span>
               <div>
@@ -185,7 +180,7 @@ export class HomeScreen implements Screen {
             </div>
             <div style="display:flex;gap:.5rem;flex-wrap:wrap">
               <button type="button" class="pf-btn pf-btn--ghost" data-action="keluar">Keluar</button>
-              <button type="button" class="pf-btn pf-btn--ghost" data-action="hapus-profil">Hapus profil ini</button>
+              <button type="button" class="pf-btn pf-btn--ghost" data-action="hapus-profil">Hapus akun ini</button>
             </div>
           </section>
         </div>
@@ -202,18 +197,18 @@ export class HomeScreen implements Screen {
       this.options.onSwitchProfile(),
     );
     el.querySelector('[data-action="keluar"]')?.addEventListener('click', () => {
-      setActiveProfileId(null);
-      this.options.onSwitchProfile();
+      signOut();
+      this.options.onSignOut();
     });
     el.querySelector('[data-action="hapus-profil"]')?.addEventListener('click', async () => {
       if (
         !window.confirm(
-          `Hapus profil "${profile.name}" beserta seluruh progres dan data risetnya? Tindakan ini tidak bisa dibatalkan.`,
+          `Hapus akun "${profile.name}" beserta seluruh progres dan data risetnya? Tindakan ini tidak bisa dibatalkan.`,
         )
       )
         return;
       await db.deleteProfile(profile.id);
-      setActiveProfileId(null);
+      signOut();
       this.options.onSwitchProfile();
     });
     el.querySelectorAll<HTMLButtonElement>('[data-chapter]').forEach((btn) =>
@@ -312,12 +307,4 @@ export class HomeScreen implements Screen {
     this.element?.remove();
     this.element = null;
   }
-}
-
-function escapeHtml(s: string): string {
-  return s
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;');
 }

@@ -1,6 +1,6 @@
 /**
  * AppShell — orkestrasi alur produk:
- *   intro -> loading (tahap nyata) -> landing -> masuk/profil -> beranda -> main/<bab>
+ *   intro -> loading (tahap nyata) -> landing -> masuk/daftar -> beranda -> main/<bab>
  *
  * Preloader dipasang SEBELUM import berat apa pun (hanya pembukaan.json kecil
  * yang dimuat statis), sehingga layar pertama tampil seketika.
@@ -14,6 +14,7 @@ import {
   persistSettingsToStorage,
   settingsStore,
 } from '@core/store/SettingsStore.ts';
+import { getActiveSession, isSignedIn } from '@core/persistence/persistence.ts';
 import { pickIntroPassage } from '@data/introPassages.ts';
 import { LOADING_DESCRIPTIONS, PRODUCT_DESCRIPTION } from './copy.ts';
 import { Router, type Route } from './router.ts';
@@ -23,6 +24,8 @@ import type * as LandingModule from '@landing/LandingPage.ts';
 export interface Screen {
   mount(root: HTMLElement): Promise<void> | void;
   unmount(): void;
+  /** opsional: layar yang bisa menerima perubahan rute tanpa dipasang ulang */
+  setRoute?(route: Route): void;
 }
 
 export function resolveReducedMotion(): boolean {
@@ -41,6 +44,10 @@ export function isLiteDevice(): boolean {
   const small = Math.min(window.innerWidth, window.innerHeight) < 720;
   const cores = navigator.hardwareConcurrency ?? 4;
   return coarse || small || cores <= 2;
+}
+
+function isAuthRoute(route: Route): boolean {
+  return route.name === 'masuk' || route.name === 'daftar';
 }
 
 export class AppShell {
@@ -62,6 +69,7 @@ export class AppShell {
     persistSettingsToStorage();
     this.reducedMotion = resolveReducedMotion();
     this.lite = isLiteDevice();
+    if (this.reducedMotion) document.documentElement.classList.add('pf-no-motion');
     this.cursor = new CustomCursor({ reducedMotion: this.reducedMotion });
     this.transition = new SceneTransition(document.body);
     this.landingHost = document.createElement('div');
@@ -150,6 +158,8 @@ export class AppShell {
             reducedMotion: this.reducedMotion,
             lite: this.lite,
             onStart: () => this.onStartGame(),
+            onMasuk: () => this.router.navigate({ name: 'masuk' }),
+            onDaftar: () => this.router.navigate({ name: 'daftar' }),
           });
           const total = this.landing.hero.wordCount;
           report(0, `Kata Pembukaan: 0 dari ${total} dirender ke SDF`);
@@ -181,6 +191,7 @@ export class AppShell {
     this.router.onChange((route) => void this.showRoute(route));
     // rute awal: landing selalu ditampilkan di balik preloader; rute lain dimuat setelahnya
     this.screenHost.hidden = true;
+    await this.syncLandingSession();
     this.landing?.start();
     this.currentRoute = { name: 'landing' };
     await preloader.finish();
@@ -188,13 +199,29 @@ export class AppShell {
     if (this.router.current.name !== 'landing') await this.showRoute(this.router.current);
   }
 
+  /** "Mulai Bermain": langsung ke beranda jika sudah masuk, jika belum ke layar Masuk */
   private onStartGame(): void {
-    this.router.navigate({ name: 'masuk' });
+    this.router.navigate({ name: isSignedIn() ? 'beranda' : 'masuk' });
+  }
+
+  /** nav landing menampilkan chip akun + Beranda bila sudah masuk */
+  private async syncLandingSession(): Promise<void> {
+    if (!this.landing) return;
+    const session = await getActiveSession();
+    this.landing.setSession(
+      session ? { name: session.profile.name, color: session.profile.color } : null,
+    );
   }
 
   private async showRoute(route: Route): Promise<void> {
-    if (this.currentRoute && this.currentRoute.name === route.name && route.name !== 'main') return;
     const previous = this.currentRoute;
+    // masuk <-> daftar: layar yang sama, cukup ganti tab (tanpa transisi)
+    if (previous && isAuthRoute(previous) && isAuthRoute(route) && this.currentScreen) {
+      this.currentRoute = route;
+      this.currentScreen.setRoute?.(route);
+      return;
+    }
+    if (previous && previous.name === route.name && route.name !== 'main') return;
     this.currentRoute = route;
 
     const swap = async () => {
@@ -202,6 +229,7 @@ export class AppShell {
       this.currentScreen = null;
       this.screenHost.innerHTML = '';
       if (route.name === 'landing') {
+        await this.syncLandingSession();
         this.landingHost.hidden = false;
         this.screenHost.hidden = true;
         window.scrollTo({ top: 0 });
@@ -227,11 +255,14 @@ export class AppShell {
 
   private async createScreen(route: Route): Promise<Screen> {
     switch (route.name) {
-      case 'masuk': {
-        const { ProfileScreen } = await import('../screens/ProfileScreen.ts');
-        return new ProfileScreen({
+      case 'masuk':
+      case 'daftar': {
+        const { AuthScreen } = await import('../screens/AuthScreen.ts');
+        return new AuthScreen({
+          initialTab: route.name,
           onDone: () => this.router.navigate({ name: 'beranda' }, { replace: true }),
           onBack: () => this.router.navigate({ name: 'landing' }),
+          onTabChange: (tab) => this.router.navigate({ name: tab }, { replace: true }),
         });
       }
       case 'beranda': {
@@ -239,6 +270,7 @@ export class AppShell {
         return new HomeScreen({
           onPlay: (chapterId) => this.router.navigate({ name: 'main', chapterId }),
           onSwitchProfile: () => this.router.navigate({ name: 'masuk' }),
+          onSignOut: () => this.router.navigate({ name: 'landing' }),
           onLanding: () => this.router.navigate({ name: 'landing' }),
         });
       }
@@ -250,8 +282,9 @@ export class AppShell {
         });
       }
       default: {
-        const { ProfileScreen } = await import('../screens/ProfileScreen.ts');
-        return new ProfileScreen({
+        const { AuthScreen } = await import('../screens/AuthScreen.ts');
+        return new AuthScreen({
+          initialTab: 'masuk',
           onDone: () => this.router.navigate({ name: 'beranda' }, { replace: true }),
           onBack: () => this.router.navigate({ name: 'landing' }),
         });

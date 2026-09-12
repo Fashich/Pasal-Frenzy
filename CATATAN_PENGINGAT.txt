@@ -44,6 +44,14 @@ Peran AI    : "M-shaped talent" (game designer + arsitek teknis + engineer 3D/fr
 [ ] Latar 3D landing harus memudar/blur saat di-scroll agar tidak menimpa teks.
 [ ] Tambahkan ganti bahasa: Indonesia (default) dan English/internasional.
 [ ] Hapus/ganti kalimat teknis yang "terasa buatan AI" (mis. menyebut IndexedDB di UI).
+[ ] (12 Sep) Versi web TIDAK memakai IndexedDB/backend; hanya versi aplikasi (unduhan) yang
+    memakai basis data untuk menyimpan data & profil pemain.
+[ ] (12 Sep) Teks deskripsi paling bawah di loading dibuat melebar, jangan mengecil di tengah.
+[ ] (12 Sep) Tambahkan login/sign-up (Masuk/Daftar) di versi web DAN aplikasi; tombolnya ada di
+    landing page.
+[ ] (12 Sep) Tampilan Beranda harus terlihat premium/"mahal" (frontend mewah), bukan kartu polos.
+[ ] (12 Sep) Git: tiap fitur spesifik punya branch, commit, merge, dan push sendiri; jangan
+    menumpuk semuanya dalam satu push ke satu branch.
 
 3. KEPUTUSAN (disetujui Fashich, 12 Sep 2026)
 ---------------------------------------------
@@ -170,6 +178,12 @@ research_sessions).
                   + intro acak (intro-passages.json) + loading detail per item + deskripsi 2 detik
                   + GameDB IndexedDB + layar Masuk/Profil + Beranda + GameScreen host + ChapterInterface
                   (21 & 22 dikerjakan di dalam branch 20 agar alur utuh diuji sekaligus)
+              [x] feature/21 akun Masuk/Daftar di web & aplikasi (tombol di nav + hero landing),
+                  PIN opsional (hash SHA-256 + salt, lokal), penyimpanan: web = localStorage
+                  browser (tanpa server/IndexedDB), aplikasi = IndexedDB (GameDB); satu kontrak
+                  PersistenceAdapter untuk keduanya
+              [ ] feature/22 Beranda premium (desain ulang: latar ambien, gauge integritas,
+                  jalur bab, ubin statistik, panel kaca bergradien)
               [ ] feature/23 i18n: Indonesia (default) + English, saklar di nav landing & beranda
 [ ] Fase 4  : feature/06 Mode Frenzy + DOM Injection + XPBD + partikel; feature/07 A-Frame XR
 [ ] Fase 5  : feature/10 Prolog; 11 Kasus 1; 12 Kasus 2; 13 Kasus 3
@@ -295,3 +309,16 @@ Rencana penuh : C:\Users\ASUS\.claude\plans\c-users-asus-downloads-skill-claude-
 Memori sesi   : C:\Users\ASUS\.claude\projects\C--laragon-www-Project-Self-Pasal-Frenzy\memory\
 Skill referensi: C:\Users\ASUS\Downloads\Skill-Claude\ (makalah-word, blueprint-analyzer,
                 realtime-researcher, analytical-thinker, stop-slop)
+2026-09-12  Fase 3 / feature/21: PersistenceAdapter (kontrak), LocalStorageAdapter (web: satu
+            dokumen JSON di localStorage, tanpa server), GameDB implements adapter (app),
+            persistence.ts memilih lewat IS_APP_BUILD; sesi aktif di localStorage. pin.ts:
+            PIN 4-6 digit di-hash SHA-256(salt:pin) via WebCrypto, tidak ikut ekspor.
+            AuthScreen: tab Masuk/Daftar (#/masuk, #/daftar), pilih akun -> baris PIN bila
+            terkunci ("PIN salah." + getar), form daftar (nama, PIN+ulangi, warna, kode
+            partisipan). Landing: nav Masuk/Daftar (mobile: di menu), setelah masuk chip akun
+            + tombol Beranda; hero CTA ikut berubah. AppShell: masuk<->daftar ganti tab tanpa
+            remount; "Mulai Bermain" -> beranda jika sudah masuk. Diuji di browser: daftar
+            (PIN 2468) -> beranda -> keluar -> masuk PIN salah ditolak -> PIN benar masuk.
+            Pelajaran: heredoc Bash gagal parse bila isi mengandung kutip tak seimbang ->
+            skrip patch ditulis ke file scratchpad lalu dijalankan python; setiap fitur
+            dipisah branch sendiri (feature/20 dikomit bersih dulu, baru feature/21).

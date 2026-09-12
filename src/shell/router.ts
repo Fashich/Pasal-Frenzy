@@ -1,5 +1,5 @@
 /**
- * Router hash sederhana (#/, #/masuk, #/beranda, #/main/<bab>).
+ * Router hash sederhana (#/, #/masuk, #/daftar, #/beranda, #/main/<bab>).
  * Hash dipilih karena aman untuk GitHub Pages (subpath), Electron (skema app://),
  * dan Capacitor tanpa konfigurasi server, serta mendukung tombol kembali.
  */
@@ -10,6 +10,7 @@ export type ChapterId = (typeof CHAPTER_IDS)[number];
 export type Route =
   | { name: 'landing' }
   | { name: 'masuk' }
+  | { name: 'daftar' }
   | { name: 'beranda' }
   | { name: 'main'; chapterId: ChapterId };
 
@@ -21,6 +22,7 @@ export function parseHash(hash: string): Route {
   const path = hash.replace(/^#/, '').replace(/^\/+/, '').replace(/\/+$/, '');
   if (path === '' || path === 'landing') return { name: 'landing' };
   if (path === 'masuk') return { name: 'masuk' };
+  if (path === 'daftar') return { name: 'daftar' };
   if (path === 'beranda') return { name: 'beranda' };
   const main = /^main\/([a-z0-9-]+)$/.exec(path);
   if (main && main[1] && isChapterId(main[1])) return { name: 'main', chapterId: main[1] };
@@ -33,6 +35,8 @@ export function routeToHash(route: Route): string {
       return '#/';
     case 'masuk':
       return '#/masuk';
+    case 'daftar':
+      return '#/daftar';
     case 'beranda':
       return '#/beranda';
     case 'main':
