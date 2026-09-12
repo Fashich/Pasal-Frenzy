@@ -13,6 +13,7 @@ import { validatePin, verifyPin, PIN_MAX, PIN_MIN } from '@core/persistence/pin.
 import { KUTIPAN } from '@landing/content.ts';
 import type { Screen } from '../shell/AppShell.ts';
 import type { Route } from '../shell/router.ts';
+import { brandMarkup } from '../shell/brand.ts';
 import { escapeHtml, formatPlayTime, formatRelative, initials } from './format.ts';
 
 export type AuthTab = 'masuk' | 'daftar';
@@ -70,9 +71,7 @@ export class AuthScreen implements Screen {
         <i class="pf-ambient__grain"></i>
       </div>
       <header class="pf-topbar">
-        <a class="pf-logotype pf-topbar__brand" href="#/" aria-label="Pasal Frenzy">
-          <span class="pf-logotype__pasal">PASAL</span><span class="pf-logotype__frenzy">FRENZY</span>
-        </a>
+        ${brandMarkup('pf-topbar__brand')}
         <button type="button" class="pf-btn pf-btn--ghost" data-action="kembali">Halaman utama</button>
       </header>
 

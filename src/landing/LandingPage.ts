@@ -14,6 +14,7 @@ import { resolveSplineScene } from '@data/splineScenes.ts';
 import { SplineStage } from '@ui/spline/SplineStage.ts';
 import { APP_VERSION, IS_APP_BUILD } from '../buildInfo.ts';
 import { PRODUCT_DESCRIPTION, SOURCE_STATEMENT } from '../shell/copy.ts';
+import { brandMarkup } from '../shell/brand.ts';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -156,9 +157,7 @@ export class LandingPage {
       <div class="pf-landing__scrim" aria-hidden="true"></div>
       <div class="pf-landing__content">
         <header class="pf-nav">
-          <a class="pf-logotype pf-nav__brand" href="#/" aria-label="Pasal Frenzy">
-            <span class="pf-logotype__pasal">PASAL</span><span class="pf-logotype__frenzy">FRENZY</span>
-          </a>
+          ${brandMarkup('pf-nav__brand')}
           <button type="button" class="pf-btn pf-btn--ghost pf-nav__toggle" aria-expanded="false" aria-controls="pf-nav-links">Menu</button>
           <ul class="pf-nav__links" id="pf-nav-links">
             <li><a href="#konsep">Konsep</a></li>

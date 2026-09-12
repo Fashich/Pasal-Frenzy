@@ -53,6 +53,7 @@ Peran AI    : "M-shaped talent" (game designer + arsitek teknis + engineer 3D/fr
 [ ] (12 Sep) Buatkan prompt khusus Claude Design (termasuk aset yang dibutuhkan); jangan memaksa
     frontend buatan sendiri yang hasilnya kurang bagus / "kaya web buatan AI".
 [ ] (12 Sep) Boleh memakai Spline (spline.design) untuk elemen 3D web kustom.
+[ ] (12 Sep) Tambahkan logo Pasal Frenzy (PNG asli) di header/nav.
 [ ] (12 Sep) Git: tiap fitur spesifik punya branch, commit, merge, dan push sendiri; jangan
     menumpuk semuanya dalam satu push ke satu branch.
 
@@ -192,6 +193,8 @@ research_sessions).
               [x] feature/24 integrasi Spline self-hosted: SplineStage (runtime dimuat dinamis, WebGL,
                   wasm lokal, tanpa CDN), slot landing-hero & beranda di spline-scenes.json,
                   rute uji ?dev=spline&scene=, npm run spline:sync, BRIEF-spline.md
+              [x] feature/25 logo Pasal Frenzy (src/assets/brand, PNG asli 123 px) di nav landing,
+                  bilah atas Masuk/Daftar, dan Beranda (brand.ts, .pf-brand)
               [ ] feature/23 i18n: Indonesia (default) + English, saklar di nav landing & beranda
 [ ] Fase 4  : feature/06 Mode Frenzy + DOM Injection + XPBD + partikel; feature/07 A-Frame XR
 [ ] Fase 5  : feature/10 Prolog; 11 Kasus 1; 12 Kasus 2; 13 Kasus 3

@@ -12,6 +12,7 @@ import { settingsStore } from '@core/store/SettingsStore.ts';
 import { APP_VERSION } from '../buildInfo.ts';
 import type { Screen } from '../shell/AppShell.ts';
 import { SOURCE_STATEMENT } from '../shell/copy.ts';
+import { brandMarkup } from '../shell/brand.ts';
 import { CHAPTER_IDS, type ChapterId } from '../shell/router.ts';
 import { downloadTextFile } from './download.ts';
 import { resolveSplineScene } from '@data/splineScenes.ts';
@@ -136,9 +137,7 @@ export class HomeScreen implements Screen {
       </div>
 
       <header class="pf-topbar pf-topbar--sticky">
-        <a class="pf-logotype pf-topbar__brand" href="#/" aria-label="Pasal Frenzy">
-          <span class="pf-logotype__pasal">PASAL</span><span class="pf-logotype__frenzy">FRENZY</span>
-        </a>
+        ${brandMarkup('pf-topbar__brand')}
         <div class="pf-topbar__actions">
           <span class="pf-badge pf-topbar__mode">${modeLabel}</span>
           <span class="pf-user" title="${escapeHtml(profile.name)}">
