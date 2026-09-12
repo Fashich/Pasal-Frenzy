@@ -79,6 +79,48 @@
   display: none;
 }
 
+.pf-nav__auth {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.pf-nav__user {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.3rem 0.75rem 0.3rem 0.3rem;
+  border: 1px solid rgba(248, 248, 248, 0.14);
+  border-radius: 999px;
+  background: rgba(8, 8, 16, 0.5);
+  font-family: var(--pf-font-ui);
+  font-size: var(--pf-t-small);
+  max-width: 200px;
+}
+
+.pf-nav__user-name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.pf-nav__links-auth {
+  display: none;
+}
+
+.pf-nav__links-auth button {
+  appearance: none;
+  background: none;
+  border: 0;
+  padding: 0.85rem 0;
+  width: 100%;
+  text-align: left;
+  color: var(--pf-fg);
+  font-family: var(--pf-font-ui);
+  font-size: var(--pf-t-body);
+  cursor: pointer;
+}
+
 @media (max-width: 860px) {
   .pf-nav__links {
     position: absolute;
@@ -106,8 +148,18 @@
     display: inline-flex;
   }
 
-  .pf-nav__cta {
+  .pf-nav__cta,
+  .pf-nav__user {
     display: none;
+  }
+
+  .pf-nav__links-auth:not([hidden]) {
+    display: block;
+    border-top: 1px solid rgba(248, 248, 248, 0.1);
+  }
+
+  .pf-nav__links-auth + .pf-nav__links-auth {
+    border-top: 0;
   }
 }
 

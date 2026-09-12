@@ -1,0 +1,402 @@
+/* Layar Masuk / Daftar */
+.pf-auth__layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+  gap: clamp(1.5rem, 4vw, 4rem);
+  align-items: center;
+  width: min(100%, 1100px);
+  margin-inline: auto;
+  min-height: calc(100dvh - 140px);
+  padding-block: clamp(1rem, 4vh, 3rem);
+}
+
+@media (max-width: 900px) {
+  .pf-auth__layout {
+    grid-template-columns: 1fr;
+    align-items: start;
+    min-height: 0;
+  }
+}
+
+.pf-auth__aside {
+  display: grid;
+  gap: 1rem;
+  max-width: 44ch;
+}
+
+.pf-auth__quote {
+  font-family: var(--pf-font-display);
+  font-style: italic;
+  font-weight: 400;
+  font-size: var(--pf-t-h2);
+  line-height: 1.2;
+  margin: 0;
+}
+
+.pf-auth__note {
+  font-size: var(--pf-t-small);
+  color: var(--pf-fg-muted);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.pf-auth__mode {
+  margin: 0;
+}
+
+.pf-auth__card {
+  padding: clamp(1.25rem, 3vw, 2.25rem);
+  display: grid;
+  gap: 1.25rem;
+}
+
+.pf-auth__panel {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.pf-auth__lead {
+  color: var(--pf-fg-muted);
+}
+
+.pf-auth__switch {
+  text-align: center;
+  margin: 0;
+}
+
+/* tabs */
+.pf-tabs {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 1px solid rgba(248, 248, 248, 0.14);
+  border-radius: 4px;
+  background: rgba(8, 8, 16, 0.5);
+  padding: 4px;
+}
+
+.pf-tab {
+  appearance: none;
+  position: relative;
+  z-index: 1;
+  min-height: 44px;
+  border: 0;
+  background: transparent;
+  color: var(--pf-fg-muted);
+  font-family: var(--pf-font-ui);
+  font-weight: 500;
+  font-size: var(--pf-t-body);
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  transition: color 200ms ease;
+}
+
+.pf-tab[aria-selected='true'] {
+  color: var(--pf-fg);
+}
+
+.pf-tabs__ink {
+  position: absolute;
+  top: 4px;
+  bottom: 4px;
+  left: 0;
+  width: 0;
+  border-radius: 3px;
+  background: linear-gradient(160deg, rgba(220, 38, 38, 0.9), rgba(127, 29, 29, 0.9));
+  box-shadow: 0 8px 24px -10px rgba(220, 38, 38, 0.8);
+  transition:
+    transform 320ms cubic-bezier(0.2, 0.7, 0.2, 1),
+    width 320ms cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+/* daftar akun */
+.pf-profile-item {
+  display: grid;
+  gap: 0.5rem;
+  border-radius: 4px;
+}
+
+.pf-profile-item.is-active .pf-profile-card {
+  border-color: var(--pf-gold);
+}
+
+.pf-profile-card {
+  border: 1px solid rgba(248, 248, 248, 0.12);
+  border-radius: 4px;
+  background: rgba(248, 248, 248, 0.03);
+  transition:
+    border-color 200ms ease,
+    background-color 200ms ease,
+    transform 200ms ease;
+}
+
+.pf-profile-card:hover,
+.pf-profile-card:focus-visible {
+  background: rgba(248, 248, 248, 0.06);
+  transform: translateY(-1px);
+}
+
+.pf-profile-card__arrow {
+  margin-left: auto;
+  color: var(--pf-fg-muted);
+  transition: transform 200ms ease;
+}
+
+.pf-profile-card:hover .pf-profile-card__arrow {
+  transform: translateX(4px);
+  color: var(--pf-fg);
+}
+
+.pf-lock {
+  display: inline-block;
+  margin-left: 0.4rem;
+  padding: 0.05rem 0.4rem;
+  border: 1px solid rgba(212, 160, 23, 0.6);
+  border-radius: 3px;
+  color: var(--pf-gold);
+  font-family: var(--pf-font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  vertical-align: middle;
+}
+
+.pf-pin-row {
+  display: grid;
+  gap: 0.35rem;
+  padding: 0 0.25rem 0.25rem;
+}
+
+.pf-pin-row form {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.5rem;
+}
+
+.pf-pin-row .pf-input {
+  letter-spacing: 0.3em;
+  font-family: var(--pf-font-mono);
+}
+
+.pf-shake {
+  animation: pf-shake 360ms cubic-bezier(0.36, 0.07, 0.19, 0.97);
+}
+
+@keyframes pf-shake {
+  10%,
+  90% {
+    transform: translateX(-1px);
+  }
+  20%,
+  80% {
+    transform: translateX(2px);
+  }
+  30%,
+  50%,
+  70% {
+    transform: translateX(-4px);
+  }
+  40%,
+  60% {
+    transform: translateX(4px);
+  }
+}
+
+/* form daftar */
+.pf-form--wide {
+  width: 100%;
+}
+
+.pf-field-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+@media (max-width: 480px) {
+  .pf-field-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.pf-field__label {
+  font-family: var(--pf-font-ui);
+  font-size: var(--pf-t-small);
+  color: var(--pf-fg-muted);
+  letter-spacing: 0.04em;
+}
+
+.pf-swatches {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.pf-swatch {
+  position: relative;
+  cursor: pointer;
+}
+
+.pf-swatch input {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+.pf-swatch__dot {
+  display: block;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--c);
+  border: 2px solid transparent;
+  box-shadow: 0 0 0 2px rgba(8, 8, 16, 1);
+  transition:
+    transform 200ms ease,
+    box-shadow 200ms ease;
+}
+
+.pf-swatch input:checked + .pf-swatch__dot {
+  transform: scale(1.12);
+  box-shadow:
+    0 0 0 2px rgba(8, 8, 16, 1),
+    0 0 0 4px var(--pf-fg);
+}
+
+.pf-swatch input:focus-visible + .pf-swatch__dot {
+  box-shadow:
+    0 0 0 2px rgba(8, 8, 16, 1),
+    0 0 0 4px var(--pf-gold);
+}
+
+.pf-btn--block {
+  width: 100%;
+}
+
+.pf-linklike {
+  appearance: none;
+  border: 0;
+  background: none;
+  padding: 0;
+  color: var(--pf-fg);
+  font: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+
+.pf-visually-hidden {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.pf-avatar--sm {
+  width: 26px;
+  height: 26px;
+  font-size: 0.75rem;
+}
+
+.pf-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.25rem 0.6rem;
+  border: 1px solid rgba(212, 160, 23, 0.45);
+  border-radius: 3px;
+  color: var(--pf-gold);
+  font-family: var(--pf-font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+/* bilah atas + latar ambien dipakai bersama Beranda */
+.pf-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  width: min(100%, 1100px);
+  margin-inline: auto;
+}
+
+.pf-topbar__brand {
+  font-size: 1.15rem;
+  text-decoration: none;
+}
+
+.pf-ambient {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.pf-ambient__glow {
+  position: absolute;
+  width: 70vmax;
+  height: 70vmax;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.55;
+  animation: pf-ambient-drift 26s ease-in-out infinite alternate;
+}
+
+.pf-ambient__glow--biru {
+  left: -20vmax;
+  top: -30vmax;
+  background: radial-gradient(circle, rgba(30, 58, 138, 0.75), transparent 60%);
+}
+
+.pf-ambient__glow--merah {
+  right: -25vmax;
+  bottom: -35vmax;
+  background: radial-gradient(circle, rgba(127, 29, 29, 0.6), transparent 60%);
+  animation-delay: -12s;
+}
+
+.pf-ambient__grain {
+  position: absolute;
+  inset: 0;
+  opacity: 0.07;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.5 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  background-size: 160px 160px;
+}
+
+@keyframes pf-ambient-drift {
+  from {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  to {
+    transform: translate3d(8vmax, 6vmax, 0) scale(1.15);
+  }
+}
+
+/* reveal masuk */
+[data-reveal] {
+  animation: pf-rise 700ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  animation-delay: calc(var(--i, 0) * 90ms);
+}
+
+.pf-no-motion [data-reveal] {
+  animation: none;
+}
+
+@keyframes pf-rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+    filter: blur(6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+    filter: blur(0);
+  }
+}

@@ -11,7 +11,7 @@ import { AudioEngine } from '@core/audio/AudioEngine.ts';
 import { constitutionalBus } from '@core/engine/ConstitutionalEventBus.ts';
 import { QUALITY_PRESETS, ThreeEngine } from '@core/engine/ThreeEngine.ts';
 import { InputManager } from '@core/input/InputManager.ts';
-import { gameDB, getActiveProfileId } from '@core/persistence/GameDB.ts';
+import { getActiveSession } from '@core/persistence/persistence.ts';
 import { constitutionalStore } from '@core/store/ConstitutionalStore.ts';
 import { settingsStore } from '@core/store/SettingsStore.ts';
 import type { Screen } from '../shell/AppShell.ts';
@@ -97,14 +97,14 @@ export class GameScreen implements Screen {
     this.chapter = await factory();
     await this.chapter.initialize(ctx);
 
-    // muat progres tersimpan jika ada
-    const profileId = getActiveProfileId();
-    if (profileId) {
-      const db = await gameDB();
-      const saved = await db.getChapterProgress(profileId, this.options.chapterId);
-      if (saved?.lastState) {
-        constitutionalStore.getState().hydrate(saved.lastState);
-      }
+    // muat progres tersimpan jika ada (web: browser ini; aplikasi: basis data perangkat)
+    const session = await getActiveSession();
+    if (session) {
+      const saved = await session.adapter.getChapterProgress(
+        session.profile.id,
+        this.options.chapterId,
+      );
+      if (saved?.lastState) constitutionalStore.getState().hydrate(saved.lastState);
     }
     constitutionalStore.getState().startChapter(this.options.chapterId);
 
@@ -127,9 +127,10 @@ export class GameScreen implements Screen {
   }
 
   private async persist(): Promise<void> {
-    const profileId = getActiveProfileId();
-    if (!profileId) return;
-    const db = await gameDB();
+    const session = await getActiveSession();
+    if (!session) return;
+    const db = session.adapter;
+    const profileId = session.profile.id;
     const state = constitutionalStore.getState();
     const prev = await db.getChapterProgress(profileId, this.options.chapterId);
     await db.saveChapterProgress({

@@ -6,6 +6,8 @@ describe('router hash', () => {
     expect(parseHash('')).toEqual({ name: 'landing' });
     expect(parseHash('#/')).toEqual({ name: 'landing' });
     expect(parseHash('#/masuk')).toEqual({ name: 'masuk' });
+    expect(parseHash('#/daftar')).toEqual({ name: 'daftar' });
+    expect(routeToHash({ name: 'daftar' })).toBe('#/daftar');
     expect(parseHash('#/beranda/')).toEqual({ name: 'beranda' });
     expect(parseHash('#/main/case-2-pasal33')).toEqual({
       name: 'main',

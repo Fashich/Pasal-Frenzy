@@ -18,7 +18,15 @@ gsap.registerPlugin(ScrollTrigger);
 export interface LandingOptions {
   reducedMotion: boolean;
   lite: boolean;
+  /** "Mulai Bermain": ke beranda jika sudah masuk, jika belum ke layar Masuk */
   onStart: () => void;
+  onMasuk: () => void;
+  onDaftar: () => void;
+}
+
+export interface LandingSession {
+  name: string;
+  color: string;
 }
 
 const RELEASES_URL = 'https://github.com/Fashich/Pasal-Frenzy/releases/latest';
@@ -29,6 +37,7 @@ export class LandingPage {
   readonly hero: HeroScene;
   private readonly options: LandingOptions;
   private lenis: Lenis | null = null;
+  private session: LandingSession | null = null;
   private triggers: ScrollTrigger[] = [];
   private rafTicker: ((time: number) => void) | null = null;
   private readonly pointerHandler = (e: PointerEvent) => {
@@ -138,8 +147,10 @@ export class LandingPage {
             <li><a href="#cara">Cara bermain</a></li>
             <li><a href="#riset">Riset</a></li>
             <li><a href="#unduh">Unduh</a></li>
+            <li class="pf-nav__links-auth"><button type="button" data-action="masuk">Masuk</button></li>
+            <li class="pf-nav__links-auth"><button type="button" data-action="daftar">Daftar</button></li>
           </ul>
-          <button type="button" class="pf-btn pf-btn--primary pf-nav__cta" data-action="mulai">Mulai Bermain</button>
+          <div class="pf-nav__auth" data-nav-auth>${this.authTemplate()}</div>
         </header>
 
         <main id="pf-main">
@@ -150,10 +161,7 @@ export class LandingPage {
             </h1>
             <p class="pf-hero__tagline" data-reveal>${escapeHtml(HERO.tagline)}</p>
             <p class="pf-lead pf-hero__lead" data-reveal>${escapeHtml(HERO.lead)}</p>
-            <div class="pf-hero__cta" data-reveal>
-              <button type="button" class="pf-btn pf-btn--primary" data-action="mulai">Mulai Bermain</button>
-              <a class="pf-btn pf-btn--secondary" href="#unduh">Unduh untuk Windows / Android</a>
-            </div>
+            <div class="pf-hero__cta" data-reveal data-hero-cta>${this.heroCtaTemplate()}</div>
             <ul class="pf-hero__stats" data-reveal>
               <li><strong>${STATISTIK.alinea}</strong><span>alinea Pembukaan</span></li>
               <li><strong>${STATISTIK.pasal}</strong><span>pasal dalam ${STATISTIK.bab} bab</span></li>
@@ -234,10 +242,76 @@ export class LandingPage {
     `;
   }
 
+  /** tombol Masuk/Daftar di nav; setelah masuk berganti menjadi chip akun + Beranda */
+  private authTemplate(): string {
+    if (this.session) {
+      return `
+        <span class="pf-nav__user" title="${escapeHtml(this.session.name)}">
+          <span class="pf-avatar pf-avatar--sm" style="background:${this.session.color}" aria-hidden="true">${escapeHtml(this.session.name.charAt(0).toUpperCase())}</span>
+          <span class="pf-nav__user-name">${escapeHtml(this.session.name)}</span>
+        </span>
+        <button type="button" class="pf-btn pf-btn--primary pf-nav__cta" data-action="mulai">Beranda</button>`;
+    }
+    return `
+      <button type="button" class="pf-btn pf-btn--ghost pf-nav__cta" data-action="masuk">Masuk</button>
+      <button type="button" class="pf-btn pf-btn--primary pf-nav__cta" data-action="daftar">Daftar</button>`;
+  }
+
+  private heroCtaTemplate(): string {
+    if (this.session) {
+      return `
+        <button type="button" class="pf-btn pf-btn--primary" data-action="mulai">Lanjutkan ke Beranda</button>
+        <a class="pf-btn pf-btn--secondary" href="#unduh">Unduh untuk Windows / Android</a>`;
+    }
+    return `
+      <button type="button" class="pf-btn pf-btn--primary" data-action="mulai">Mulai Bermain</button>
+      <button type="button" class="pf-btn pf-btn--secondary" data-action="masuk">Masuk</button>
+      <a class="pf-btn pf-btn--ghost" href="#unduh">Unduh untuk Windows / Android</a>`;
+  }
+
+  /** dipanggil AppShell saat status masuk berubah */
+  setSession(session: LandingSession | null): void {
+    this.session = session;
+    const nav = this.element.querySelector('[data-nav-auth]');
+    if (nav) nav.innerHTML = this.authTemplate();
+    const hero = this.element.querySelector('[data-hero-cta]');
+    if (hero) hero.innerHTML = this.heroCtaTemplate();
+    this.element.querySelectorAll<HTMLElement>('.pf-nav__links-auth').forEach((li) => {
+      li.hidden = session !== null;
+    });
+    this.bindActions();
+    this.bindDownloadLinks();
+  }
+
+  private bindActions(): void {
+    const handlers: Record<string, () => void> = {
+      mulai: () => this.options.onStart(),
+      masuk: () => this.options.onMasuk(),
+      daftar: () => this.options.onDaftar(),
+    };
+    this.element.querySelectorAll<HTMLElement>('[data-action]').forEach((b) => {
+      const action = b.dataset['action'] ?? '';
+      const handler = handlers[action];
+      if (!handler || b.dataset['bound'] === '1') return;
+      b.dataset['bound'] = '1';
+      b.addEventListener('click', handler);
+    });
+  }
+
+  private bindDownloadLinks(): void {
+    this.element.querySelectorAll<HTMLAnchorElement>('a[href="#unduh"]').forEach((a) => {
+      if (a.dataset['bound'] === '1') return;
+      a.dataset['bound'] = '1';
+      a.addEventListener('click', (e) => {
+        e.preventDefault();
+        const target = this.element.querySelector('#unduh');
+        if (target instanceof HTMLElement) this.scrollTo(target);
+      });
+    });
+  }
+
   private bind(): void {
-    this.element
-      .querySelectorAll<HTMLElement>('[data-action="mulai"]')
-      .forEach((b) => b.addEventListener('click', () => this.options.onStart()));
+    this.bindActions();
     const toggle = this.element.querySelector('.pf-nav__toggle') as HTMLButtonElement;
     const links = this.element.querySelector('.pf-nav__links') as HTMLElement;
     const mq = window.matchMedia('(max-width: 860px)');
@@ -267,11 +341,11 @@ export class LandingPage {
         }
       }),
     );
-    this.element.querySelectorAll<HTMLAnchorElement>('a[href="#unduh"]').forEach((a) =>
-      a.addEventListener('click', (e) => {
-        e.preventDefault();
-        const target = this.element.querySelector('#unduh');
-        if (target instanceof HTMLElement) this.scrollTo(target);
+    this.bindDownloadLinks();
+    links.querySelectorAll<HTMLButtonElement>('button[data-action]').forEach((b) =>
+      b.addEventListener('click', () => {
+        toggle.setAttribute('aria-expanded', 'false');
+        syncMenu();
       }),
     );
 
