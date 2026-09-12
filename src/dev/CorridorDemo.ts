@@ -28,6 +28,8 @@ import { PortalSystem } from '@core/engine/PortalSystem.ts';
 import { QUALITY_PRESETS, ThreeEngine } from '@core/engine/ThreeEngine.ts';
 import { InputManager } from '@core/input/InputManager.ts';
 import { applyConstitutionalWarpDeep } from '@core/shaders/ConstitutionalMaterial.ts';
+import { GlitchDOMEffect } from '@core/shaders/GlitchDOM.ts';
+import { ChromaticAberrationPass } from '@core/shaders/passes/ChromaticAberrationPass.ts';
 import { constitutionalStore } from '@core/store/ConstitutionalStore.ts';
 import { createUudIndex } from '@data/uud1945.ts';
 
@@ -223,9 +225,15 @@ export function runCorridorDemo(root: HTMLElement): () => void {
 
   applyConstitutionalWarpDeep(world, uniforms.set);
 
+  // ---- post-processing (feature/04) ----
+  const aberration = new ChromaticAberrationPass(uniforms.set);
+  const removePass = engine.addPass(aberration);
+  const glitch = new GlitchDOMEffect({ wrapper: root });
+
   // ---- HUD sederhana ----
   const hud = document.createElement('div');
   hud.className = 'pf-devhud';
+  hud.dataset['glitchTarget'] = '';
   hud.style.cssText =
     'position:absolute;left:12px;top:12px;padding:8px 12px;background:rgba(8,8,16,.7);color:#f8f8f8;font:12px/1.5 "JetBrains Mono",monospace;border:1px solid #1e3a8a;pointer-events:none;white-space:pre';
   root.appendChild(hud);
@@ -237,6 +245,7 @@ export function runCorridorDemo(root: HTMLElement): () => void {
     const frame = input.consumeFrame();
     rig.update(dt, frame);
     anchors.upload(camera, uniforms.set);
+    aberration.update();
     portals.render(engine.renderer, scene, camera);
 
     fpsAcc += dt;
@@ -251,7 +260,8 @@ export function runCorridorDemo(root: HTMLElement): () => void {
       `integritas ${s.integrity.toFixed(3)} (${s.getIntegrityLevel()})  target ${s.integrityTarget.toFixed(2)}\n` +
       `frenzy ${s.frenzyActive ? 'AKTIF' : 'off'}  tekanan ${uniforms.set.u_democracyPressure.value.toFixed(2)}\n` +
       `fps ${fps}  mode ${frame.mode}  lock ${frame.pointerLocked ? 'ya' : 'tidak'}  kualitas ${engine.quality.preset}\n` +
-      `[ ] integritas, F frenzy, 1/2/3 kualitas, klik = pointer lock`;
+      `glitch ${glitch.currentStage}  flux ${uniforms.set.u_temporalFlux.value.toFixed(1)}  aberasi ${aberration.material.uniforms['u_offsetPx']?.value.toFixed(1)}px\n` +
+      `[ ] integritas, F frenzy, G glitch DOM, T temporal flux, 1/2/3 kualitas, klik = lock`;
   });
 
   const onKey = (e: KeyboardEvent) => {
@@ -261,6 +271,12 @@ export function runCorridorDemo(root: HTMLElement): () => void {
     if (e.code === 'KeyF') {
       if (s.frenzyActive) s.deactivateFrenzy('manual');
       else s.activateFrenzy('naratif');
+    }
+    if (e.code === 'KeyG' || e.key === 'g') {
+      glitch.setStage(((glitch.currentStage + 1) % 5) as 0 | 1 | 2 | 3 | 4);
+    }
+    if (e.code === 'KeyT' || e.key === 't') {
+      uniforms.set.u_temporalFlux.value = uniforms.set.u_temporalFlux.value > 0 ? 0 : 1;
     }
     if (e.code === 'Digit1') engine.setQuality(QUALITY_PRESETS.rendah);
     if (e.code === 'Digit2') engine.setQuality(QUALITY_PRESETS.sedang);
@@ -276,11 +292,15 @@ export function runCorridorDemo(root: HTMLElement): () => void {
     rig,
     portals,
     anchors,
+    glitch,
+    aberration,
   };
 
   return () => {
     window.removeEventListener('keydown', onKey);
     offUpdate();
+    removePass();
+    glitch.dispose();
     input.dispose();
     portals.dispose();
     engine.dispose();

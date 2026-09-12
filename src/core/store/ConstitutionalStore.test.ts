@@ -64,13 +64,11 @@ describe('psychologicalSlice', () => {
     const { store, bus } = setup();
     const listener = vi.fn();
     bus.on('PSYCHOLOGICAL_STATE_CHANGED', listener);
-    store
-      .getState()
-      .updatePsychological({
-        cognitiveLoad: 0,
-        argumentativeCoherence: 1,
-        constitutionalEmpathy: 1,
-      });
+    store.getState().updatePsychological({
+      cognitiveLoad: 0,
+      argumentativeCoherence: 1,
+      constitutionalEmpathy: 1,
+    });
     expect(store.getState().getOverallPsychologicalHealth()).toBeCloseTo(1);
     expect(listener).toHaveBeenCalledTimes(1);
     expect(
