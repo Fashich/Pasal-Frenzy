@@ -98,10 +98,6 @@ export default defineConfig({
     // Satu instance THREE untuk engine kita, troika, dan A-Frame (super-three 0.184.0).
     dedupe: ['three'],
   },
-  define: {
-    __APP_VERSION__: JSON.stringify(process.env.npm_package_version ?? '0.0.0'),
-    __BUILD_TARGET__: JSON.stringify(target),
-  },
   optimizeDeps: {
     include: ['three', 'phaser', 'gsap', 'zustand', 'idb', 'comlink'],
     exclude: ['aframe'],

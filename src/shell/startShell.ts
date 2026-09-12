@@ -2,8 +2,19 @@
  * Titik masuk sementara sebelum preloader dan landing page dibangun
  * (feature/09 dan feature/20). Menampilkan status build agar pipeline
  * Vite, alias path, dan CSS bisa diverifikasi lebih awal.
+ *
+ * Parameter `?dev=<nama>` membuka scene pengembangan (hanya dimuat saat diminta).
  */
+import { APP_VERSION, BUILD_TARGET } from '../buildInfo.ts';
+
 export async function startShell(root: HTMLElement): Promise<void> {
+  const dev = new URLSearchParams(window.location.search).get('dev');
+  if (dev === 'corridor') {
+    const { runCorridorDemo } = await import('../dev/CorridorDemo.ts');
+    runCorridorDemo(root);
+    return;
+  }
+
   const capabilities = detectCapabilities();
 
   root.innerHTML = `
@@ -12,7 +23,7 @@ export async function startShell(root: HTMLElement): Promise<void> {
         <span class="shell__pasal">PASAL</span><span class="shell__frenzy">FRENZY</span>
       </h1>
       <p class="shell__status">
-        Build ${__BUILD_TARGET__} · v${__APP_VERSION__} ·
+        Build ${BUILD_TARGET} · v${APP_VERSION} ·
         WebGL2 ${capabilities.webgl2 ? 'tersedia' : 'tidak tersedia'} ·
         WebXR ${capabilities.webxr ? 'tersedia' : 'tidak tersedia'}
       </p>
