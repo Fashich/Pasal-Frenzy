@@ -133,10 +133,12 @@ research_sessions).
 10. RENCANA FASE & STATUS
 -------------------------
 [x] Fase 0  : init repo, docs/, data-source/, .gitignore, README, catatan ini, branch development
-[~] Fase 1  : [x] feature/01 scaffold Vite+TS+lint+vitest; parser PDF -> uud-1945.json (lulus)
-              [ ] feature/02 ConstitutionalStore (5 slice) + ConstitutionalEventBus
-[ ] Fase 2  : feature/03 ThreeEngine; 04 shader (hyperbolic, chromatic, distortion, GlitchDOM);
-              05 Phaser overlay + fisika tipografi; 08 AudioEngine + GavelSynth + HeartbeatWorklet
+[x] Fase 1  : [x] feature/01 scaffold Vite+TS+lint+vitest; parser PDF -> uud-1945.json (lulus)
+              [x] feature/02 ConstitutionalStore (5 slice + Frenzy) + ConstitutionalEventBus + SettingsStore
+[~] Fase 2  : [x] feature/03 ThreeEngine + InputManager + FirstPersonRig + ruang hiperbolik
+                  (GLSL + cermin CPU) + ConstitutionalAnchors + PortalSystem + demo ?dev=corridor
+              [ ] 04 shader (chromatic, distortion, GlitchDOM);
+              [ ] 05 Phaser overlay + fisika tipografi; [ ] 08 AudioEngine + GavelSynth + HeartbeatWorklet
 [ ] Fase 3  : feature/09 preloader + cursor + transisi; feature/20 intro + landing 3D responsif
 [ ] Fase 4  : feature/06 Mode Frenzy + DOM Injection + XPBD + partikel; feature/07 A-Frame XR
 [ ] Fase 5  : feature/10 Prolog; 11 Kasus 1; 12 Kasus 2; 13 Kasus 3
@@ -175,6 +177,29 @@ research_sessions).
             Fashich menawarkan Claude Design -> prompt siap-copas dibuat di
             docs/design/PROMPT-claude-design.md (memakai teks UUD asli dan token desain kode).
             .claude/ (launch.json alat lokal) diabaikan git agar tidak muncul di repo.
+2026-09-12  Fase 1 / feature/02: ConstitutionalEventBus (event bertipe, riwayat ring buffer,
+            listener terisolasi, waitFor) + ConstitutionalStore Zustand vanilla: integrity
+            (smoothing tau 0.35 s, emit jika beda > 0.01), psychological (bobot 0.4/0.35/0.25),
+            pasalInventory (mastery, contextualNetwork, jurisprudentialWeight), audio, progress,
+            frenzy (aktif integrity<0.35 & cognitiveLoad>0.7, histeresis pulih 0.5/0.5).
+            SettingsStore terpisah (kualitas, reduced motion, consent riset opt-in, localStorage).
+            33 tes lulus. Merge ke development, push OK.
+2026-09-12  Fase 2 / feature/03: ThreeEngine (WebGL2, EffectComposer RenderPass->OutputPass,
+            setAnimationLoop, ResizeObserver, DPR cap per preset, pointer lock, raycaster,
+            layer gameplay/ui/debug/portalHidden), GlobalUniforms (u_constitutionalIntegrity,
+            u_democracyPressure, u_temporalFlux, u_frenzy, anchors), InputManager (pointer lock
+            + WASD, sentuh dua zona, gamepad, hook XR), FirstPersonRig, hyperbolic.glsl +
+            cermin CPU src/core/math/hyperbolic.ts (6 tes invarian), applyConstitutionalWarp
+            (onBeforeCompile pada semua material bawaan), ConstitutionalAnchors (radius ikut
+            mastery), PortalSystem (RT proporsional + oblique near plane + proyeksi layar).
+            Demo dev ?dev=corridor: koridor Pasal 28A-28J, warp terverifikasi visual
+            (integritas 0.15 -> koridor melengkung, langit-langit turun), portal terverifikasi
+            (RT berisi konten). PELAJARAN: Vite `define` tidak tersedia di dev untuk modul biasa
+            -> pakai import.meta.env (src/buildInfo.ts); three.js mengabaikan renderer.setViewport
+            untuk render target -> pakai renderTarget.viewport; dev server perlu restart setelah
+            file baru ditambahkan (cache resolusi). Pane browser embedded tidak mengizinkan
+            pointer lock (WrongDocumentError) -> uji mouse look harus di Chrome/Electron asli.
+            fps di pane 22-60 (tidak representatif; benchmark resmi nanti via Playwright headed).
 
 13. PATH PENTING
 ----------------
