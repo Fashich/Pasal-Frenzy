@@ -25,6 +25,7 @@ const vendorChunk = (id: string): string | undefined => {
     return 'vendor-three';
   }
   if (id.includes('/gsap/') || id.includes('/lenis/')) return 'vendor-motion';
+  if (id.includes('@splinetool')) return 'vendor-spline';
   return undefined;
 };
 
@@ -69,7 +70,7 @@ if (withServiceWorker) {
         ],
       },
       workbox: {
-        globPatterns: ['**/*.{js,css,html,ico,png,svg,json,woff2,wasm}'],
+        globPatterns: ['**/*.{js,css,html,ico,png,svg,json,woff2,wasm,splinecode}'],
         maximumFileSizeToCacheInBytes: 8 * 1024 * 1024,
         cleanupOutdatedCaches: true,
         clientsClaim: true,
@@ -100,7 +101,7 @@ export default defineConfig({
   },
   optimizeDeps: {
     include: ['three', 'phaser', 'gsap', 'zustand', 'idb', 'comlink'],
-    exclude: ['aframe'],
+    exclude: ['aframe', '@splinetool/runtime'],
   },
   worker: {
     format: 'es',

@@ -50,6 +50,9 @@ Peran AI    : "M-shaped talent" (game designer + arsitek teknis + engineer 3D/fr
 [ ] (12 Sep) Tambahkan login/sign-up (Masuk/Daftar) di versi web DAN aplikasi; tombolnya ada di
     landing page.
 [ ] (12 Sep) Tampilan Beranda harus terlihat premium/"mahal" (frontend mewah), bukan kartu polos.
+[ ] (12 Sep) Buatkan prompt khusus Claude Design (termasuk aset yang dibutuhkan); jangan memaksa
+    frontend buatan sendiri yang hasilnya kurang bagus / "kaya web buatan AI".
+[ ] (12 Sep) Boleh memakai Spline (spline.design) untuk elemen 3D web kustom.
 [ ] (12 Sep) Git: tiap fitur spesifik punya branch, commit, merge, dan push sendiri; jangan
     menumpuk semuanya dalam satu push ke satu branch.
 
@@ -186,6 +189,9 @@ research_sessions).
                   besar dengan nama bergradien emas, gauge integritas SVG, ubin statistik, jalur
                   4 bab bertepi gradien + angka Romawi, panel kaca; prompt Claude Design ditambah
                   layar Masuk/Daftar dan Beranda)
+              [x] feature/24 integrasi Spline self-hosted: SplineStage (runtime dimuat dinamis, WebGL,
+                  wasm lokal, tanpa CDN), slot landing-hero & beranda di spline-scenes.json,
+                  rute uji ?dev=spline&scene=, npm run spline:sync, BRIEF-spline.md
               [ ] feature/23 i18n: Indonesia (default) + English, saklar di nav landing & beranda
 [ ] Fase 4  : feature/06 Mode Frenzy + DOM Injection + XPBD + partikel; feature/07 A-Frame XR
 [ ] Fase 5  : feature/10 Prolog; 11 Kasus 1; 12 Kasus 2; 13 Kasus 3
@@ -332,3 +338,10 @@ Skill referensi: C:\Users\ASUS\Downloads\Skill-Claude\ (makalah-word, blueprint-
             mask-composite, numeral Romawi, pill status, hover angkat), .pf-panel, saklar pill.
             Tidak ada angka contoh: semua dari adapter penyimpanan & store. docs/design/PROMPT-
             claude-design.md ditambah artboard 3b (Masuk/Daftar) dan 3c (Beranda) untuk dicopas.
+2026-09-12  Fase 3 / feature/24: Spline. Fakta terverifikasi: @splinetool/runtime 2.0.46 (npm),
+            .splinecode bisa diunduh dari panel Code Export dan di-host sendiri; opsi wasmPath
+            (tanpa itu runtime mengambil WASM dari CDN Spline); paket Free = ekspor web dengan
+            watermark, Hobby (berbayar) tanpa watermark. Keputusan: runtime hanya diimpor bila
+            slot terisi (chunk vendor-spline), renderer dipaksa webgl, htmlContentMode none,
+            WASM disalin ke public/spline/wasm lewat scripts/spline-sync.mjs, .splinecode ikut
+            precache PWA. Fallback: bila gagal, partikel Three.js / CSS tetap tampil.

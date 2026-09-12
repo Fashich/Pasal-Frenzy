@@ -14,6 +14,8 @@ import type { Screen } from '../shell/AppShell.ts';
 import { SOURCE_STATEMENT } from '../shell/copy.ts';
 import { CHAPTER_IDS, type ChapterId } from '../shell/router.ts';
 import { downloadTextFile } from './download.ts';
+import { resolveSplineScene } from '@data/splineScenes.ts';
+import { SplineStage } from '@ui/spline/SplineStage.ts';
 import {
   escapeHtml,
   formatDurationShort,
@@ -87,6 +89,8 @@ const GAUGE_C = 2 * Math.PI * GAUGE_R;
 
 export class HomeScreen implements Screen {
   private element: HTMLElement | null = null;
+  /** scene Spline opsional di balik sambutan (slot 'beranda') */
+  private stage: SplineStage | null = null;
 
   constructor(private readonly options: HomeScreenOptions) {}
 
@@ -147,6 +151,7 @@ export class HomeScreen implements Screen {
       </header>
 
       <div class="pf-beranda__hero">
+        <div class="pf-beranda__stage" data-spline-host aria-hidden="true"></div>
         <div class="pf-beranda__intro" data-reveal style="--i:0">
           <p class="pf-eyebrow">Beranda · ${escapeHtml(formatLongDate(new Date()))}</p>
           <h1 class="pf-beranda__title" id="pf-beranda-title">Selamat datang, <em>${escapeHtml(profile.name)}.</em></h1>
@@ -295,6 +300,17 @@ export class HomeScreen implements Screen {
     root.appendChild(el);
     this.element = el;
 
+    // scene Spline (opsional): variabel integrity/menang dikirim ke scene bila scene mendefinisikannya
+    const splineUrl = resolveSplineScene('beranda');
+    if (splineUrl) {
+      this.stage = new SplineStage(el.querySelector('[data-spline-host]') as HTMLElement, {
+        url: splineUrl,
+        variables: { integrity, menang: won, total: CHAPTER_IDS.length },
+        onError: (err) => console.warn('[spline] beranda gagal dimuat:', err),
+      });
+      void this.stage.load();
+    }
+
     // aksi umum
     el.querySelectorAll('[data-action="landing"]').forEach((b) =>
       b.addEventListener('click', () => this.options.onLanding()),
@@ -425,6 +441,8 @@ export class HomeScreen implements Screen {
   }
 
   unmount(): void {
+    this.stage?.dispose();
+    this.stage = null;
     this.element?.remove();
     this.element = null;
   }
