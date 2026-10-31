@@ -6,8 +6,9 @@ _A 3D game about the 1945 Constitution of the Republic of Indonesia._
 
 - Situs: https://fashich.github.io/Pasal-Frenzy/
 - Unduh: [GitHub Releases](https://github.com/Fashich/Pasal-Frenzy/releases/latest)
-  - **Windows** (installer `.exe`, Windows 10/11 64-bit). Jika muncul "Windows melindungi PC Anda", pilih Info selengkapnya → Tetap jalankan.
-  - **Android** (paket `.apk`, Android 9 ke atas). Izinkan pemasangan dari sumber tidak dikenal.
+  - **Windows** (installer `.exe`, Windows 10/11 64-bit). Jika muncul "Windows melindungi PC Anda", pilih Info selengkapnya → Tetap jalankan. Berkas `.zip` di halaman rilis berisi installer yang sama beserta petunjuk `BACA-DULU.txt`, untuk dibagikan ke teman.
+  - **Android** (paket `.apk`): segera hadir.
+- Tanpa email dan kata sandi: buat profil dengan username di aplikasi. Profil dan progres hanya tersimpan di perangkatmu.
 - Lapor masalah atau beri saran: [Issues](https://github.com/Fashich/Pasal-Frenzy/issues/new)
 
 ## Isi repositori
